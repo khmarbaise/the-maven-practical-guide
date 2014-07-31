@@ -1,0 +1,19 @@
+:sourcedir: examples/basics/
+
+The Basics
+----------
+
+- Smallest POM file.
+
+[source,xml]
+----
+include::{sourcedir}/simple/pom.xml[]
+----
+<1> The groupId
+<2> The artifactId
+<3> The version
+
+
+== The build life cycle
+
+

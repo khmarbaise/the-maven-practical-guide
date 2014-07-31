@@ -1,0 +1,47 @@
+Different Environments
+----------------------
+
+= The Problem
+
+In the wild a usual problem occurs having configurations for
+different environments like development, test, q&a and production.
+The differences between those environments are most likely 
+things like username, password for an database connection or may
+be other things.
+
+Let us make a more realistic example out of this to get more relationship
+to the real world. So we create
+
+
+get the whole lecture of GearConf2013
+
+How to build for prod, dev, qa environment etc.
+
+http://blog.soebes.de/blog/2011/07/29/maven-configuration-for-multipe-environments/
+
+http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/
+
+== The Solutions
+
+=== The Obvious Solution
+
+Many people using Maven will suggest to use profiles for such purposes
+So you have different profiles which define the filtered values for
+the appropriate environments and you will build the appropriate
+artifacts.
+
+-------------------
+mvn -Pdevelopment clean package
+mvn -Ptest clean package
+mvn -Pqa clean package
+mvn -Pproduction clean package
+-------------------
+
+
+
+Picture of the application ?
+
+What are the drawbacks of such a solution?
+
+=== The next
+

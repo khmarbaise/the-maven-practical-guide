@@ -1,0 +1,35 @@
+= Plugin Development
+
+How to develop a plugin.
+Basics. Annotations?
+Example project.
+
+== Reasons
+Often i see people developing maven plugins which are superfluous, cause the functionality is already
+provided by one of the existing plugins.
+There existing serveral reasons to develop a maven plugin in particular if you are working in an environment
+which does not allow things.
+
+So the question is: When should i start to think about creating my own plugin?
+Simple answer if the needed functions are not provided by the existing ones.
+
+I can encourage you to mail information which kind of request you have to the mailing 
+list which gives the developers / commiters the chance to introduce such kind of requirements
+into the existings plugins if it makes sense.
+Or you fill in a jira ticket..
+
+
+
+Testing
+
+{link-maven-invoker-plugin}
+Folder structure 
+
+
+Conventions
+
+
+Testing with Spock:
+https://github.com/asciidoctor/asciidoctor-maven-plugin
+
+

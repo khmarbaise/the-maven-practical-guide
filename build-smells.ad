@@ -1,0 +1,62 @@
+= Build Smells
+
+== Creating Multiple Artifacts
+
+ Multiple Artifacts The Wrong Way
+
+
+Creating multiple jars from a single module? (create a jar from package a.b.c and
+create an other jar from packages a.b.d)?
+
+
+Examples for build smells:
+
+http://stackoverflow.com/questions/11448184/maven-jar-plugin-include-upper-dir
+
+== Not Part of the Life Cycle
+
+ Calling mvn assembly:single or assembly:assemble ? Why not being part of the build? and use mvn package?
+
+
+== Multi Module Builds
+
+
+=== Module Structure
+
+- Parent of a multi-module is *not located* at root level of the structure?
+
+=== The Install Hack
+
+The Install Hack
+
+You need to do `mvn install` in a multi-module build but `mvn clean package` will not work?
+
+=== Separation of Concerns
+
+Multiple Purposes of a Module
+
+Use a module for only one purpose not for many. (Separation of Concern)
+
+
+== Testing 
+
+- Not separated unit- and integration tests
+  Configuration by using profile for unit and integration tests
+
+- Typical indicator having TestSuite class file etc.
+
+== Assemblies
+
+- Looking on the file system instead of using the reactor
+  Here: 
+  http://stackoverflow.com/questions/23951547/how-to-create-single-target-from-multi-module-maven-project
+
+- Warngings in relationship with maven-assembly-plugin (dir format!)
+
+== Problem with Profiles and Dependencies
+
+http://blog.soebes.de/blog/2013/11/09/why-is-it-bad-to-activate-slash-deactive-modules-by-profiles-in-maven/
+
+== What about dependencies by profiles?
+
+Describe why and how and what the drawbacks are?

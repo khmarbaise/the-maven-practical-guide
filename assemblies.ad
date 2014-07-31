@@ -1,0 +1,32 @@
+= Assemblies
+
+  - Default assemblies
+  - Archive types
+  - Component Descriptors
+  - Distribution archive
+  - empty folders etc.
+
+Typical scenarios which occur often.
+
+Create a jar with all dependencies which might be used to call simply java programm as a command line 
+tool.
+Alternatives {link-maven-shade-plugin}.
+
+
+You would like to create an distribution archive which contains the resulting components of your application.
+Examples. 
+
+You would like to create an archive with all sources of your project as well as the sources 
+of all the used dependencies:
+
+-------------------
+mvn dependency:sources
+mvn dependency:copy-dependencies -Dclassifier=sources -DoutputDirectory=target/sources
+-------------------
+
+Add here all the examples from my example-assemblies 
+
+
+
+Special requirements which you can fullfil with maven-assembly-plugin
+http://stackoverflow.com/questions/24311053/how-to-get-the-content-of-a-directory-inside-of-war-that-is-inside-of-an-ear-tha

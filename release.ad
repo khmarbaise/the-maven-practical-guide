@@ -1,0 +1,16 @@
+= Releases The Traditional Maven Way
+
+maven-release-plugin etc.
+How it works. Pro's and con's.
+
+
+= Releases The CD Way
+Releases in the time of Continious Delivery. How to solve this via Maven?  Is this possible? Maven 3.2.1.
+
+
+
+http://www.youtube.com/watch?v=McTZtyb9M38
+
+http://maven.40175.n5.nabble.com/Continuous-Delivery-and-Maven-td3245370.html
+
+http://stackoverflow.com/questions/18456111/what-is-the-maven-way-for-project-versions-when-doing-continuous-delivery

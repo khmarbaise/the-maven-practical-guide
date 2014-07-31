@@ -1,0 +1,323 @@
+= Plugins
+
+== Overview
+The plugins of Maven building the foundation of the Maven eco system,
+cause if you download Maven itself it's a relative small archive
+(about 6 {link-mib}) and Maven itslef is more or less only a IoC
+container which supports the life-cycle and other small things. If you
+like to compile for example your source code this is provided by the
+{link-maven-compiler-plugin} with the appropriate functionality.
+
+This chapter will give you an overview of the different areas of
+plugins sources, the different ideas of the plugins and their typical
+usage within a Java project build.
+
+== The Plugin Sources
+
+In general there are two big sources of plugin. The first source is
+the area under the umbrella of the {link-apache-software-foundation}.
+I will call them the **Core Maven Plugins**. The reason for this is that
+you will find plugins like {link-maven-compiler-plugin},
+{link-maven-jar-plugin} etc. in that area which provide the most basic
+functionality for your build.
+
+The second source is the Mojo Codehaus area which also provides a
+large number of maven plugins (http://mojo.codehaus.org/plugins/).
+
+
+Other sources of PLugins (JBoss, Tomcat, Antlr, google code (Maven
+Processor Plugin) 
+
+jaxws-maven-plugin ? (URL?)
+
+Describe more sources and other plugins
+
+Groovy Plugins
+
+
+== The Different Plugins
+
+In this chapter we will take a look on more or less every plugin which
+is a participant of a usual Java build or to be more accurate a
+participant of the {link-build-life-cycle}.
+
+The lifecycle contains already bindings for usual plugins so 
+in the majority of the cases it enough to build usual projects.
+
+=== Clean Everything
+
+If you want to be sure your build will start from scratch you need to
+wipe out everything which has been created by previous operations or
+the build itself. So the {link-maven-clean-plugin} is your friend
+which will delete the 'target' folder of your project or in every
+module in case of a multi-module build. This can be simply achieved by
+calling maven like this:
+
+[listing]
+mvn clean
+
+
+Usualy you won't ever think about the {link-maven-clean-plugin}, cause
+by default it's bound to the 'clean' {link-life-cycle-phase} and there
+is no reason to change the configuration of the
+{link-maven-clean-plugin} or something similar. In rare situations it
+could happen that you need to change the configuration and add
+supplemental folder or files which should be deleted during a 'mvn
+clean' call.
+
+HINT: Something about the clean life cylce of the maven super pom!!
+
+In the clean life cycle the following phases exist: pre-clean, clean, post-clean.
+
+=== Resources
+
+Ofter it occurs that your java code needs some kind of configuration
+files.  One of the most famous examples for this kind of
+configurations is one of those numerous logging frameworks like log4j,
+logback, log4j2 etc.  So the question is where to locate such
+configuration files? The {link-default-folder-layout} gives you the
+information to put such things into 'src/main/resources' which is of
+course intended for the production code (in other words which is
+packaged later into the jar file). Furthermore it is often the case as
+well as having different configuration files for your unit tests cause
+you would like having a different logging level in your unit test so
+you need a different set of files which should be located into
+'src/test/resources'. This means in other words those files will not
+be packaged into the resulting jar file.
+
+
+HINT about super pom !
+
+So usually you can simply put your appropriate configuration files
+into 'src/test/resources' or 'src/main/resources' and they will
+automatically be copied into 'target/classes' or
+'target/test-classes'.  But why are they copied ? The most important
+point about this is that you can use such resources by the usual java
+resources way like this:
+
+code example (getClass().getResourcesAsStream("/log4j.properties");
+This works for unit tests and for your production code! (good example?)
+
+One important thing to mention is that the order on your class path 
+is that the resources from your test resources coming first before
+your production code which means you can give a different configurtation file
+for every file which you already use in your production code and so you
+can change the behaviour in your unit tests to change things for example
+the logging level or something else.
+
+
+* {link-maven-resources-plugin}
+
+=== Let The Source Be With You(????)
+
+You usually write Java source code (ok ok sometimes you write
+difference sources like {link-groovy}, {link-scala}, {link-ceylon} or
+whatever) and of course you would like to compile such code into
+usable class files which can be used to run your application
+or to run your unit tests.
+
+This is the purpose of the {link-maven-compiler-plugin} which will
+compile your source code into class files.
+
+The sources code is located in 'src/main/java' and will be compiled
+into the 'target/classes' folder. Apart from that the Maven Compiler
+Plugin is also responsible to compile your unit/integration test code
+which is located in 'src/test/java' into 'target/test-classes'.
+
+=== Let's See If The Code Is Working?
+
+After we have compiled the whole code we should run the unit tests to
+check our code. This is done before the code will be packaged into a
+jar file, cause if one of your unit tests will fail your build will
+fail as well and no package is being build.
+
+
+For this purpose the {link-maven-surefire-plugin} is responsible
+to run those unit tests.
+
+
+=== Let The Jar's Come To Me
+
+After the source has been compiled into the appropriate '.class' files
+they will be packed into a jar file which is the base unit to be
+distributed. The jar will contain only the files from 'target/classes'.
+So if you don't do something special your unit tests will never be
+packed into jar files.
+
+The {link-maven-jar-plugin} is bound to the 'package' build life cycle phase
+to create a jar file. This jar file contains only the
+files from the 'src/main/java' inclusive the resources from
+'src/main/resources' area (Let use call it the production code area).
+
+There exsist situations where you like to package your test code into
+a jar as well. This can be achieved by using the `test-jar` goal of the
+{link-maven-jar-plugin}. 
+
+See examples (testing with common code).
+
+* {link-maven-jar-plugin}
++
+Creating test-jars
+non transitive behaviour of test-jar artifact. Solution create a usual separate module.
+
+=== Install The Archive
+
+After the jar archive has been created the archive can be installed into the local 
+repository to be consumed by other projects on the same machine. For such a purpose
+the {link-maven-install-plugin} is responsible.
+
+=== Distribute It To The World
+
+To break the limits of your machine you can distribute an jar archive to 
+a remote repository which can be used by other users.
+For this the {link-maven-deploy-plugin}.
+
+
+
+
+* {link-maven-war-plugin}
+* {link-maven-ear-plugin}
+* {link-maven-ejb-plugin}
+* {link-maven-shade-plugin}
+* {link-maven-deploy-plugin}
+* {link-maven-install-plugin}
++
+Idea and usage? Why?
+* {link-buildnumber-maven-plugin}
+* {link-build-helper-maven-plugin}
+* {link-appassembler-maven-plugin}
+* {link-cargo-maven2-plugin}
+* {link-exec-maven-plugin}
+* {link-sql-maven-plugin}
+* {link-templating-maven-plugin}
+* {link-versions-maven-plugin}
+* ??ß
+
+
+http://mojo.codehaus.org/clirr-maven-plugin/plugin-info.html
+
+
+Google Code:
+maven-processor-plugin
+http://stackoverflow.com/questions/24345920/could-i-use-java-6-annotation-processors-jsr-269-to-produce-code-for-gwt-in-ma
+
+
+http://mvnplugins.fusesource.org/maven/1.4/maven-uberize-plugin/compared-to-shade.html
+
+maven-graph-plugin
+
+https://github.com/fusesource/mvnplugins/
+
+(Looks intresting)
+http://site.kuali.org/maven/plugins/graph-maven-plugin/1.2.3/dependency-graphs.html
+Can add the graphs a reports to the build. 
+Take a deeper look into it.
+http://site.kuali.org/maven/plugins/
+
+Checksums
+http://nicoulaj.github.io/checksum-maven-plugin/
+
+
+nar-maven-plugin:
+https://github.com/maven-nar/nar-maven-plugin
+
+https://github.com/marceloverdijk/lesscss-maven-plugin
+
+=== Let The Force Be With You
+
+The larger a build becomes the more you need to control what happens
+within your build otherwise the {link-broken-window-problem} occurs
+and will likely result in later problems you should prevent.
+
+How can you force rules within in your build?  Sometimes it is not
+enough to suggest the best practice you need to force the best
+practices within a build. The tool to do so is the
+{link-maven-enforcer-plugin}.
+
+
+One of the basic things is to force your build is built with the
+correct Maven version, cause htere exist some things which don't work
+with older Maven versions etc.  The way to prevent building with the
+wrong Maven version was to use the `prerequsites` tag like this:
+
+[source,xml,numbered]
+--------------------------------------
+<prerequisites>
+  <maven>2.2.1</maven>
+</prerequisites>
+--------------------------------------
+
+but based on the improvements in Maven within Maven 3 the
+'prerequsites' part in the pom has been marked as depcrecated and will
+not be checked. So to make sure a build will only works with a
+particular Maven version for example 3.1.1 you need to go the
+following path:
+
+[source,xml,numbered]
+--------------------------------------
+<project ...>
+
+  <!-- This marked as deprecated for Maven 3.X. This is checked by maven-enforcer-plugin -->
+  <!--  http://jira.codehaus.org/browse/MNG-4840 -->
+  <!--  http://jira.codehaus.org/browse/MNG-5297 -->
+  <prerequisites>
+    <maven>${maven.version}</maven>
+  </prerequisites>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>${maven.version}</version>
+                </requireMavenVersion>
+              </rules>    
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  ..
+</project>
+--------------------------------------
+
+
+
+
+
+[source,xml,numbered]
+--------------------------------------
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-enforcer-plugin</artifactId>
+  <executions>
+    <execution>
+      <id>enforce-maven</id>
+      <goals>
+        <goal>enforce</goal>
+      </goals>
+      <configuration>
+        <rules>
+          <requireSameVersions>
+            <plugins>
+              <plugin>org.apache.maven.plugins:maven-surefire-plugin</plugin>
+              <plugin>org.apache.maven.plugins:maven-failsafe-plugin</plugin>
+              <plugin>org.apache.maven.plugins:maven-surefire-report-plugin</plugin>
+            </plugins>
+          </requireSameVersions>
+        </rules>    
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
+--------------------------------------

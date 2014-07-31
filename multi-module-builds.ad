@@ -1,0 +1,133 @@
+= Multi Module Builds
+
+== Overview
+
+The idea of a multi-module-build is to have maven modules build and released under the
+same version which are directly related.
+
+Let us start with a simple example project which contains several modules like the following:
+
+-------------
+module-core
+module-client
+module-server
+-------------
+
+Before we know about multi-module-builds you should have created three
+separated maven projects and had to define dependencies between those modules
+and work on them without any relationship.  Obviously you can imagine that the
+above module have relationship to each other, cause the `module-client` module
+has a dependency to the `module-core` whereas the `module-server` has a
+dependency to `module-core` and so on.
+
+Wouldn't it be the best if all the above module live within a single location
+(git repository or SVN trunk for example) where you could simply checkout
+those modules and work with your IDE on the whole project, cause if you need to
+change something in your `module-core` it's very likely that you need to change
+the depending module `module-client` as well? Exactly for such purposes a
+multi-module-build exists in Maven. 
+
+
+== Structure
+
+Based on the idea of the relationship of the modules it is neccesary to create
+an appropriate folder structure which more or less shows the relationship of
+the module to each other.
+
+
+---------------
+ +--- pom.xml
+   +--- module-core
+   +--- module-client
+   +--- module-server
+---------------
+
+
+There are some parts which you need to pay attention to, to get a good working
+environment. The first thing is the pom on the root level of this structure.
+This pom file contains no code nor does it produce an artifact as the usual
+maven project. This mean in other words it does not produce an `jar`-File.
+This is the reason why this Maven project defines it's packaging as `pom`.
+
+---------------
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.soebes.smpp</groupId>
+    <artifactId>smpp</artifactId>
+    <version>0.6.4</version>
+  </parent>
+
+  <groupId>com.soebes.mpg.examples.mmb</groupId>
+  <artifactId>parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  ..
+  <modules>
+    <module>module-core</module>
+    <module>module-client</module>
+    <module>module-server</module>
+  </modules>
+  ..
+</project>
+---------------
+
+Apart from the above you need to define the list of modules which you
+would like include in this parent. It is best practice to name the
+folders as their appropriate `artifactId`. So now let us take a look
+at a module how its pom file looks like:
+
+
+---------------
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.soebes.mpg.examples.mmb</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>module-core</artifactId>
+...
+---------------
+
+
+
+
+
+http://stackoverflow.com/questions/11528877/releasing-a-multi-module-maven-project-hosted-in-single-git-repository/[See here]
+
+
+What is the basic idea of a multi module build? Same version? Same time of releasing them.
+
+  - Multiple Modules
+  - mvn install (first why?)
+  - Unit Tests (mvn test)
+  - Integration Test (mvn integration-test)
+  - packaging
+  - use of an module from a reactor build in other projects?
+
+Pro's and Cons'
+http://stackoverflow.com/questions/23584429/releasing-a-modular-maven-project
+
+Jenkins support for separated maven projects to be released:
+https://wiki.jenkins-ci.org/display/JENKINS/Maven+Cascade+Release+Plugin
+
+
+Aggregator ? Difference.
+
+http://stackoverflow.com/questions/23936339/maven-parent-project-structure
+
+
+What if only a single modules code has been changed? Can i release only a single 
+module from the multi module build? Draw backs?

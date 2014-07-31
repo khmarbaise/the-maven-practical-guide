@@ -1,0 +1,125 @@
+= Best Practice
+
+== Generate Into Source Folder
+
+generating code into src folder instead of 'target'.
+Pro/Cons on that approach..
+
+In Maven the convention exists to put everything which is generated,
+compiled etc. into the 'target' folder of the appropriate module.
+Unfortunately in the wild you will find builds which do not follow the
+convention and for example generate things into 'src' folder which is
+a bad practice (Hint why?). 
+
+So let use think about this a little bit more. The first thing 
+is if you change something in 'src' folder means your version control
+system will be alarmed about such a change which on the other hand means
+you will be alarmed about a change which is not really a change, cause
+generated code will usually generate the same code from the same source
+but usually with some changed timestamp within the generated code.
+The consequence on the above is you must exclude some areas from your
+version control view to suppress such irritations.
+
+The next thing is you need to change the configuration of your appropriate
+plugins, cause more or less all plugins follow that conventions (ok there 
+exist some exceptions). This implies your configuration in your pom gets
+larger and of course does not follow the conventions over configuration
+paradigm.
+
+Other 'solutions' which fall into the same category do something different.
+They generate into a folder within 'target' things like 'target/generated-code'
+but they usually missed that plugins usually add the generated code folder
+to the project sources folders automaticially already.
+But in contradiction they explicitly add the generated folder via supplemental
+plugins like 'build-helper-maven-plugin' to the sources folder.
+
+== Dependencies / DependencyManagement
+
+Scope only in real dependencies not in dependencyManagement
+
+means always use scope:test in the real project and not in dependencyManagement
+
+
+== Deps via Props
+
+Using properties to control the dependencies with a so called company pom?
+
+Result: Complete build is necessary instead of using released within a build.
+
+
+
+== Company wide parent(s)
+
+Manifest setup with master parent.
+
+--------------------------------
+<configuration>
+  <archive>
+    <addMavenDescriptor>true</addMavenDescriptor>
+    <index>true</index>
+    <manifest>
+      <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+      <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+    </manifest>
+    <manifestEntries>
+      <artifactId>${project.artifactId}</artifactId>
+      <groupId>${project.groupId}</groupId>
+      <version>${project.version}</version>
+      <buildNumber>${buildNumber}</buildNumber>
+      <scmBranch>${scmBranch}</scmBranch>
+    </manifestEntries>
+  </archive>
+</configuration>
+--------------------------------
+
+
+What should be defined in such a parent?
+http://stackoverflow.com/questions/24409889/where-should-i-keep-my-companys-parent-pom
+
+Style Guide for POM files.
+SortPom (default style for pom files)
+
+Why you should never use version ranges?
+
+No different dependencies via profiles! Why ? The consequences?
+
+Naming modules based on their artifactId's.
+
+Don't do this:
+http://stackoverflow.com/questions/23901560/how-to-handle-different-dependencies-requirements-for-web-servers-in-pom-xml
+
+
+Ideas like this:
+http://developer-blog.cloudbees.com/2013/03/playing-trade-offs-with-maven.html
+
+This is a bad idea:
+http://stackoverflow.com/questions/24104735/embedding-dependencies-resources-in-maven
+
+What is a good solution for such kind of questions:
+http://stackoverflow.com/questions/24248873/maven-package-resources-with-classes
+Answer: create a mod-core, mod-war and that's it?
+
+== Building for different Environments
+You are often face with the problem having different environments like 
+dev, test, prod this is just a simple example how real life is. 
+
+== How to do good integration tests for maven plugins
+
+One of the final tests should be to clean your local repository 
+and start your integration tests of your plugin from scratch
+
+rm -fr $HOME/.m2/repository 
+mvn -Prun-its clean verify 
+
+This should work without any problem.
+
+== Nexus
+
+why the order of the repositories does really matter...
+
+== Branching Strategies
+
+http://stackoverflow.com/questions/24420474/do-you-really-need-to-version-the-trunk-of-a-maven-project
+
+
+https://github.com/lewisd32/lint-maven-plugin

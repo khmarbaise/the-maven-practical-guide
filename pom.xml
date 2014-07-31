@@ -1,0 +1,93 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.soebes.smpp</groupId>
+    <artifactId>smpp</artifactId>
+    <version>0.6.4</version>
+  </parent>
+
+  <groupId>com.soebes.tpmg</groupId>
+  <artifactId>the-maven-practical-guide</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Maven Practical Guide</name>
+  <description>The Maven Practical Guide</description>
+  <url>http://khmarbaise.github.com/mpg/</url>
+  <inceptionYear>2014</inceptionYear>
+
+  <organization>
+    <name>SoftwareEntwicklung Beratung Schulung</name>
+    <url>http://www.soebes.de</url>
+  </organization>
+
+
+  <developers>
+    <developer>
+      <id>kama</id>
+      <name>Karl Heinz Marbaise</name>
+      <email>mpg@soebes.de</email>
+      <roles>
+        <role>Lead</role>
+        <role>Committer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>default</system>
+    <url>https://github.com/khmarbaise/mpg/issues</url>
+  </issueManagement>
+
+  <scm>
+    <developerConnection>scm:git:git://github.com:khmarbaise/mpg.git</developerConnection>
+    <connection>scm:git:git://github.com/khmarbaise/mpg.git</connection>
+    <url>https://github.com/khmarbaise/mpg</url>
+  </scm>
+
+  <modules>
+    <module>examples</module>
+  </modules>
+
+  <profiles>
+    <profile>
+      <!--
+        mvn -Pgithub site
+        will deploy the site to github site.
+       -->
+      <id>github</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.github</groupId>
+            <artifactId>site-maven-plugin</artifactId>
+            <configuration>
+              <message>Creating site for ${project.version}</message>
+              <server>github</server>
+              <override>true</override>
+              <includeAttached>true</includeAttached>
+              <server>github</server>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>site</goal>
+                </goals>
+                <phase>site</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+</project>

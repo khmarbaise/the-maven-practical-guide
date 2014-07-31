@@ -1,0 +1,41 @@
+
+
+Take a look on that and make it better, cause mvn eclipse:eclipse shoulnd't be necessary 
+any more.
+http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+
+Maven Version schema:
+
+http://kylelieber.com/2012/06/maven-versioning-strategy/
+
+
+I have to read that ..
+http://blog.ltgt.net/maven-is-broken-by-design/
+
+http://blog.lexspoon.org/2012/12/recursive-maven-considered-harmful.html
+
+http://www.javarants.com/2013/07/16/why-your-new-jvm-build-tool-is-making-things-worse-aka-use-maven-to-execute-your-build/
+
+
+http://semver.org/
+
+
+Incremental Builds:
+http://takari.io/2014/03/25/incremental-build.html
+
+Interesting informations:
+http://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-for-2014/
+
+http://www.mkyong.com/maven/how-to-create-a-manifest-file-with-maven/
+
+
+Maven Polyglot
+https://github.com/takari/maven-polyglot
+
+The following should be made part of that book:
+http://maven.40175.n5.nabble.com/Complex-Maven-projects-Tutorials-Books-td5795625.html
+
+http://blog.artifact-software.com/tech/?tag=maven
+
+Wher to locate aquirilian tests.
+http://stackoverflow.com/questions/24517814/maven-folder-layout-should-i-place-tests-in-the-ear-or-its-sub-modules

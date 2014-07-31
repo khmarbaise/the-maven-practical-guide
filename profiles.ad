@@ -1,0 +1,11 @@
+Profiles in Maven
+-----------------
+Why and how to use Profiles.
+
+Typical scenarios where to use profiles.
+
+CI build (jenkins) etc.
+
+http://blog.soebes.de/blog/2013/11/09/why-is-it-bad-to-activate-slash-deactive-modules-by-profiles-in-maven/[Don't use profiles to activate/deactive modules]
+
+Situations where you shouldn't use profiles.

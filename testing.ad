@@ -1,0 +1,148 @@
+:sourcedir: examples/testing
+
+= Testing with Maven
+
+Basic Unit Testing, Responsibilities of Plugins, Using JUnit, TestNG,
+multi module builds and unit tests.
+
+
+== Overview
+
+This chapter will give some practical hints how you can use unit- and
+integration tests in relationship with Maven. Furthermore it will give
+you tipps how to prevent several issues with testing.
+
+
+Think about some examples about the following:
+http://stackoverflow.com/questions/23588707/maven-layout-how-to-be-sure-that-src-main-does-not-depend-on-src-test
+
+http://stackoverflow.com/questions/23659829/maven-run-class-before-test-phase-exec-maven-plugin-execjava-not-executing-cla
+
+Information:
+http://labs.carrotsearch.com/randomizedtesting.html
+http://stackoverflow.com/questions/8295100/how-to-re-run-failed-junit-tests-immediately
+
+https://blog.42.nl/articles/keeping-integration-tests-isolated/
+
+=== Unit Testing
+
+Unit testing can be done out-of-box in Maven which means you just have
+to locate your unit tests into 'src/test/java' and follow the naming
+conventions. The resulting and recommended folder structure will be show
+in the followin example.
+
+[source,xml,numbered]
+--------------------------------------
+.
+|-- pom.xml
+`-- src
+    |-- main
+    |   `-- java
+    |       `-- com
+    |           `-- soebes
+    |               `-- training
+    |                   `-- maven
+    |                       `-- simple
+    |                           `-- BitMask.java
+    `-- test
+        `-- java
+            `-- com
+                `-- soebes
+                    `-- training
+                        `-- maven
+                            `-- simple
+                                `-- BitMaskTest.java
+--------------------------------------
+
+The folder 'src/main/java' plus an approriate package structure will
+contain your production code whereas the 'src/test/java' plus the 
+package structure will contains your unit test area.
+
+.Naming Schema for Unit Tests
+[width="60%",options="header"]
+|==============================================
+| Name Pattern    | Example
+| Test*.java      | TestBitMask.java
+| *Test.java      | BitMaskTest.java
+| *TestCase.java  | BitMaskTestCase.java
+|==============================================
+
+
+The following simple example will show how a basic unit test can look
+like.
+[source,java]
+----
+include::{sourcedir}/ut-example/src/test/java/com/soebes/training/maven/simple/BitMaskTest.java[]
+----
+
+So if you follow the conventions in Maven and put your tests into the
+appropriate locations 'src/test/java' those tests will automatically
+be picked up and executed as unit tests. The plugin which is
+responsible for execution of those unit tests is the
+{link-maven-surefire-plugin}.
+
+Make an example output here....
+
+An important thing to think of is sometimes which test framework you
+would like to use? There are things like {link-junit}, {link-testng},
+Spock and of course many other opportunities.
+
+In the case you would like to use {link-junit} within your unit tests
+you just simply add the appropriate dependency to your 'pom.xml' and
+that's it.
+
+[source,xml]
+----
+include::{sourcedir}/ut-example/pom.xml[]
+----
+
+If you prefer {link-testng} to use for your unit tests you can simply
+add the dependency for {link-testng} and your unit tests can be run as
+well without any supplemental change except the changes based on the
+differences between {link-junit} and {link-testng} itself.
+
+[source,xml]
+----
+include::{sourcedir}/ut-example-testng/pom.xml[]
+----
+
+
+Location of unit tests
+
+'src/test/java' is the correct location for unit tests.
+
+
+Packaging of unit tests
+execution of unit tests
+Support of testing frameworks
+JUnit, TestNG, Spock?, BDD ?
+
+
+=== Integration Testing
+
+What is integration tests?
+How to use? Naming convention?
+In which cases should be used a separate module?
+
+
+Test an web application with Selenium? (Examples).
+
+== Importance of Separation
+
+Why is it important to separate between unit tests and integration
+tests?
+
+If look into the formal definition of unit tests you will read things
+like independent from any resource etc.  So you can by definition
+parallelize unit tests in general. If you don't have real unit tests
+you can't go that simple path to improve your build time.
+
+In controdiction integration tests are not independent and could not
+be parallized by default. Under special circumstances you might change
+cause you know your code and of course your tests. This means to
+parallelize integration tests is always a task which should be done
+separately.
+
+
+http://tempusfugitlibrary.org/documentation/
+http://labs.carrotsearch.com/randomizedtesting.html

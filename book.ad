@@ -1,0 +1,224 @@
+The Maven Practical Guide
+=========================
+Karl-Heinz Marbaise <the-maven-practival-guide@soebes.com>
+v0.0.3, 2014-06
+:doctype: book
+:toc: right
+
+:source-highlighter: pygments
+
+:link-junit: http://junit.org[JUnit]
+:link-testng: http://testng.org[TestNG]
+
+:link-mib: http://en.wikipedia.org/wiki/Binary_prefix#Specific_units_of_IEC_60027-2_A.2_and_ISO.2FIEC_80000[MiB]
+
+:link-groovy: http://groovy.codehaus.org[Groovy]
+:link-scala: http://scala.org[Scala]
+:link-ceylon: http://ceylon-lang.org[Ceylon]
+:link-ruby: http://www.ruby-lang.org[Ruby]
+
+:link-apache-software-foundation: http://www.apache.org/[Apache Software Foundation]
+
+:link-mojo-plugins: http://mojo.codehaus.org/plugins.html[Mojo's Plugin List]
+:link-asf-plugins: http://maven.apache.org/plugins/index.html[Apache Software Foundation Maven Plugin List]
+
+:link-life-cycle-phase: http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html[Build Life Cycle Phase]
+:link-build-life-cycle: http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html[Build Life Cycle]
+
+:link-default-folder-layout: http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html[Default Folder Layout]
+
+:link-maven-clean-plugin: http://maven.apache.org/plugins/maven-clean-plugin/[Maven Clean Plugin]
+:link-maven-compiler-plugin: http://maven.apache.org/plugins/maven-compiler-plugin/[Maven Compiler Plugin]
+:link-maven-jar-plugin: http://maven.apache.org/plugins/maven-jar-plugin/[Maven Jar Plugin]
+:link-maven-war-plugin: http://maven.apache.org/plugins/maven-war-plugin/[Maven WAR Plugin]
+:link-maven-ear-plugin: http://maven.apache.org/plugins/maven-ear-plugin/[Maven EAR Plugin]
+:link-maven-ejb-plugin: http://maven.apache.org/plugins/maven-ejb-plugin/[Maven EJB Plugin]
+:link-maven-resources-plugin: http://maven.apache.org/plugins/maven-resources-plugin/[Maven Resources Plugin]
+:link-maven-install-plugin: http://maven.apache.org/plugins/maven-install-plugin/[Maven Install Plugin]
+:link-maven-deploy-plugin: http://maven.apache.org/plugins/maven-deploy-plugin/[Maven Deploy Plugin]
+:link-maven-shade-plugin: http://maven.apache.org/plugins/maven-shade-plugin/[Maven Shade Plugin]
+:link-maven-surefire-plugin: http://maven.apache.org/plugins/maven-surefire-plugin/[Maven Surefire Plugin]
+:link-maven-failsafe-plugin: http://maven.apache.org/plugins/maven-failsafe-plugin/[Maven Surefire Plugin]
+:link-maven-enforcer-plugin: http://maven.apache.org/plugins/maven-enforcer-plugin/[Maven Enforcer Plugin]
+:link-maven-invoker-plugin: http://maven.apache.org/plugins/maven-invoker-plugin/[Maven Invoker Plugin]
+
+:link-appassembler-maven-plugin: http://mojo.codehaus.org/appassembler-maven-plugin[Mojo's Appassembler Maven Plugin]
+:link-jdepend-maven-plugin: http://mojo.codehaus.org/jdepend-maven-plugin/[Mojo's JDepend Maven Plugin]
+:link-exec-maven-plugin: http://mojo.codehaus.org/exec-maven-plugin/[Mojo's Exec Maven Plugin]
+:link-versions-maven-plugin: http://mojo.codehaus.org/version-maven-plugin/[Mojo's Versions Maven Plugin]
+:link-sql-maven-plugin: http://mojo.codehaus.org/sql-maven-plugin/[Mojo's SQL Maven Plugin]
+:link-templating-maven-plugin: http://mojo.codehaus.org/templating-maven-plugin/[Mojo's Templating Maven Plugin]
+:link-build-helper-maven-plugin: http://mojo.codehaus.org/build-helper-maven-plugin/[Mojo's Build Helper Maven Plugin]
+:link-buildnumber-maven-plugin: http://mojo.codehaus.org/buildnumber-maven-plugin/[Mojo's Buildnumber Maven Plugin]
+
+:link-cargo-maven2-plugin: http://cargo.codehaus.org/Maven2+plugin[Mojo's Cargo Maven 2 Plugin]
+
+[dedication]
+Example Dedication
+------------------
+Optional dedication.
+
+This document is an AsciiDoc book skeleton containing briefly
+annotated example elements plus a couple of example index entries and
+footnotes.
+
+Books are normally used to generate DocBook markup and the titles of
+the preface, appendix, bibliography, glossary and index sections are
+significant ('specialsections').
+
+
+[preface]
+Example Preface
+---------------
+Optional preface.
+
+Preface Sub-section
+~~~~~~~~~~~~~~~~~~~
+Preface sub-section body.
+
+
+The First Chapter
+-----------------
+Chapters can contain sub-sections nested up to three deep.
+footnote:[An example footnote.]
+indexterm:[Example index entry]
+
+Chapters can have their own bibliography, glossary and index.
+
+And now for something completely different: ((monkeys)), lions and
+tigers (Bengal and Siberian) using the alternative syntax index
+entries.
+(((Big cats,Lions)))
+(((Big cats,Tigers,Bengal Tiger)))
+(((Big cats,Tigers,Siberian Tiger)))
+Note that multi-entry terms generate separate index entries.
+
+Here are a couple of image examples: an image:images/smallnew.png[]
+example inline image followed by an example block image:
+
+.Tiger block image
+image::images/apache-maven-project.png[Apache Maven Project]
+image::images/maventxt_logo_200.png[Maven Logo]
+
+Followed by an example table:
+
+.An example table
+[width="60%",options="header"]
+|==============================================
+| Option          | Description
+| -a 'USER GROUP' | Add 'USER' to 'GROUP'.
+| -R 'GROUP'      | Disables access to 'GROUP'.
+|==============================================
+
+.An example example
+===============================================
+Lorum ipum...
+===============================================
+
+[[X1]]
+Sub-section with Anchor
+~~~~~~~~~~~~~~~~~~~~~~~
+Sub-section at level 2.
+
+Chapter Sub-section
+^^^^^^^^^^^^^^^^^^^
+Sub-section at level 3.
+
+Chapter Sub-section
++++++++++++++++++++
+Sub-section at level 4.
+
+This is the maximum sub-section depth supported by the distributed
+AsciiDoc configuration.
+footnote:[A second example footnote.]
+
+
+The Second Chapter
+------------------
+An example link to anchor at start of the <<X1,first sub-section>>.
+indexterm:[Second example index entry]
+
+An example link to a bibliography entry <<taoup>>.
+
+Dependencies
+------------
+We should make some examples how dependencies are
+being solved (dependency puzzler).
+
+include::basics.ad[]
+
+include::profiles.ad[]
+
+include::different-environments.ad[]
+
+include::multi-module-builds.ad[]
+
+include::testing.ad[]
+
+include::assemblies.ad[]
+
+include::plugins.ad[]
+
+include::release.ad[]
+
+include::ci-solution.ad[]
+
+include::repository-manager.ad[]
+
+include::build-smells.ad[]
+
+include::plugin-development.ad[]
+
+include::performance.ad[]
+
+include::best-practice.ad[]
+
+:numbered!:
+
+= Example Appendix
+
+One or more optional appendixes go here at section level 1.
+
+== Appendix Sub-section
+
+Sub-section body.
+
+
+= Example Bibliography
+
+The bibliography list is a style of AsciiDoc bulleted list.
+
+[bibliography]
+.Books
+- [[[taoup]]] Eric Steven Raymond. 'The Art of Unix
+  Programming'. Addison-Wesley. ISBN 0-13-142901-9.
+- [[[walsh-muellner]]] Norman Walsh & Leonard Muellner.
+  'DocBook - The Definitive Guide'. O'Reilly & Associates. 1999.
+  ISBN 1-56592-580-7.
+
+[bibliography]
+.Articles
+- [[[abc2003]]] Gall Anonim. 'An article', Whatever. 2003.
+
+
+
+= Example Glossary
+Glossaries are optional. Glossaries entries are an example of a style
+of AsciiDoc labeled lists.
+
+= Example Colophon
+
+Text at the end of a book describing facts about its production.
+
+This books has been created by using the following tools:
+http://git-scm.com[Git], http://asciidoc.org/[AsciiDoc] and
+http://www.vim.org[Vim] for text editing.
+
+
+[index]
+= Example Index
+
+////////////////////////////////////////////////////////////////
+The index is normally left completely empty, it's contents being
+generated automatically by the DocBook toolchain.
+////////////////////////////////////////////////////////////////
