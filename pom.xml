@@ -8,7 +8,7 @@
   <parent>
     <groupId>com.soebes.smpp</groupId>
     <artifactId>smpp</artifactId>
-    <version>0.6.4</version>
+    <version>0.6.5</version>
   </parent>
 
   <groupId>com.soebes.tpmg</groupId>
@@ -18,7 +18,7 @@
 
   <name>Maven Practical Guide</name>
   <description>The Maven Practical Guide</description>
-  <url>http://khmarbaise.github.com/mpg/</url>
+  <url>http://maven-practical-guide.com</url>
   <inceptionYear>2014</inceptionYear>
 
   <organization>
@@ -45,9 +45,9 @@
   </issueManagement>
 
   <scm>
-    <developerConnection>scm:git:git://github.com:khmarbaise/mpg.git</developerConnection>
-    <connection>scm:git:git://github.com/khmarbaise/mpg.git</connection>
-    <url>https://github.com/khmarbaise/mpg</url>
+    <developerConnection>scm:git:https://github.com/khmarbaise/maven-practical-guide</developerConnection>
+    <connection>scm:git:https://github.com/khmarbaise/maven-practical-guide</connection>
+    <url>https://github.com/khmarbaise/maven-practical-guide</url>
   </scm>
 
   <modules>
