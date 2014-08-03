@@ -1,9 +1,11 @@
 The Maven Practical Guide
 =========================
-Karl-Heinz Marbaise <the-maven-practival-guide@soebes.com>
+Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.com>
 v0.0.3, 2014-06
 :doctype: book
 :toc: right
+
+:keywords: Maven,Documentation,Apache Maven
 
 :source-highlighter: pygments
 
@@ -54,13 +56,15 @@ v0.0.3, 2014-06
 :link-cargo-maven2-plugin: http://cargo.codehaus.org/Maven2+plugin[Mojo's Cargo Maven 2 Plugin]
 
 [dedication]
-Example Dedication
-------------------
-Optional dedication.
+THIS IS WORK IN PROGRESS
+------------------------
+This is work in progress.
 
-This document is an AsciiDoc book skeleton containing briefly
-annotated example elements plus a couple of example index entries and
-footnotes.
+If you have any suggestions, improvments or improvments
+please use the following issue tracking system:
+
+https://github.com/khmarbaise/maven-practical-guide/issues
+
 
 Books are normally used to generate DocBook markup and the titles of
 the preface, appendix, bibliography, glossary and index sections are
