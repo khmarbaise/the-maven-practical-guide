@@ -25,10 +25,10 @@ http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environmen
 
 === The Obvious Solution
 
-Many people using Maven will suggest to use profiles for such purposes
-So you have different profiles which define the filtered values for
-the appropriate environments and you will build the appropriate
-artifacts.
+Many people using Maven would suggest to use profiles for such
+purposes. So you have different profiles which define the filtered
+values for the appropriate environments and you will build the
+appropriate artifacts.
 
 -------------------
 mvn -Pdevelopment clean package
