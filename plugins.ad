@@ -227,6 +227,9 @@ Take a deeper look into this
 http://docs.spring.io/spring-boot/docs/1.1.4.RELEASE/maven-plugin/usage.html
 spring-boot-maven-plugin
 
+Very interesting plugin:
+http://www.javacodegeeks.com/2014/08/maven-git-release.html
+
 === Let The Force Be With You
 
 The larger a build becomes the more you need to control what happens
