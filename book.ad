@@ -29,6 +29,7 @@ v0.0.3, 2014-06
 
 :link-default-folder-layout: http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html[Default Folder Layout]
 
+:link-maven-assembly-plugin: http://maven.apache.org/plugins/maven-assembly-plugin/[Maven Assembly Plugin]
 :link-maven-clean-plugin: http://maven.apache.org/plugins/maven-clean-plugin/[Maven Clean Plugin]
 :link-maven-compiler-plugin: http://maven.apache.org/plugins/maven-compiler-plugin/[Maven Compiler Plugin]
 :link-maven-jar-plugin: http://maven.apache.org/plugins/maven-jar-plugin/[Maven Jar Plugin]

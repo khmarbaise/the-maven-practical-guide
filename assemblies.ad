@@ -6,14 +6,34 @@
 
 During the usual usage you will often be faced with the situation to
 create a kind of a distribution archive for example 'dist.zip' or
-'dist.tar.gz' or other kind of archive flavors.  Things which also
+'dist.tar.gz' or other kind of archive flavors. Things which also
 happen are to create a so called 'ueber' jar which you can use to call
 your java application from the command line (There are other
 opportunities as well see Chapter ...).  This chapter will give a wide
 overview of the possibilities how you can create the different flavors
 of archives which you need to fullfil the requirements of your builds
-and also we will take a look what kind of mistakes you can make and
+furthermore we will take a look what kind of mistakes you can make and
 how to prevent them.
+
+== Single Executable Artifact
+
+One of the requirements you will often be confronted with is to create
+an archive which can simply be executed on command line. This is often
+called an 'ueber' or 'fat-jar'.  This can simply be accomplished by
+using {link-maven-assembly-plugin}'s
+http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html[pre-defined
+descriptors].
+
+Currently there are four of them:
+
+ 1. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#bin[bin]
+ 2. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#jar-with-dependencies[jar-with-dependencies]
+ 3. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#src[src]
+ 4. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#project[project]
+
+So back to our real problem. We start with an example project which looks like this:
+
+
 
 == Default Assemblies
 
