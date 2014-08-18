@@ -1,4 +1,5 @@
 :sourcedir: examples/assemblies
+:link-pre-defined-descriptors: http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html[pre-defined descriptors]
 
 = Assemblies
 
@@ -19,10 +20,8 @@ how to prevent them.
 
 One of the requirements you will often be confronted with is to create
 an archive which can simply be executed on command line. This is often
-called an 'ueber' or 'fat-jar'.  This can simply be accomplished by
-using {link-maven-assembly-plugin}'s
-http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html[pre-defined
-descriptors].
+called an 'ueber-jar' or 'fat-jar'.  This can simply be accomplished by
+using {link-maven-assembly-plugin}'s {link-pre-defined-descriptors}:
 
 Currently there are four of them:
 
@@ -33,7 +32,25 @@ Currently there are four of them:
 
 So back to our real problem. We start with an example project which looks like this:
 
+[source,xml]
+----
+include::{sourcedir}/assembly-jar-with-dependencies/pom.xml[]
+----
 
+Via using the above pom you will get a jar which contains all the
+dependencies you have defined in the pom file as part of the resulting
+jar which is named by using a classifier `jar-with-dependencies` to
+make it distinguishable from the other artifacts.  The other aspect of
+this example project is that you can see how simple it is to create
+such an artifact. One thing which should be mentioned about the
+{link-maven-assembly-plugin}. It is not bound to any
+{link-life-cycle-phase} by default which means you need to bind it to
+the life-cylce if you like to use it.
+
+A note about the given example. In real life you should find this 
+example suspicious, cause it will use a typical test dependency (TestNG)
+without the scope `test` which might be wrong. In this case it is 
+only use for example purposes.
 
 == Default Assemblies
 

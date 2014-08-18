@@ -11,12 +11,13 @@
     <version>0.1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.soebes.tmpg.examples.testing</groupId>
-  <artifactId>tmpg-examples-aggregator</artifactId>
+  <groupId>com.soebes.tmpg.examples.assemblies</groupId>
+  <artifactId>tmpg-assemblies-aggregator</artifactId>
   <packaging>pom</packaging>
-  <name>TMPG :: Testing :: Aggregator</name>
+  <name>TMPG :: Assemblies :: Aggregator</name>
 
   <modules>
-    <module>ut-example</module>
+    <module>assembly-jar-with-dependencies</module>
   </modules>
+
 </project>

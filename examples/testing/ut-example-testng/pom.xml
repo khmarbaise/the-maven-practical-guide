@@ -15,7 +15,7 @@
   <artifactId>unit-test-example-testng</artifactId>
   <version>0.1.0-SNAPSHOT</version>
 
-  <name>Maven Practical Guide :: Unit Test Example</name>
+  <name>TMPG :: Testing :: Unit Test Example (TestNG)</name>
 
   <dependencies>
     <dependency>
