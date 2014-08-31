@@ -52,6 +52,14 @@ example suspicious, cause it will use a typical test dependency (TestNG)
 without the scope `test` which might be wrong. In this case it is 
 only use for example purposes.
 
+== Creating an ZIP Archive
+
+The idea of an zip archive or to be more accurate any archive is to
+create an archive which contains particular content which is defined
+by the project in the way you like to do that and define how it will look 
+like within the archive. This means having a folder structure within
+the archive.
+
 == Default Assemblies
 
 
