@@ -10,11 +10,25 @@ create a kind of a distribution archive for example 'dist.zip' or
 'dist.tar.gz' or other kind of archive flavors. Things which also
 happen are to create a so called 'ueber' jar which you can use to call
 your java application from the command line (There are other
-opportunities as well see Chapter ...).  This chapter will give a wide
+opportunities as well see Chapter ...).
+Furthermore you often have the requirement to create archives
+with different configurations for different environments this
+also achievable.
+
+This chapter will give a wide
 overview of the possibilities how you can create the different flavors
-of archives which you need to fullfil the requirements of your builds
+of archives which you need to fulfil the requirements of your builds
 furthermore we will take a look what kind of mistakes you can make and
 how to prevent them.
+
+
+== Maven Assembly Plugin
+
+The {link-maven-assembly-plugin} is especially created for the purpose to create any kind archive type.
+
+
+
+== Predefined Descriptors
 
 == Single Executable Artifact
 
@@ -54,11 +68,10 @@ only use for example purposes.
 
 == Creating an ZIP Archive
 
-The idea of an zip archive or to be more accurate any archive is to
-create an archive which contains particular content which is defined
+The idea of an archive is have particular content which is defined
 by the project in the way you like to do that and define how it will look 
 like within the archive. This means having a folder structure within
-the archive.
+the archive or not.
 
 == Default Assemblies
 
@@ -71,7 +84,7 @@ the archive.
 
 Typical scenarios which occur often.
 
-Create a jar with all dependencies which might be used to call simply java programm as a command line 
+Create a jar with all dependencies which might be used to call simply java program as a command line
 tool.
 Alternatives {link-maven-shade-plugin}.
 
@@ -90,6 +103,14 @@ mvn dependency:copy-dependencies -Dclassifier=sources -DoutputDirectory=target/s
 Add here all the examples from my example-assemblies 
 
 
-
-Special requirements which you can fullfil with maven-assembly-plugin
+Special requirements which you can fulfil with maven-assembly-plugin
 http://stackoverflow.com/questions/24311053/how-to-get-the-content-of-a-directory-inside-of-war-that-is-inside-of-an-ear-tha
+
+== Predefined Descriptors
+
+The predefined descriptors fulfil the need of often requests archive types which should be usable in a very short time.
+You could use them in a very simple form.
+
+
+===
+==
