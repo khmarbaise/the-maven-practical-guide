@@ -23,7 +23,7 @@ functionality for your build.
 
 The second source is the Mojo Codehaus area which also provides a
 large number of maven plugins (http://mojo.codehaus.org/plugins/).
-
+(Will change cause EoL of Codehaus).
 
 Other sources of PLugins (JBoss, Tomcat, Antlr, google code (Maven
 Processor Plugin) 
@@ -42,7 +42,7 @@ is a participant of a usual Java build or to be more accurate a
 participant of the {link-build-life-cycle}.
 
 The lifecycle contains already bindings for usual plugins so 
-in the majority of the cases it enough to build usual projects.
+in the majority of the cases its enough to build usual projects.
 
 === Clean Everything
 
@@ -62,7 +62,7 @@ by default it's bound to the 'clean' {link-life-cycle-phase} and there
 is no reason to change the configuration of the
 {link-maven-clean-plugin} or something similar. In rare situations it
 could happen that you need to change the configuration and add
-supplemental folder or files which should be deleted during a 'mvn
+supplemental folders or files which should be deleted during a 'mvn
 clean' call.
 
 HINT: Something about the clean life cylce of the maven super pom!!
@@ -71,12 +71,12 @@ In the clean life cycle the following phases exist: pre-clean, clean, post-clean
 
 === Resources
 
-Ofter it occurs that your java code needs some kind of configuration
+Often it occurs that your java code needs some kind of configuration
 files.  One of the most famous examples for this kind of
 configurations is one of those numerous logging frameworks like log4j,
 logback, log4j2 etc.  So the question is where to locate such
 configuration files? The {link-default-folder-layout} gives you the
-information to put such things into 'src/main/resources' which is of
+hint to put such things into 'src/main/resources' which is of
 course intended for the production code (in other words which is
 packaged later into the jar file). Furthermore it is often the case as
 well as having different configuration files for your unit tests cause
@@ -85,6 +85,7 @@ you need a different set of files which should be located into
 'src/test/resources'. This means in other words those files will not
 be packaged into the resulting jar file.
 
+TODO: Move the following to test phase
 
 HINT about super pom !
 
@@ -108,7 +109,7 @@ the logging level or something else.
 
 * {link-maven-resources-plugin}
 
-=== Let The Source Be With You(????)
+=== Let The Source Be With You
 
 You usually write Java source code (ok ok sometimes you write
 difference sources like {link-groovy}, {link-scala}, {link-ceylon} or
@@ -119,7 +120,7 @@ or to run your unit tests.
 This is the purpose of the {link-maven-compiler-plugin} which will
 compile your source code into class files.
 
-The sources code is located in 'src/main/java' and will be compiled
+The source code is located in 'src/main/java' and will be compiled
 into the 'target/classes' folder. Apart from that the Maven Compiler
 Plugin is also responsible to compile your unit/integration test code
 which is located in 'src/test/java' into 'target/test-classes'.
@@ -129,8 +130,7 @@ which is located in 'src/test/java' into 'target/test-classes'.
 After we have compiled the whole code we should run the unit tests to
 check our code. This is done before the code will be packaged into a
 jar file, cause if one of your unit tests will fail your build will
-fail as well and no package is being build.
-
+fail and no packages are being built.
 
 For this purpose the {link-maven-surefire-plugin} is responsible
 to run those unit tests.
@@ -138,16 +138,16 @@ to run those unit tests.
 
 === Let The Jar's Come To Me
 
-After the source has been compiled into the appropriate '.class' files
-they will be packed into a jar file which is the base unit to be
-distributed. The jar will contain only the files from 'target/classes'.
-So if you don't do something special your unit tests will never be
-packed into jar files.
+After the production code has been compiled into the appropriate
+'.class' files they will be packed into a jar file which is the base
+unit to be distributed.  The jar will contain only the files from
+'target/classes'.  So if you don't do something special your unit
+tests will never be packed into jar files.
 
-The {link-maven-jar-plugin} is bound to the 'package' build life cycle phase
-to create a jar file. This jar file contains only the
-files from the 'src/main/java' inclusive the resources from
-'src/main/resources' area (Let use call it the production code area).
+The {link-maven-jar-plugin} is bound to the 'package' build life cycle
+phase to create a jar file. This jar file contains only the files from
+the 'src/main/java' inclusive the resources from 'src/main/resources'
+area (Let use call it the production code area).
 
 There exsist situations where you like to package your test code into
 a jar as well. This can be achieved by using the `test-jar` goal of the

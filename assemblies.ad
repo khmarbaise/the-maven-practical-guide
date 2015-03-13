@@ -1,11 +1,11 @@
 :sourcedir: examples/assemblies
 :link-pre-defined-descriptors: http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html[pre-defined descriptors]
 
-= Assemblies
+= Maven Assemblies
 
 == Overview
 
-During the usual usage you will often be faced with the situation to
+During the use usage you will often be faced with the situation to
 create a kind of a distribution archive for example 'dist.zip' or
 'dist.tar.gz' or other kind of archive flavors. Things which also
 happen are to create a so called 'ueber' jar which you can use to call
@@ -22,19 +22,18 @@ furthermore we will take a look what kind of mistakes you can make and
 how to prevent them.
 
 
-== Maven Assembly Plugin
+== The Maven Assembly Plugin
 
-The {link-maven-assembly-plugin} is especially created for the purpose to create any kind archive type.
-
-
+The {link-maven-assembly-plugin} is especially created for such purposes to
+create any kind archive type.
 
 == Predefined Descriptors
 
 == Single Executable Artifact
 
-One of the requirements you will often be confronted with is to create
-an archive which can simply be executed on command line. This is often
-called an 'ueber-jar' or 'fat-jar'.  This can simply be accomplished by
+One of the requirements you will often be confronted with is to create an
+archive which can simply be executed on command line. This is often called an
+'ueber-jar' or 'fat-jar' (other names?).  This can simply be accomplished by
 using {link-maven-assembly-plugin}'s {link-pre-defined-descriptors}:
 
 Currently there are four of them:
@@ -51,10 +50,10 @@ So back to our real problem. We start with an example project which looks like t
 include::{sourcedir}/assembly-jar-with-dependencies/pom.xml[]
 ----
 
-Via using the above pom you will get a jar which contains all the
-dependencies you have defined in the pom file as part of the resulting
+By using the above pom you will get a jar which contains all the
+dependencies you have defined in your pom file as part of the resulting
 jar which is named by using a classifier `jar-with-dependencies` to
-make it distinguishable from the other artifacts.  The other aspect of
+make it distinguishable from the other artifacts. The other aspect of
 this example project is that you can see how simple it is to create
 such an artifact. One thing which should be mentioned about the
 {link-maven-assembly-plugin}. It is not bound to any
