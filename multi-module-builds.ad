@@ -28,7 +28,7 @@ the depending module `module-client` as well? Exactly for such purposes a
 multi-module-build exists in Maven. 
 
 
-== Structure
+=== Structure
 
 Based on the idea of the relationship of the modules it is neccesary to create
 an appropriate folder structure which more or less shows the relationship of
