@@ -30,6 +30,9 @@ purposes. So you have different profiles which define the filtered
 values for the appropriate environments and you will build the
 appropriate artifacts.
 
+This will result in calling Maven with the following commands to
+produce artifacts for the differernt environments.
+
 -------------------
 mvn -Pdevelopment clean package
 mvn -Ptest clean package
@@ -37,6 +40,28 @@ mvn -Pqa clean package
 mvn -Pproduction clean package
 -------------------
 
+But unfortunately this approach has one big drawback. How would you
+call Maven if you need the artifacts for development, test, q&a and
+production? So your answer might look like this?
+
+-------------------
+mvn -Pdevelopment,test,qa,production clean package
+-------------------
+
+The disadvantage of this approach is that you have to give all these
+parameters everytime you call Maven maybe in several permutations
+depending for which environment you would like to build. What does in
+practice happen?  You simple forget them. Have you remembered to change
+the configuration of your CI solution? Have you informed all your
+team mates? I bet you missed something.
+
+So solution should work by simply calling Maven like this:
+-------------------
+mvn clean package
+-------------------
+
+
+So in conclusion this approach is not ideal.
 
 
 Picture of the application ?
