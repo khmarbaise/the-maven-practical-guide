@@ -22,14 +22,14 @@ furthermore we will take a look what kind of mistakes you can make and
 how to prevent them.
 
 
-== The Maven Assembly Plugin
+=== The Maven Assembly Plugin
 
 The {link-maven-assembly-plugin} is especially created for such purposes to
 create any kind archive type.
 
-== Predefined Descriptors
+=== Predefined Descriptors
 
-== Single Executable Artifact
+=== Single Executable Artifact
 
 One of the requirements you will often be confronted with is to create an
 archive which can simply be executed on command line. This is often called an
@@ -65,14 +65,14 @@ example suspicious, cause it will use a typical test dependency (TestNG)
 without the scope `test` which might be wrong. In this case it is 
 only use for example purposes.
 
-== Creating an ZIP Archive
+=== Creating an ZIP Archive
 
 The idea of an archive is have particular content which is defined
 by the project in the way you like to do that and define how it will look 
 like within the archive. This means having a folder structure within
 the archive or not.
 
-== Default Assemblies
+=== Default Assemblies
 
 
   - Default assemblies
@@ -105,7 +105,7 @@ Add here all the examples from my example-assemblies
 Special requirements which you can fulfil with maven-assembly-plugin
 http://stackoverflow.com/questions/24311053/how-to-get-the-content-of-a-directory-inside-of-war-that-is-inside-of-an-ear-tha
 
-== Predefined Descriptors
+=== Predefined Descriptors
 
 The predefined descriptors fulfil the need of often requests archive types which should be usable in a very short time.
 You could use them in a very simple form.
