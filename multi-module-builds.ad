@@ -1,3 +1,5 @@
+:sourcedir: examples/multi-modules
+
 = Multi Module Builds
 
 == Overview

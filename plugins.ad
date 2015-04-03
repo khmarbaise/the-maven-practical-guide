@@ -12,7 +12,7 @@ This chapter will give you an overview of the different areas of
 plugins sources, the different ideas of the plugins and their typical
 usage within a Java project build.
 
-== The Plugin Sources
+=== The Plugin Sources
 
 In general there are two big sources of plugin. The first source is
 the area under the umbrella of the {link-apache-software-foundation}.

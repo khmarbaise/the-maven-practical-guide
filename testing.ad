@@ -2,11 +2,10 @@
 
 = Testing with Maven
 
+== Overview
+
 Basic Unit Testing, Responsibilities of Plugins, Using JUnit, TestNG,
 multi module builds and unit tests.
-
-
-== Overview
 
 This chapter will give some practical hints how you can use unit- and
 integration tests in relationship with Maven. Furthermore it will give
@@ -127,7 +126,7 @@ In which cases should be used a separate module?
 
 Test an web application with Selenium? (Examples).
 
-== Importance of Separation
+==== Importance of Separation
 
 Why is it important to separate between unit tests and integration
 tests?

@@ -1,10 +1,14 @@
-= Releases The Traditional Maven Way
+= Making Releases
+
+== Overview
+
+== The Traditional Maven Way
 
 maven-release-plugin etc.
 How it works. Pro's and con's.
 
 
-= Releases The CD Way
+== Releases The CD Way
 Releases in the time of Continious Delivery. How to solve this via Maven?  Is this possible? Maven 3.2.1.
 
 

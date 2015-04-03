@@ -1,7 +1,9 @@
-Different Environments
-----------------------
+:sourcedir: examples/assemblies
+:link-pre-defined-descriptors: http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html[pre-defined descriptors]
 
-= The Problem
+= Different Environments
+
+== Overview
 
 In the wild a usual problem occurs having configurations for
 different environments like development, test, q&a and production.
@@ -22,7 +24,7 @@ http://blog.soebes.de/blog/2011/07/29/maven-configuration-for-multipe-environmen
 
 http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/
 
-== The Solutions
+=== The Solutions
 
 === The Obvious Solution
 
