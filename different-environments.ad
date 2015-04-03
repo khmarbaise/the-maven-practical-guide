@@ -10,7 +10,8 @@ things like username, password for an database connection or may
 be other things.
 
 Let us make a more realistic example out of this to get more relationship
-to the real world. So we create
+to the real world. So we create an examples which consists of several files
+which are different from environment to environment.
 
 
 get the whole lecture of GearConf2013
@@ -31,7 +32,7 @@ values for the appropriate environments and you will build the
 appropriate artifacts.
 
 This will result in calling Maven with the following commands to
-produce artifacts for the differernt environments.
+produce artifacts for the different environments.
 
 -------------------
 mvn -Pdevelopment clean package
@@ -49,7 +50,7 @@ mvn -Pdevelopment,test,qa,production clean package
 -------------------
 
 The disadvantage of this approach is that you have to give all these
-parameters everytime you call Maven maybe in several permutations
+parameters every time you call Maven maybe in several permutations
 depending for which environment you would like to build. What does in
 practice happen?  You simple forget them. Have you remembered to change
 the configuration of your CI solution? Have you informed all your
