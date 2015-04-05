@@ -18,3 +18,6 @@ http://www.youtube.com/watch?v=McTZtyb9M38
 http://maven.40175.n5.nabble.com/Continuous-Delivery-and-Maven-td3245370.html
 
 http://stackoverflow.com/questions/18456111/what-is-the-maven-way-for-project-versions-when-doing-continuous-delivery
+
+An other kind of doing releases..
+http://danielflower.github.io/2015/03/08/The-Multi-Module-Maven-Release-Plugin-for-Git.html
