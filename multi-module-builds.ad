@@ -4,8 +4,19 @@
 
 == Overview
 
+Sometimes it is enough having a single pom file and a limited number of java classes
+which are combined into a single jar which is produced to get a full fledged project.
+But this is only in a limited number of cases solution for all kind of project types.
+If we take a look at JEE project which often contains several kinds of artifacts which
+will be comined into a final single artifact usually an EAR file than the single
+module setup is not really a good idea.
+For this kind of purposes it's verfy useful having a so called multi module build
+which combines the different artifacts under a single hood.
+
+
 The idea of a multi-module-build is to have maven modules build and released under the
 same version which are directly related.
+
 
 Let us start with a simple example project which contains several modules like the following:
 

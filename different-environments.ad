@@ -9,7 +9,13 @@ In the wild a usual problem occurs having configurations for
 different environments like development, test, q&a and production.
 The differences between those environments are most likely 
 things like username, password for an database connection or may
-be other things.
+be other things. 
+
+I have to admit that the example with the database connection is not the
+best, cause this would imply having such critical information within
+your application which you never should do in real life. This is choosen
+only as an example for information which are definitively different from
+environment to environment.
 
 Let us make a more realistic example out of this to get more relationship
 to the real world. So we create an examples which consists of several files
