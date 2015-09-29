@@ -22,7 +22,7 @@ you will find plugins like {link-maven-compiler-plugin},
 functionality for your build.
 
 The second source is the MojoHouse area which also provides a
-large number of maven plugins (http://www.mojohaus.org/plugins/).
+large number of maven plugins (http://www.mojohaus.org/plugins.html).
 
 
 Other sources of PLugins (JBoss, Tomcat, Antlr, google code (Maven
