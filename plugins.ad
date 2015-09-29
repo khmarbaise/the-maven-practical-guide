@@ -3,7 +3,7 @@
 == Overview
 The plugins of Maven building the foundation of the Maven eco system,
 cause if you download Maven itself it's a relative small archive
-(about 6 {link-mib}) and Maven itslef is more or less only a IoC
+(less than 8 {link-mib}) and Maven itslef is more or less only a IoC
 container which supports the life-cycle and other small things. If you
 like to compile for example your source code this is provided by the
 {link-maven-compiler-plugin} with the appropriate functionality.
@@ -21,9 +21,9 @@ you will find plugins like {link-maven-compiler-plugin},
 {link-maven-jar-plugin} etc. in that area which provide the most basic
 functionality for your build.
 
-The second source is the Mojo Codehaus area which also provides a
-large number of maven plugins (http://mojo.codehaus.org/plugins/).
-(Will change cause EoL of Codehaus).
+The second source is the MojoHouse area which also provides a
+large number of maven plugins (http://www.mojohaus.org/plugins/).
+
 
 Other sources of PLugins (JBoss, Tomcat, Antlr, google code (Maven
 Processor Plugin) 
@@ -194,7 +194,7 @@ Idea and usage? Why?
 * ??ß
 
 
-http://mojo.codehaus.org/clirr-maven-plugin/plugin-info.html
+http://mojo.codehaus.org/clirr-maven-plugin/
 
 
 Google Code:
@@ -265,8 +265,8 @@ following path:
 <project ...>
 
   <!-- This marked as deprecated for Maven 3.X. This is checked by maven-enforcer-plugin -->
-  <!--  http://jira.codehaus.org/browse/MNG-4840 -->
-  <!--  http://jira.codehaus.org/browse/MNG-5297 -->
+  <!--  https://issues.apache.org/jira/browse/MNG-4840 -->
+  <!--  https://issues.apache.org/jira/browse/MNG-5297 -->
   <prerequisites>
     <maven>${maven.version}</maven>
   </prerequisites>

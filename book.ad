@@ -14,14 +14,14 @@ v0.0.5, 2015-09
 
 :link-mib: http://en.wikipedia.org/wiki/Binary_prefix#Specific_units_of_IEC_60027-2_A.2_and_ISO.2FIEC_80000[MiB]
 
-:link-groovy: http://groovy.codehaus.org[Groovy]
+:link-groovy: http://http://groovy-lang.org/[Groovy]
 :link-scala: http://scala.org[Scala]
 :link-ceylon: http://ceylon-lang.org[Ceylon]
 :link-ruby: http://www.ruby-lang.org[Ruby]
 
 :link-apache-software-foundation: http://www.apache.org/[Apache Software Foundation]
 
-:link-mojo-plugins: http://mojo.codehaus.org/plugins.html[Mojo's Plugin List]
+:link-mojo-plugins: http://www.mojohaus.orgplugins.html[MojoHaus's Plugin List]
 :link-asf-plugins: http://maven.apache.org/plugins/index.html[Apache Software Foundation Maven Plugin List]
 
 :link-life-cycle-phase: http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html[Build Life Cycle Phase]
@@ -45,16 +45,16 @@ v0.0.5, 2015-09
 :link-maven-enforcer-plugin: http://maven.apache.org/plugins/maven-enforcer-plugin/[Maven Enforcer Plugin]
 :link-maven-invoker-plugin: http://maven.apache.org/plugins/maven-invoker-plugin/[Maven Invoker Plugin]
 
-:link-appassembler-maven-plugin: http://mojo.codehaus.org/appassembler-maven-plugin[Mojo's Appassembler Maven Plugin]
-:link-jdepend-maven-plugin: http://mojo.codehaus.org/jdepend-maven-plugin/[Mojo's JDepend Maven Plugin]
-:link-exec-maven-plugin: http://mojo.codehaus.org/exec-maven-plugin/[Mojo's Exec Maven Plugin]
-:link-versions-maven-plugin: http://mojo.codehaus.org/version-maven-plugin/[Mojo's Versions Maven Plugin]
-:link-sql-maven-plugin: http://mojo.codehaus.org/sql-maven-plugin/[Mojo's SQL Maven Plugin]
-:link-templating-maven-plugin: http://mojo.codehaus.org/templating-maven-plugin/[Mojo's Templating Maven Plugin]
-:link-build-helper-maven-plugin: http://mojo.codehaus.org/build-helper-maven-plugin/[Mojo's Build Helper Maven Plugin]
-:link-buildnumber-maven-plugin: http://mojo.codehaus.org/buildnumber-maven-plugin/[Mojo's Buildnumber Maven Plugin]
+:link-appassembler-maven-plugin: http://www.mojohaus.org/appassembler-maven-plugin[Mojo's Appassembler Maven Plugin]
+:link-jdepend-maven-plugin: http://www.mojohaus.org/jdepend-maven-plugin/[Mojo's JDepend Maven Plugin]
+:link-exec-maven-plugin: http://www.mojohaus.org/exec-maven-plugin/[Mojo's Exec Maven Plugin]
+:link-versions-maven-plugin: http://www.mojohaus.org/version-maven-plugin/[Mojo's Versions Maven Plugin]
+:link-sql-maven-plugin: http://www.mojohaus.org/sql-maven-plugin/[Mojo's SQL Maven Plugin]
+:link-templating-maven-plugin: http://www.mojohaus.org/templating-maven-plugin/[Mojo's Templating Maven Plugin]
+:link-build-helper-maven-plugin: http://www.mojohaus.org/build-helper-maven-plugin/[Mojo's Build Helper Maven Plugin]
+:link-buildnumber-maven-plugin: http://www.mojohaus.org/buildnumber-maven-plugin/[Mojo's Buildnumber Maven Plugin]
 
-:link-cargo-maven2-plugin: http://cargo.codehaus.org/Maven2+plugin[Mojo's Cargo Maven 2 Plugin]
+:link-cargo-maven2-plugin: http://https://codehaus-cargo.github.io/cargo/Maven2+plugin.html[Mojo's Cargo Maven 2 Plugin]
 
 [dedication]
 THIS IS WORK IN PROGRESS
