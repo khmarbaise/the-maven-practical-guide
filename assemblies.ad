@@ -22,26 +22,26 @@ furthermore we will take a look what kind of mistakes you can make and
 how to prevent them.
 
 
-=== The Maven Assembly Plugin
+== The Maven Assembly Plugin
 
 The {link-maven-assembly-plugin} is especially created for such purposes to
-create any kind archive type.
+create any kind of archive type.
 
-=== Predefined Descriptors
+=== Scenario Creating Executeable
+
+The first scenario we will take a look onto is the case where we need
+to create a executable jar file which means you can simply call
+java by using the following:
+
+
 
 === Single Executable Artifact
 
 One of the requirements you will often be confronted with is to create an
 archive which can simply be executed on command line. This is often called an
-'ueber-jar' or 'fat-jar' (other names?).  This can simply be accomplished by
-using {link-maven-assembly-plugin}'s {link-pre-defined-descriptors}:
+'ueber-jar' or 'fat-jar' (or maven tongue: jar-with-dependencies).  This can simply be accomplished by
+using {link-maven-assembly-plugin}'s {link-pre-defined-descriptors}.
 
-Currently there are four of them:
-
- 1. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#bin[bin]
- 2. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#jar-with-dependencies[jar-with-dependencies]
- 3. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#src[src]
- 4. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#project[project]
 
 So back to our real problem. We start with an example project which looks like this:
 
@@ -58,7 +58,7 @@ this example project is that you can see how simple it is to create
 such an artifact. One thing which should be mentioned about the
 {link-maven-assembly-plugin}. It is not bound to any
 {link-life-cycle-phase} by default which means you need to bind it to
-the life-cylce if you like to use it.
+the life-cylce explicitly if you like to use it.
 
 A note about the given example. In real life you should find this 
 example suspicious, cause it will use a typical test dependency (TestNG)
@@ -110,4 +110,20 @@ http://stackoverflow.com/questions/24311053/how-to-get-the-content-of-a-director
 The predefined descriptors fulfil the need of often requests archive types which should be usable in a very short time.
 You could use them in a very simple form.
 
+
+=== Module Sets
+
+=== Dependency Sets
+
+=== Sources
+
+
+=== Predefined Descriptors
+
+Currently there are four of them:
+
+ 1. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#bin[bin]
+ 2. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#jar-with-dependencies[jar-with-dependencies]
+ 3. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#src[src]
+ 4. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#project[project]
 
