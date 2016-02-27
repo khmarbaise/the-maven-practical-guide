@@ -27,23 +27,16 @@ how to prevent them.
 The {link-maven-assembly-plugin} is especially created for such purposes to
 create any kind of archive type.
 
-=== Scenario Creating Executeable
-
-The first scenario we will take a look onto is the case where we need
-to create a executable jar file which means you can simply call
-java by using the following:
-
-
-
 === Single Executable Artifact
 
 One of the requirements you will often be confronted with is to create an
 archive which can simply be executed on command line. This is often called an
-'ueber-jar' or 'fat-jar' (or maven tongue: jar-with-dependencies).  This can simply be accomplished by
+'ueber-jar' or 'fat-jar' (or Maven tongue: jar-with-dependencies).  This can simply be accomplished by
 using {link-maven-assembly-plugin}'s {link-pre-defined-descriptors}.
 
-
-So back to our real problem. We start with an example project which looks like this:
+The following pom.xml example will give you an impression how the 
+configuration for {link-maven-assembly-plugin} needs to look like to get
+a `jar-with-dependencies`.
 
 [source,xml]
 ----
@@ -62,8 +55,14 @@ the life-cylce explicitly if you like to use it.
 
 A note about the given example. In real life you should find this 
 example suspicious, cause it will use a typical test dependency (TestNG)
-without the scope `test` which might be wrong. In this case it is 
+without the scope `test` which is usually wrong. In this case it is 
 only use for example purposes.
+
+The created `jar-with-dependencies` can simply be used by the following:
+
+-------------------
+java -jar target/assembly-jar-with-dependencies-0.1.0-SNAPSHOTS-jar-with-dependency.jar
+-------------------
 
 === Creating an ZIP Archive
 
