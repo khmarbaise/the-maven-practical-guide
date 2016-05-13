@@ -6,19 +6,19 @@
 
 Sometimes it is enough having a single pom file and a limited number of java classes
 which are combined into a single jar which is produced to get a full fledged project.
-But this is only in a limited number of cases solution for all kind of project types.
-If we take a look at JEE project which often contains several kinds of artifacts which
-will be comined into a final single artifact usually an EAR file than the single
+But this is only in a limited number of cases a solution for all kind of project types.
+If we take a look at JEE projects which often contains several kinds of artifacts which
+will be combined into a final single artifact usually an EAR file than the single
 module setup is not really a good idea.
 For this kind of purposes it's verfy useful having a so called multi module build
 which combines the different artifacts under a single hood.
 
 
-The idea of a multi-module-build is to have maven modules build and released under the
-same version which are directly related.
+The idea of a multi-module-build is having multiple maven modules which are
+released under the same version which are directly related.
 
-
-Let us start with a simple example project which contains several modules like the following:
+Let us start with a simple example project which contains several modules like
+the following:
 
 -------------
 module-core
@@ -29,7 +29,7 @@ module-server
 Before we know about multi-module-builds you should have created three
 separated maven projects and had to define dependencies between those modules
 and work on them without any relationship.  Obviously you can imagine that the
-above module have relationship to each other, cause the `module-client` module
+above modules have relationship to each other, cause the `module-client` module
 has a dependency to the `module-core` whereas the `module-server` has a
 dependency to `module-core` and so on.
 
@@ -59,7 +59,7 @@ the module to each other.
 There are some parts which you need to pay attention to, to get a good working
 environment. The first thing is the pom on the root level of this structure.
 This pom file contains no code nor does it produce an artifact as the usual
-maven project. This mean in other words it does not produce an `jar`-File.
+maven project. This means in other words it does not produce an `jar`-File.
 This is the reason why this Maven project defines it's packaging as `pom`.
 
 ---------------
@@ -73,7 +73,7 @@ This is the reason why this Maven project defines it's packaging as `pom`.
   <parent>
     <groupId>com.soebes.smpp</groupId>
     <artifactId>smpp</artifactId>
-    <version>0.6.4</version>
+    <version>2.1.0</version>
   </parent>
 
   <groupId>com.soebes.mpg.examples.mmb</groupId>
@@ -112,6 +112,7 @@ at a module how its pom file looks like:
 
   <artifactId>module-core</artifactId>
 ...
+</project>
 ---------------
 
 
