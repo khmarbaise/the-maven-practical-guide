@@ -10,7 +10,7 @@ But this is only in a limited number of cases a solution for all kind of project
 If we take a look at JEE projects which often contains several kinds of artifacts which
 will be combined into a final single artifact usually an EAR file than the single
 module setup is not really a good idea.
-For this kind of purposes it's verfy useful having a so called multi module build
+For this kind of purposes it's verify useful having a so called multi module build
 which combines the different artifacts under a single hood.
 
 
@@ -38,12 +38,12 @@ Wouldn't it be the best if all the above module live within a single location
 those modules and work with your IDE on the whole project, cause if you need to
 change something in your `module-core` it's very likely that you need to change
 the depending module `module-client` as well? Exactly for such purposes a
-multi-module-build exists in Maven. 
+multi-module-build exists in Maven.
 
 
 === Structure
 
-Based on the idea of the relationship of the modules it is neccesary to create
+Based on the idea of the relationship of the modules it is necessary to create
 an appropriate folder structure which more or less shows the relationship of
 the module to each other.
 
@@ -143,5 +143,5 @@ Aggregator ? Difference.
 http://stackoverflow.com/questions/23936339/maven-parent-project-structure
 
 
-What if only a single modules code has been changed? Can i release only a single 
+What if only a single modules code has been changed? Can i release only a single
 module from the multi module build? Draw backs?

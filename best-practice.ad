@@ -9,9 +9,9 @@ In Maven the convention exists to put everything which is generated,
 compiled etc. into the 'target' folder of the appropriate module.
 Unfortunately in the wild you will find builds which do not follow the
 convention and for example generate things into 'src' folder which is
-a bad practice (Hint why?). 
+a bad practice (Hint why?).
 
-So let use think about this a little bit more. The first thing 
+So let use think about this a little bit more. The first thing
 is if you change something in 'src' folder means your version control
 system will be alarmed about such a change which on the other hand means
 you will be alarmed about a change which is not really a change, cause
@@ -21,7 +21,7 @@ The consequence on the above is you must exclude some areas from your
 version control view to suppress such irritations.
 
 The next thing is you need to change the configuration of your appropriate
-plugins, cause more or less all plugins follow that conventions (ok there 
+plugins, cause more or less all plugins follow that conventions (ok there
 exist some exceptions). This implies your configuration in your pom gets
 larger and of course does not follow the conventions over configuration
 paradigm.
@@ -29,7 +29,7 @@ paradigm.
 Other 'solutions' which fall into the same category do something different.
 They generate into a folder within 'target' things like 'target/generated-code'
 but they usually missed that plugins usually add the generated code folder
-to the project sources folders automaticially already.
+to the project sources folders automatically already.
 But in contradiction they explicitly add the generated folder via supplemental
 plugins like 'build-helper-maven-plugin' to the sources folder.
 
@@ -100,16 +100,16 @@ http://stackoverflow.com/questions/24248873/maven-package-resources-with-classes
 Answer: create a mod-core, mod-war and that's it?
 
 == Building for different Environments
-You are often face with the problem having different environments like 
-dev, test, prod this is just a simple example how real life is. 
+You are often face with the problem having different environments like
+dev, test, prod this is just a simple example how real life is.
 
 == How to do good integration tests for maven plugins
 
-One of the final tests should be to clean your local repository 
+One of the final tests should be to clean your local repository
 and start your integration tests of your plugin from scratch
 
-rm -fr $HOME/.m2/repository 
-mvn -Prun-its clean verify 
+rm -fr $HOME/.m2/repository
+mvn -Prun-its clean verify
 
 This should work without any problem.
 

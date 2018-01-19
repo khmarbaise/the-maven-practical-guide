@@ -1,0 +1,24 @@
+language: java
+jdk:
+  - openjdk6
+  - oraclejdk7
+  - oraclejdk8
+
+# Install the asciidoctor
+before_install:
+  - sudo apt-get install asciidoc
+#
+# We can skip the installation
+# step, cause everything will be
+# done in script step.
+install: true
+#
+script: "create-a2x.sh"
+#
+#
+branches:
+  except:
+    - gh-pages
+notifications:
+  email:
+    - khmarbaise@apache.org
