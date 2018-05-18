@@ -1,5 +1,5 @@
 :sourcedir: examples/assemblies
-:link-pre-defined-descriptors: http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html[pre-defined descriptors]
+:link-pre-defined-descriptors: https://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html[pre-defined descriptors]
 
 = Maven Assemblies
 
@@ -102,7 +102,7 @@ Add here all the examples from my example-assemblies
 
 
 Special requirements which you can fulfil with maven-assembly-plugin
-http://stackoverflow.com/questions/24311053/how-to-get-the-content-of-a-directory-inside-of-war-that-is-inside-of-an-ear-tha
+https://stackoverflow.com/questions/24311053/how-to-get-the-content-of-a-directory-inside-of-war-that-is-inside-of-an-ear-tha
 
 === Predefined Descriptors
 
@@ -121,7 +121,7 @@ You could use them in a very simple form.
 
 Currently there are four of them:
 
- 1. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#bin[bin]
- 2. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#jar-with-dependencies[jar-with-dependencies]
- 3. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#src[src]
- 4. http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#project[project]
+ 1. https://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#bin[bin]
+ 2. https://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#jar-with-dependencies[jar-with-dependencies]
+ 3. https://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#src[src]
+ 4. https://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#project[project]
