@@ -5,11 +5,11 @@
 
   <modelVersion>4.0.0</modelVersion>
   
-  <parent>
+  <parent> <!-- tag::first[] -->
     <groupId>com.soebes.tmpg.examples.basics</groupId>
     <artifactId>basics-aggregator</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-  </parent>
+  </parent> <!-- end::first[] -->
 
   <groupId>com.soebes.tmpg.examples.basics</groupId>          <!--1-->
   <artifactId>simplest-pom</artifactId>                       <!--2-->

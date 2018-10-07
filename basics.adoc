@@ -7,7 +7,7 @@ The Basics
 
 [source,xml]
 ----
-include::{sourcedir}/simple/pom.xml[]
+include::{sourcedir}/simple/pom.xml[tags=first]
 ----
 <1> The groupId
 <2> The artifactId
