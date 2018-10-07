@@ -1,2 +1,2 @@
 #!/bin/bash
-a2x --no-xmllint book.ad
+a2x --no-xmllint book.adoc

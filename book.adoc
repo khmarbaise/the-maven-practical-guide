@@ -7,8 +7,6 @@ v0.0.5, 2015-09
 
 :keywords: Maven,Documentation,Apache Maven
 
-:source-highlighter: pygments
-
 :link-junit: http://junit.org[JUnit]
 :link-testng: http://testng.org[TestNG]
 
@@ -98,11 +96,10 @@ entries.
 (((Big cats,Tigers,Siberian Tiger)))
 Note that multi-entry terms generate separate index entries.
 
-Here are a couple of image examples: an image:images/smallnew.png[]
+Here are a couple of image examples: an image:images/apache-maven-project.png[]
 example inline image followed by an example block image:
 
-.Tiger block image
-image::images/apache-maven-project.png[Apache Maven Project]
+.An Image with a Caption.
 image::images/maventxt_logo_200.png[Maven Logo]
 
 Followed by an example table:
@@ -150,33 +147,33 @@ Dependencies
 We should make some examples how dependencies are
 being solved (dependency puzzler).
 
-include::basics.ad[]
+include::./basics.adoc[]
 
-include::profiles.ad[]
+include::profiles.adoc[]
 
-include::different-environments.ad[]
+include::different-environments.adoc[]
 
-include::multi-module-builds.ad[]
+include::multi-module-builds.adoc[]
 
-include::testing.ad[]
+include::testing.adoc[]
 
-include::assemblies.ad[]
+include::assemblies.adoc[]
 
-include::plugins.ad[]
+include::./plugins.adoc[]
 
-include::release.ad[]
+include::./release.adoc[]
 
-include::ci-solution.ad[]
+include::ci-solution.adoc[]
 
-include::repository-manager.ad[]
+include::repository-manager.adoc[]
 
-include::build-smells.ad[]
+include::build-smells.adoc[]
 
-include::plugin-development.ad[]
+include::plugin-development.adoc[]
 
-include::performance.ad[]
+include::performance.adoc[]
 
-include::best-practice.ad[]
+include::best-practice.adoc[]
 
 :numbered!:
 

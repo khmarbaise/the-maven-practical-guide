@@ -51,8 +51,8 @@ Result: Complete build is necessary instead of using released within a build.
 == Company wide parent(s)
 
 Manifest setup with master parent.
-
---------------------------------
+[source,xml]
+----
 <configuration>
   <archive>
     <addMavenDescriptor>true</addMavenDescriptor>
@@ -70,8 +70,7 @@ Manifest setup with master parent.
     </manifestEntries>
   </archive>
 </configuration>
---------------------------------
-
+----
 
 What should be defined in such a parent?
 http://stackoverflow.com/questions/24409889/where-should-i-keep-my-companys-parent-pom

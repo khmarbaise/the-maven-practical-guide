@@ -21,9 +21,8 @@ you will find plugins like {link-maven-compiler-plugin},
 {link-maven-jar-plugin} etc. in that area which provide the most basic
 functionality for your build.
 
-The second source is the MojoHouse area which also provides a
-large number of maven plugins (http://www.mojohaus.org/plugins.html).
-
+The second source is the https://www.mojohaus.org/plugins.html[MojoHaus]
+area which also provides a large number of maven plugins.
 
 Other sources of PLugins (JBoss, Tomcat, Antlr, google code (Maven
 Processor Plugin) 
