@@ -10,7 +10,7 @@ create a kind of a distribution archive for example 'dist.zip' or
 'dist.tar.gz' or other kind of archive flavors. Things which also
 happen are to create a so called 'ueber' jar which you can use to call
 your java application from the command line (There are other
-opportunities as well see Chapter ...).
+opportunities as well see Chapter...).
 Furthermore you often have the requirement to create archives
 with different configurations for different environments this
 also achievable.

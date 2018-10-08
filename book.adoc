@@ -6,27 +6,19 @@ v0.0.5, 2015-09
 :toc: right
 
 :keywords: Maven,Documentation,Apache Maven
-
-:link-junit: http://junit.org[JUnit]
-:link-testng: http://testng.org[TestNG]
-
-:link-mib: http://en.wikipedia.org/wiki/Binary_prefix#Specific_units_of_IEC_60027-2_A.2_and_ISO.2FIEC_80000[MiB]
-
-:link-groovy: http://http://groovy-lang.org/[Groovy]
+:link-junit: https://junit.org[JUnit]
+:link-testng: https://testng.org[TestNG]
+:link-mib: https://en.wikipedia.org/wiki/Binary_prefix#Specific_units_of_IEC_60027-2_A.2_and_ISO.2FIEC_80000[MiB]
+:link-groovy: https://groovy-lang.org/[Groovy]
 :link-scala: http://scala.org[Scala]
 :link-ceylon: http://ceylon-lang.org[Ceylon]
 :link-ruby: http://www.ruby-lang.org[Ruby]
-
 :link-apache-software-foundation: https://www.apache.org/[Apache Software Foundation]
-
 :link-mojo-plugins: https://www.mojohaus.orgplugins.html[MojoHaus's Plugin List]
 :link-asf-plugins: https://maven.apache.org/plugins/index.html[Apache Software Foundation Maven Plugin List]
-
 :link-life-cycle-phase: https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html[Build Life Cycle Phase]
 :link-build-life-cycle: https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html[Build Life Cycle]
-
 :link-default-folder-layout: https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html[Default Folder Layout]
-
 :link-maven-assembly-plugin: https://maven.apache.org/plugins/maven-assembly-plugin/[Maven Assembly Plugin]
 :link-maven-clean-plugin: https://maven.apache.org/plugins/maven-clean-plugin/[Maven Clean Plugin]
 :link-maven-compiler-plugin: https://maven.apache.org/plugins/maven-compiler-plugin/[Maven Compiler Plugin]
@@ -42,7 +34,6 @@ v0.0.5, 2015-09
 :link-maven-failsafe-plugin: https://maven.apache.org/plugins/maven-failsafe-plugin/[Maven Surefire Plugin]
 :link-maven-enforcer-plugin: https://maven.apache.org/plugins/maven-enforcer-plugin/[Maven Enforcer Plugin]
 :link-maven-invoker-plugin: https://maven.apache.org/plugins/maven-invoker-plugin/[Maven Invoker Plugin]
-
 :link-appassembler-maven-plugin: https://www.mojohaus.org/appassembler-maven-plugin[Mojo's Appassembler Maven Plugin]
 :link-jdepend-maven-plugin: https://www.mojohaus.org/jdepend-maven-plugin/[Mojo's JDepend Maven Plugin]
 :link-exec-maven-plugin: https://www.mojohaus.org/exec-maven-plugin/[Mojo's Exec Maven Plugin]
@@ -51,7 +42,6 @@ v0.0.5, 2015-09
 :link-templating-maven-plugin: https://www.mojohaus.org/templating-maven-plugin/[Mojo's Templating Maven Plugin]
 :link-build-helper-maven-plugin: https://www.mojohaus.org/build-helper-maven-plugin/[Mojo's Build Helper Maven Plugin]
 :link-buildnumber-maven-plugin: https://www.mojohaus.org/buildnumber-maven-plugin/[Mojo's Buildnumber Maven Plugin]
-
 :link-cargo-maven2-plugin: http://https://codehaus-cargo.github.io/cargo/Maven2+plugin.html[Mojo's Cargo Maven 2 Plugin]
 
 [dedication]
@@ -147,7 +137,7 @@ Dependencies
 We should make some examples how dependencies are
 being solved (dependency puzzler).
 
-include::./basics.adoc[]
+include::basics.adoc[]
 
 include::profiles.adoc[]
 
