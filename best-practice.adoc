@@ -1,7 +1,6 @@
-Best Practice
--------------
+= Best Practice
 
-= Generate Into Source Folder
+== Generate Into Source Folder
 
 generating code into src folder instead of 'target'.
 Pro/Cons on that approach..

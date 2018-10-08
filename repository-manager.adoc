@@ -1,5 +1,4 @@
-Repository Manager
-------------------
+= Repository Manager
 
 == TEst
 

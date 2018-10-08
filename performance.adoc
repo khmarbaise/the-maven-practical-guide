@@ -1,5 +1,7 @@
 = Performance tipps
 
+== Incremental Builds
+
 incremental builds in Maven.
 
 Improve the performance of your build.

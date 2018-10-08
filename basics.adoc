@@ -1,13 +1,12 @@
 :sourcedir: examples/basics/
 
-The Basics
-----------
+= The Basics
 
-- Smallest POM file.
+Let us start with a minimal `pom` file.
 
 [source,xml]
 ----
-include::{sourcedir}/simple/pom.xml[tags=first]
+include::examples/basics/simple/pom.xml[tags=first]
 ----
 <1> The groupId
 <2> The artifactId
@@ -15,5 +14,3 @@ include::{sourcedir}/simple/pom.xml[tags=first]
 
 
 == The build life cycle
-
-
