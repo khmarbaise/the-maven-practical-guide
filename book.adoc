@@ -149,9 +149,9 @@ include::testing.adoc[]
 
 include::assemblies.adoc[]
 
-include::./plugins.adoc[]
+include::plugins.adoc[]
 
-include::./release.adoc[]
+include::release.adoc[]
 
 include::ci-solution.adoc[]
 
@@ -176,6 +176,18 @@ One or more optional appendixes go here at section level 1.
 Sub-section body.
 
 
+== Example Glossary
+Glossaries are optional. Glossaries entries are an example of a style
+of AsciiDoc labeled lists.
+
+== Example Colophon
+
+Text at the end of a book describing facts about its production.
+
+This books has been created by using the following tools:
+http://git-scm.com[Git], http://asciidoc.org/[AsciiDoc] and
+http://www.vim.org[Vim] for text editing.
+
 = Example Bibliography
 
 The bibliography list is a style of AsciiDoc bulleted list.
@@ -192,23 +204,9 @@ The bibliography list is a style of AsciiDoc bulleted list.
 .Articles
 - [[[abc2003]]] Gall Anonim. 'An article', Whatever. 2003.
 
-
-
-= Example Glossary
-Glossaries are optional. Glossaries entries are an example of a style
-of AsciiDoc labeled lists.
-
-= Example Colophon
-
-Text at the end of a book describing facts about its production.
-
-This books has been created by using the following tools:
-http://git-scm.com[Git], http://asciidoc.org/[AsciiDoc] and
-http://www.vim.org[Vim] for text editing.
-
-
 [index]
-= Example Index
+
+== Example Index
 
 ////////////////////////////////////////////////////////////////
 The index is normally left completely empty, it's contents being

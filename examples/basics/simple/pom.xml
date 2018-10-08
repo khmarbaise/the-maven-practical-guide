@@ -9,7 +9,7 @@
     <groupId>com.soebes.tmpg.examples.basics</groupId>
     <artifactId>basics-aggregator</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-  </parent> <!-- end::first[] -->
+  </parent>
 
   <groupId>com.soebes.tmpg.examples.basics</groupId>          <!--1-->
   <artifactId>simplest-pom</artifactId>                       <!--2-->
@@ -18,3 +18,4 @@
   <name>TMPG :: Examples :: Simplest POM</name>
 
 </project>
+<!-- end::first[] -->
