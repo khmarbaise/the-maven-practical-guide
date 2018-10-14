@@ -6,17 +6,17 @@ generating code into src folder instead of 'target'.
 Pro/Cons on that approach..
 
 In Maven the convention exists to put everything which is generated,
-compiled etc. into the 'target' folder of the appropriate module.
+compiled etc. into the `target` folder of the appropriate module.
 Unfortunately in the wild you will find builds which do not follow the
-convention and for example generate things into 'src' folder which is
+convention and for example generate things into `src folder which is
 a bad practice (Hint why?).
 
 So let use think about this a little bit more. The first thing
-is if you change something in 'src' folder means your version control
+is if you change something in `src` folder means your version control
 system will be alarmed about such a change which on the other hand means
 you will be alarmed about a change which is not really a change, cause
 generated code will usually generate the same code from the same source
-but usually with some changed timestamp within the generated code.
+but usually with some changed time stamp within the generated code.
 The consequence on the above is you must exclude some areas from your
 version control view to suppress such irritations.
 

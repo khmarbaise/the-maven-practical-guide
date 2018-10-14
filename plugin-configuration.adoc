@@ -1,4 +1,4 @@
-= The Basics
+= Plugin Configuration
 
 Let us start with a minimal `pom` file.
 
