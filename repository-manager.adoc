@@ -1,11 +1,16 @@
 = Repository Manager
 
-== TEst
+== Overview
 
-Why do you need a repository manager?
+This chapter will give you an overview of the idea the intention of a repository manager.
+It will also show and describe the advantages of the usage of a repository manager.
 
-What is the idea of RPM 
+== Test
 
-Proxy to Central, XXx
 
-Other repositories like primefaces?
+TODO:
+
+ * Why do you need a repository manager?
+ * Proxy to Central, XXx
+ * Using more external repositories than Central repository.
+

@@ -5,7 +5,7 @@
 
 == Overview
 
-During the use usage you will often be faced with the situation to
+During the usage you will often be faced with the situation to
 create a kind of a distribution archive for example 'dist.zip' or
 'dist.tar.gz' or other kind of archive flavors. Things which also
 happen are to create a so called 'ueber' jar which you can use to call
