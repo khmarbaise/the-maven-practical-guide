@@ -2,7 +2,7 @@
 
 == Creating Multiple Artifacts
 
- Multiple Artifacts The Wrong Way
+Multiple Artifacts The Wrong Way
 
 
 Creating multiple jars from a single module? (create a jar from package a.b.c and
