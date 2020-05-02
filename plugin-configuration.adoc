@@ -1,5 +1,6 @@
 = Plugin Configuration
 
+
 Let us start with a minimal `pom` file.
 
 [source,xml]
@@ -10,5 +11,11 @@ include::examples/basics/simple/pom.xml[tags=first]
 <2> The artifactId
 <3> The version
 
+
+
+There are several options to configure a plugin.
+
+ *
+ *
 
 == The build life cycle
