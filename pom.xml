@@ -38,6 +38,7 @@
     <url>https://github.com/khmarbaise/maven-practical-guide/issues</url>
   </issueManagement>
 
+
   <scm>
     <connection>scm:git:https://github.com/khmarbaise/maven-practical-guide.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/khmarbaise/maven-practical-guide.git</developerConnection>
