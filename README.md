@@ -35,3 +35,7 @@
 |                |                                                     | [![HTML][unstable-html-releasenotes]][unstable-releasenotes-html] | [![HTML][unstable-html-usersguide]][unstable-usersguide-html]  |
 
 
+[jdkbuilds]: https://github.com/khmarbaise/maven-practical-guide/actions?query=workflow%3AJDKBuilds
+[mainbuilds]: https://github.com/khmarbaise/maven-practical-guide/actions?query=workflow%3AMain
+[license]: https://www.apache.org/licenses/LICENSE-2.0
+
