@@ -23,19 +23,8 @@
 [![Issues](https://img.shields.io/github/issues/khmarbaise/maven-practical-guide)](https://github.com/khmarbaise/maven-practical-guide/issues)
 [![Issues Closed](https://img.shields.io/github/issues-closed/khmarbaise/maven-practical-guide)](https://github.com/khmarbaise/maven-practical-guide/issues?q=is%3Aissue+is%3Aclosed)
  
-<!---
- -green will be done for 1.0.0 the first time.
- -orange used for SNAPSHOT
--->
-| Release        | Maven Central                                       | Release Notes                                                     |                           Users Guide                          |
-| -------------- | --------------------------------------------------- | ----------------------------------------------------------------: | -------------------------------------------------------------: |
-| 0.7.0          | [![Maven Central][shield-central]][central-search]  | [![PDF][stable-pdf-releasenotes]][releasenotes-pdf]               | [![PDF][stable-pdf-usersguide]][usersguide-pdf]                |
-|                |                                                     | [![HTML][stable-html-release]][releasenotes-html]                 | [![HTML][stable-html-usersgude]][usersguide-html]              |
-| 0.8.0-SNAPSHOT | ![Maven Central][not-available-in-central]          | [![PDF][unstable-pdf-releasenotes]][unstable-releasenotes-pdf]    | [![PDF][unstable-pdf-usersguide]][unstable-usersguide-pdf]     |
-|                |                                                     | [![HTML][unstable-html-releasenotes]][unstable-releasenotes-html] | [![HTML][unstable-html-usersguide]][unstable-usersguide-html]  |
-
 
 [jdkbuilds]: https://github.com/khmarbaise/maven-practical-guide/actions?query=workflow%3AJDKBuilds
 [mainbuilds]: https://github.com/khmarbaise/maven-practical-guide/actions?query=workflow%3AMain
 [license]: https://www.apache.org/licenses/LICENSE-2.0
-
+[published-site]: https://khmarbaise.github.io/maven-practical-guide/
