@@ -137,18 +137,31 @@ We should make some examples how dependencies are
 being solved (dependency puzzler).
 
 include::basics.adoc[]
+
 include::profiles.adoc[]
+
 include::different-environments.adoc[]
+
 include::multi-module-builds.adoc[]
+
 include::testing.adoc[]
+
 include::assemblies.adoc[]
+
 include::plugins.adoc[]
+
 include::release.adoc[]
+
 include::ci-solution.adoc[]
+
 include::build-smells.adoc[]
+
 include::plugin-development.adoc[]
+
 include::performance.adoc[]
+
 include::repository-manager.adoc[]
+
 include::best-practice.adoc[]
 
 :numbered!:

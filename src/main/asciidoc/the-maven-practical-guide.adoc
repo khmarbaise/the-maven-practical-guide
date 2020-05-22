@@ -1,0 +1,17 @@
+= The Maven Practical Guide
+Karl Heinz Marbaise; {docdate}
+:doctype: book
+:author: Karl Heinz Marbaise
+:sectnums:
+:toc: left
+//
+
+== Overview
+
+this is intended as a new user guide for Apache Maven which tries to cover
+many aspect.
+
+=== Status
+
+The current status of this guide is very early.
+

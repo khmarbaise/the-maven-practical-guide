@@ -21,12 +21,6 @@
   <url>https://maven-practical-guide.com</url>
   <inceptionYear>2014</inceptionYear>
 
-  <organization>
-    <name>SoftwareEntwicklung Beratung Schulung</name>
-    <url>http://www.soebes.de</url>
-  </organization>
-
-
   <developers>
     <developer>
       <id>kama</id>
@@ -45,49 +39,91 @@
   </issueManagement>
 
   <scm>
-    <developerConnection>scm:git:https://github.com/khmarbaise/maven-practical-guide</developerConnection>
-    <connection>scm:git:https://github.com/khmarbaise/maven-practical-guide</connection>
+    <connection>scm:git:https://github.com/khmarbaise/maven-practical-guide.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/khmarbaise/maven-practical-guide.git</developerConnection>
     <url>https://github.com/khmarbaise/maven-practical-guide</url>
+    <tag>HEAD</tag>
   </scm>
 
   <modules>
     <module>examples</module>
   </modules>
 
-  <profiles>
-    <profile>
-      <!--
-        mvn -Pgithub site
-        will deploy the site to github site.
-       -->
-      <id>github</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>com.github.github</groupId>
-            <artifactId>site-maven-plugin</artifactId>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.asciidoctor</groupId>
+          <artifactId>asciidoctor-maven-plugin</artifactId>
+          <version>2.0.0-RC.1</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.asciidoctor</groupId>
+              <artifactId>asciidoctorj-pdf</artifactId>
+              <version>1.5.3</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-scm-publish-plugin</artifactId>
+          <configuration>
+            <!--
+             ! The directory where to put the SNAPSHOT of master.
+             ! which is deployed by GitHub action (deploy.yml).
+             ! So we ignore  this directory simply.
+            -->
+            <ignorePathsToDelete>snapshot</ignorePathsToDelete>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.asciidoctor</groupId>
+        <artifactId>asciidoctor-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>output-html</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>process-asciidoc</goal>
+            </goals>
             <configuration>
-              <message>Creating site for ${project.version}</message>
-              <server>github</server>
-              <override>true</override>
-              <includeAttached>true</includeAttached>
-              <server>github</server>
+              <backend>html</backend>
             </configuration>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>site</goal>
-                </goals>
-                <phase>site</phase>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
-
+          </execution>
+          <execution>
+            <id>output-pdf</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>process-asciidoc</goal>
+            </goals>
+            <configuration>
+              <backend>pdf</backend>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <logHandler>
+            <outputToConsole>true</outputToConsole>
+            <failIf>
+              <severity>ERROR</severity>
+            </failIf>
+          </logHandler>
+          <attributes>
+            <revnumber>${project.version}</revnumber>
+            <linkcss>false</linkcss>
+            <toc>left</toc>
+          </attributes>
+          <sourceHighlighter>coderay</sourceHighlighter>
+          <headerFooter>true</headerFooter>
+          <imagesDir>../resources/images</imagesDir>
+          <preserveDirectories>true</preserveDirectories>
+          <baseDir>${project.basedir}</baseDir>
+          <outputDirectory>${project.reporting.outputDirectory}</outputDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
