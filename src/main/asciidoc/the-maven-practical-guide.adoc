@@ -9,7 +9,7 @@ Karl Heinz Marbaise; {docdate}
 == Overview
 
 this is intended as a new user guide for Apache Maven which tries to cover
-many aspect.
+many aspects.
 
 === Status
 
