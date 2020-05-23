@@ -45,6 +45,13 @@
     <tag>HEAD</tag>
   </scm>
 
+  <properties>
+    <smpp.component>the-maven-practical-guide</smpp.component>
+    <!--
+      ! Make mvn site:stage working correctly in combination with scm-publish.
+    -->
+    <scmpublish.content>target/staging/${project.artifactId}</scmpublish.content>
+  </properties>
   <modules>
     <module>examples</module>
   </modules>
