@@ -26,7 +26,8 @@
 
 * Snapshot State site: https://khmarbaise.github.io/the-maven-practical-guide/snapshot/
 
-* PDF https://khmarbaise.github.io//he-maven-practical-guide/snapshot/the-maven-practical-guide.pdf
+* HTML https://khmarbaise.github.io/the-maven-practical-guide/snapshot/the-maven-practical-guide.html
+* PDF https://khmarbaise.github.io//the-maven-practical-guide/snapshot/the-maven-practical-guide.pdf
 
 
 [jdkbuilds]: https://github.com/khmarbaise/the-maven-practical-guide/actions?query=workflow%3AJDKBuilds
