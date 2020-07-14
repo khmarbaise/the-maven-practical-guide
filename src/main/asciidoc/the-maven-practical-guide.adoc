@@ -50,7 +50,7 @@ This is work in progress.
 If you have any suggestions, improvements or issues
 please use the following issue tracking system:
 
-https://github.com/khmarbaise/maven-practical-guide/issues
+https://github.com/khmarbaise/the-maven-practical-guide/issues
 
 
 Books are normally used to generate DocBook markup and the titles of
