@@ -71,7 +71,7 @@ The following simple example will show how a basic unit test can look
 like.
 [source,java]
 ----
-include::examples/testing/ut-example/src/test/java/com/soebes/training/maven/simple/BitMaskTest.java[]
+include::{includesource}/examples/testing/ut-example/src/test/java/com/soebes/training/maven/simple/BitMaskTest.java[]
 ----
 
 So if you follow the conventions in Maven and put your tests into the
@@ -92,7 +92,7 @@ that's it.
 
 [source,xml]
 ----
-include::examples/testing/ut-example/pom.xml[tags=first]
+include::{includesource}/examples/testing/ut-example/pom.xml[tags=first]
 ----
 
 If you prefer {link-testng} to use for your unit tests you can simply
@@ -102,7 +102,7 @@ differences between {link-junit} and {link-testng} itself.
 
 [source,xml]
 ----
-include::examples/testing/ut-example-testng/pom.xml[]
+include::{includesource}/examples/testing/ut-example-testng/pom.xml[]
 ----
 
 

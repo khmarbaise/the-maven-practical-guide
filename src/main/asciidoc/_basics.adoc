@@ -4,7 +4,7 @@ Let us start with a minimal `pom` file.
 
 [source,xml]
 ----
-include::examples/basics/simple/pom.xml[tags=first]
+include::{includesource}/examples/basics/simple/pom.xml[tags=first]
 ----
 <1> The groupId
 <2> The artifactId

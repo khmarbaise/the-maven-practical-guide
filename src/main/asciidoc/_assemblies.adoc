@@ -40,7 +40,7 @@ a `jar-with-dependencies`.
 
 [source,xml]
 ----
-include::{sourcedir}/assembly-jar-with-dependencies/pom.xml[]
+include::{includesource}/examples/assemblies/assembly-jar-with-dependencies/pom.xml[]
 ----
 
 By using the above pom you will get a jar which contains all the

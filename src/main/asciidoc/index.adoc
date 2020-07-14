@@ -1,9 +1,9 @@
 The Maven Practical Guide
 =========================
 Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.com>
-v0.0.6, 2018-10
 :doctype: book
-:toc: right
+:toc: left
+:sectnums:
 
 :keywords: Maven,Documentation,Apache Maven
 :link-junit: https://junit.org[JUnit]
@@ -136,33 +136,33 @@ Dependencies
 We should make some examples how dependencies are
 being solved (dependency puzzler).
 
-include::basics.adoc[]
+include::_basics.adoc[]
 
-include::profiles.adoc[]
+include::_profiles.adoc[]
 
-include::different-environments.adoc[]
+include::_different-environments.adoc[]
 
-include::multi-module-builds.adoc[]
+include::_multi-module-builds.adoc[]
 
-include::testing.adoc[]
+include::_testing.adoc[]
 
-include::assemblies.adoc[]
+include::_assemblies.adoc[]
 
-include::plugins.adoc[]
+include::_plugins.adoc[]
 
-include::release.adoc[]
+include::_release.adoc[]
 
-include::ci-solution.adoc[]
+include::_ci-solution.adoc[]
 
-include::build-smells.adoc[]
+include::_build-smells.adoc[]
 
-include::plugin-development.adoc[]
+include::_plugin-development.adoc[]
 
-include::performance.adoc[]
+include::_performance.adoc[]
 
-include::repository-manager.adoc[]
+include::_repository-manager.adoc[]
 
-include::best-practice.adoc[]
+include::_best-practice.adoc[]
 
 :numbered!:
 
