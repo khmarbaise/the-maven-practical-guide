@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="author" content="Karl-Heinz Marbaise">
+<meta name="author" content="Karl-Heinz Marbaise, 2020-07-14">
 <title>The Maven Practical Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -443,6 +443,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Karl-Heinz Marbaise</span><br>
 <span id="email" class="email"><a href="mailto:the-maven-practical-guide@maven-practical-guide.com">the-maven-practical-guide@maven-practical-guide.com</a></span><br>
+<span id="author2" class="author">2020-07-14</span><br>
 <span id="revnumber">version 0.1.0-SNAPSHOT</span>
 </div>
 <div id="toc" class="toc2">
@@ -624,7 +625,7 @@ please use the following issue tracking system:</p>
 <div class="paragraph">
 <p>Books are normally used to generate DocBook markup and the titles of
 the preface, appendix, bibliography, glossary and index sections are
-significant (<em>specialsections</em>).</p>
+significant ('specialsections').</p>
 </div>
 </div>
 </div>
@@ -689,12 +690,12 @@ example inline image followed by an example block image:</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-a <em>USER GROUP</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add <em>USER</em> to <em>GROUP</em>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-a 'USER GROUP'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add 'USER' to 'GROUP'.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-R <em>GROUP</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disables access to <em>GROUP</em>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-R 'GROUP'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disables access to 'GROUP'.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1122,7 +1123,7 @@ you tipps how to prevent several issues with testing.</p>
 <h3 id="_unit_testing">8.1. Unit Testing</h3>
 <div class="paragraph">
 <p>Unit testing can be done out-of-box in Maven which means you just have
-to locate your unit tests into <em>src/test/java</em> and follow the naming
+to locate your unit tests into 'src/test/java' and follow the naming
 conventions. The resulting and recommended folder structure will be show
 in the followin example.</p>
 </div>
@@ -1172,8 +1173,8 @@ in the followin example.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The folder <em>src/main/java</em> plus an approriate package structure will
-contain your production code whereas the <em>src/test/java</em> plus the
+<p>The folder 'src/main/java' plus an approriate package structure will
+contain your production code whereas the 'src/test/java' plus the
 package structure will contains your unit test area.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
@@ -1275,7 +1276,7 @@ like.</p>
 </div>
 <div class="paragraph">
 <p>So if you follow the conventions in Maven and put your tests into the
-appropriate locations <em>src/test/java</em> those tests will automatically
+appropriate locations 'src/test/java' those tests will automatically
 be picked up and executed as unit tests. The plugin which is
 responsible for execution of those unit tests is the
 <a href="https://maven.apache.org/plugins/maven-surefire-plugin/">Maven Surefire Plugin</a>.</p>
@@ -1290,7 +1291,7 @@ Spock and of course many other opportunities.</p>
 </div>
 <div class="paragraph">
 <p>In the case you would like to use <a href="https://junit.org">JUnit</a> within your unit tests
-you just simply add the appropriate dependency to your <em>pom.xml</em> and
+you just simply add the appropriate dependency to your 'pom.xml' and
 that&#8217;s it.</p>
 </div>
 <div class="listingblock">
@@ -1364,7 +1365,7 @@ differences between <a href="https://junit.org">JUnit</a> and <a href="https://t
 <p>Location of unit tests</p>
 </div>
 <div class="paragraph">
-<p><em>src/test/java</em> is the correct location for unit tests.</p>
+<p>'src/test/java' is the correct location for unit tests.</p>
 </div>
 <div class="paragraph">
 <p>Packaging of unit tests
@@ -1419,9 +1420,9 @@ separately.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>During the usage you will often be faced with the situation to
-create a kind of a distribution archive for example <em>dist.zip</em> or
-<em>dist.tar.gz</em> or other kind of archive flavors. Things which also
-happen are to create a so called <em>ueber</em> jar which you can use to call
+create a kind of a distribution archive for example 'dist.zip' or
+'dist.tar.gz' or other kind of archive flavors. Things which also
+happen are to create a so called 'ueber' jar which you can use to call
 your java application from the command line (There are other
 opportunities as well see Chapter&#8230;&#8203;).
 Furthermore you often have the requirement to create archives
@@ -1449,7 +1450,7 @@ create any kind of archive type.</p>
 <div class="paragraph">
 <p>One of the requirements you will often be confronted with is to create an
 archive which can simply be executed on command line. This is often called an
-<em>ueber-jar</em> or <em>fat-jar</em> (or Maven tongue: jar-with-dependencies).  This can simply be accomplished by
+'ueber-jar' or 'fat-jar' (or Maven tongue: jar-with-dependencies).  This can simply be accomplished by
 using <a href="https://maven.apache.org/plugins/maven-assembly-plugin/">Maven Assembly Plugin</a>'s <a href="https://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html">pre-defined descriptors</a>.</p>
 </div>
 <div class="paragraph">
@@ -1700,7 +1701,7 @@ in the majority of the cases its enough to build usual projects.</p>
 <p>If you want to be sure your build will start from scratch you need to
 wipe out everything which has been created by previous operations or
 the build itself. So the <a href="https://maven.apache.org/plugins/maven-clean-plugin/">Maven Clean Plugin</a> is your friend
-which will delete the <em>target</em> folder of your project or in every
+which will delete the 'target' folder of your project or in every
 module in case of a multi-module build. This can be simply achieved by
 calling maven like this:</p>
 </div>
@@ -1711,12 +1712,12 @@ calling maven like this:</p>
 </div>
 <div class="paragraph">
 <p>Usualy you won&#8217;t ever think about the <a href="https://maven.apache.org/plugins/maven-clean-plugin/">Maven Clean Plugin</a>, cause
-by default it&#8217;s bound to the <em>clean</em> <a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html">Build Life Cycle Phase</a> and there
+by default it&#8217;s bound to the 'clean' <a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html">Build Life Cycle Phase</a> and there
 is no reason to change the configuration of the
 <a href="https://maven.apache.org/plugins/maven-clean-plugin/">Maven Clean Plugin</a> or something similar. In rare situations it
 could happen that you need to change the configuration and add
-supplemental folders or files which should be deleted during a <em>mvn
-clean</em> call.</p>
+supplemental folders or files which should be deleted during a 'mvn
+clean' call.</p>
 </div>
 <div class="paragraph">
 <p>HINT: Something about the clean life cylce of the maven super pom!!</p>
@@ -1733,13 +1734,13 @@ files.  One of the most famous examples for this kind of
 configurations is one of those numerous logging frameworks like log4j,
 logback, log4j2 etc.  So the question is where to locate such
 configuration files? The <a href="https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html">Default Folder Layout</a> gives you the
-hint to put such things into <em>src/main/resources</em> which is of
+hint to put such things into 'src/main/resources' which is of
 course intended for the production code (in other words which is
 packaged later into the jar file). Furthermore it is often the case as
 well as having different configuration files for your unit tests cause
 you would like having a different logging level in your unit test so
 you need a different set of files which should be located into
-<em>src/test/resources</em>. This means in other words those files will not
+'src/test/resources'. This means in other words those files will not
 be packaged into the resulting jar file.</p>
 </div>
 <div class="paragraph">
@@ -1750,9 +1751,9 @@ be packaged into the resulting jar file.</p>
 </div>
 <div class="paragraph">
 <p>So usually you can simply put your appropriate configuration files
-into <em>src/test/resources</em> or <em>src/main/resources</em> and they will
-automatically be copied into <em>target/classes</em> or
-<em>target/test-classes</em>.  But why are they copied ? The most important
+into 'src/test/resources' or 'src/main/resources' and they will
+automatically be copied into 'target/classes' or
+'target/test-classes'.  But why are they copied ? The most important
 point about this is that you can use such resources by the usual java
 resources way like this:</p>
 </div>
@@ -1790,10 +1791,10 @@ or to run your unit tests.</p>
 compile your source code into class files.</p>
 </div>
 <div class="paragraph">
-<p>The source code is located in <em>src/main/java</em> and will be compiled
-into the <em>target/classes</em> folder. Apart from that the Maven Compiler
+<p>The source code is located in 'src/main/java' and will be compiled
+into the 'target/classes' folder. Apart from that the Maven Compiler
 Plugin is also responsible to compile your unit/integration test code
-which is located in <em>src/test/java</em> into <em>target/test-classes</em>.</p>
+which is located in 'src/test/java' into 'target/test-classes'.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1813,15 +1814,15 @@ to run those unit tests.</p>
 <h3 id="_let_the_jars_come_to_me">12.5. Let The Jar&#8217;s Come To Me</h3>
 <div class="paragraph">
 <p>After the production code has been compiled into the appropriate
-<em>.class</em> files they will be packed into a jar file which is the base
+'.class' files they will be packed into a jar file which is the base
 unit to be distributed.  The jar will contain only the files from
-<em>target/classes</em>.  So if you don&#8217;t do something special your unit
+'target/classes'.  So if you don&#8217;t do something special your unit
 tests will never be packed into jar files.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="https://maven.apache.org/plugins/maven-jar-plugin/">Maven Jar Plugin</a> is bound to the <em>package</em> build life cycle
+<p>The <a href="https://maven.apache.org/plugins/maven-jar-plugin/">Maven Jar Plugin</a> is bound to the 'package' build life cycle
 phase to create a jar file. This jar file contains only the files from
-the <em>src/main/java</em> inclusive the resources from <em>src/main/resources</em>
+the 'src/main/java' inclusive the resources from 'src/main/resources'
 area (Let use call it the production code area).</p>
 </div>
 <div class="paragraph">
@@ -1990,7 +1991,7 @@ wrong Maven version was to use the <code>prerequsites</code> tag like this:</p>
 </div>
 <div class="paragraph">
 <p>but based on the improvements in Maven within Maven 3 the
-<em>prerequsites</em> part in the pom has been marked as depcrecated and will
+'prerequsites' part in the pom has been marked as depcrecated and will
 not be checked. So to make sure a build will only works with a
 particular Maven version for example 3.1.1 you need to go the
 following path:</p>
@@ -2382,7 +2383,7 @@ It will also show and describe the advantages of the usage of a repository manag
 <h2 id="_generate_into_source_folder">28. Generate Into Source Folder</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>generating code into src folder instead of <em>target</em>.
+<p>generating code into src folder instead of 'target'.
 Pro/Cons on that approach..</p>
 </div>
 <div class="paragraph">
@@ -2410,12 +2411,12 @@ larger and of course does not follow the conventions over configuration
 paradigm.</p>
 </div>
 <div class="paragraph">
-<p>Other <em>solutions</em> which fall into the same category do something different.
-They generate into a folder within <em>target</em> things like <em>target/generated-code</em>
+<p>Other 'solutions' which fall into the same category do something different.
+They generate into a folder within 'target' things like 'target/generated-code'
 but they usually missed that plugins usually add the generated code folder
 to the project sources folders automatically already.
 But in contradiction they explicitly add the generated folder via supplemental
-plugins like <em>build-helper-maven-plugin</em> to the sources folder.</p>
+plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 </div>
@@ -2594,12 +2595,12 @@ of AsciiDoc labeled lists.</p>
 <div class="title">Books</div>
 <ul class="bibliography">
 <li>
-<p><a id="taoup"></a>[taoup] Eric Steven Raymond. <em>The Art of Unix
-Programming</em>. Addison-Wesley. ISBN 0-13-142901-9.</p>
+<p><a id="taoup"></a>[taoup] Eric Steven Raymond. 'The Art of Unix
+Programming'. Addison-Wesley. ISBN 0-13-142901-9.</p>
 </li>
 <li>
 <p><a id="walsh-muellner"></a>[walsh-muellner] Norman Walsh &amp; Leonard Muellner.
-<em>DocBook - The Definitive Guide</em>. O&#8217;Reilly &amp; Associates. 1999.
+'DocBook - The Definitive Guide'. O&#8217;Reilly &amp; Associates. 1999.
 ISBN 1-56592-580-7.</p>
 </li>
 </ul>
@@ -2608,7 +2609,7 @@ ISBN 1-56592-580-7.</p>
 <div class="title">Articles</div>
 <ul class="bibliography">
 <li>
-<p><a id="abc2003"></a>[abc2003] Gall Anonim. <em>An article</em>, Whatever. 2003.</p>
+<p><a id="abc2003"></a>[abc2003] Gall Anonim. 'An article', Whatever. 2003.</p>
 </li>
 </ul>
 </div>
@@ -2633,7 +2634,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2020-07-14 17:33:22 UTC
+Last updated 2020-07-14 17:47:53 UTC
 </div>
 </div>
 <style>
