@@ -128,7 +128,6 @@
             <toc>left</toc>
             <imagesdir>../resources/images</imagesdir>
             <source-highlighter>coderay</source-highlighter>
-<!--            <includesdirectory>src/main/asciidoc</includesdirectory>-->
             <includesource>${project.basedir}</includesource>
           </attributes>
           <sourceDirectory>src/main/asciidoc</sourceDirectory>
