@@ -567,35 +567,38 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_plugin_development">Plugin Development</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_7">24. Overview</a></li>
-<li><a href="#_reasons">25. Reasons</a></li>
-<li><a href="#_basics">26. Basics</a></li>
-<li><a href="#_building_a_plugin">27. Building a plugin</a></li>
-<li><a href="#_testing_2">28. Testing</a></li>
-<li><a href="#_compatibility">29. Compatibility</a></li>
+<li><a href="#_overview_7">24. Overview</a>
+<ul class="sectlevel2">
+<li><a href="#_reasons">24.1. Reasons</a></li>
+<li><a href="#_basics">24.2. Basics</a></li>
+<li><a href="#_building_a_plugin">24.3. Building a plugin</a></li>
+<li><a href="#_testing_2">24.4. Testing</a></li>
+<li><a href="#_compatibility">24.5. Compatibility</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_performance_tipps">Performance tipps</a>
 <ul class="sectlevel1">
-<li><a href="#_incremental_builds">30. Incremental Builds</a></li>
+<li><a href="#_incremental_builds">25. Incremental Builds</a></li>
 </ul>
 </li>
 <li><a href="#_repository_manager">Repository Manager</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_8">31. Overview</a></li>
-<li><a href="#_test">32. Test</a></li>
+<li><a href="#_overview_8">26. Overview</a></li>
+<li><a href="#_test">27. Test</a></li>
 </ul>
 </li>
 <li><a href="#_best_practice">Best Practice</a>
 <ul class="sectlevel1">
-<li><a href="#_generate_into_source_folder">33. Generate Into Source Folder</a></li>
-<li><a href="#_dependencies_dependencymanagement">34. Dependencies / DependencyManagement</a></li>
-<li><a href="#_deps_via_props">35. Deps via Props</a></li>
-<li><a href="#_company_wide_parents">36. Company wide parent(s)</a></li>
-<li><a href="#_building_for_different_environments">37. Building for different Environments</a></li>
-<li><a href="#_how_to_do_good_integration_tests_for_maven_plugins">38. How to do good integration tests for maven plugins</a></li>
-<li><a href="#_nexus">39. Nexus</a></li>
-<li><a href="#_branching_strategies">40. Branching Strategies</a></li>
+<li><a href="#_generate_into_source_folder">28. Generate Into Source Folder</a></li>
+<li><a href="#_dependencies_dependencymanagement">29. Dependencies / DependencyManagement</a></li>
+<li><a href="#_deps_via_props">30. Deps via Props</a></li>
+<li><a href="#_company_wide_parents">31. Company wide parent(s)</a></li>
+<li><a href="#_building_for_different_environments">32. Building for different Environments</a></li>
+<li><a href="#_how_to_do_good_integration_tests_for_maven_plugins">33. How to do good integration tests for maven plugins</a></li>
+<li><a href="#_nexus">34. Nexus</a></li>
+<li><a href="#_branching_strategies">35. Branching Strategies</a></li>
 </ul>
 </li>
 <li><a href="#_example_appendix">Example Appendix</a>
@@ -2300,11 +2303,8 @@ Here:
 Basics. Annotations?
 Example project.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_reasons">25. Reasons</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_reasons">24.1. Reasons</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2327,10 +2327,8 @@ The simple answer to this: If the needed functionality is not being provided by 
 <p>Example when to create a plugin?</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_basics">26. Basics</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_basics">24.2. Basics</h3>
 <div class="paragraph">
 <p>What is a Mojo?</p>
 </div>
@@ -2348,10 +2346,8 @@ The simple answer to this: If the needed functionality is not being provided by 
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_building_a_plugin">27. Building a plugin</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_building_a_plugin">24.3. Building a plugin</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2363,10 +2359,8 @@ The simple answer to this: If the needed functionality is not being provided by 
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_testing_2">28. Testing</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_testing_2">24.4. Testing</h3>
 <div class="paragraph">
 <p>Testing a plugin is one of the most challenging thing cause a plugin which is running inside a container (Maven Runtime)
 has several aspects of testing.</p>
@@ -2421,10 +2415,8 @@ has several aspects of testing.</p>
 <p><a href="https://github.com/asciidoctor/asciidoctor-maven-plugin" class="bare">https://github.com/asciidoctor/asciidoctor-maven-plugin</a></p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_compatibility">29. Compatibility</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_compatibility">24.5. Compatibility</h3>
 <div class="paragraph">
 <p>There a different aspect of compatibility. The first one is:</p>
 </div>
@@ -2440,9 +2432,10 @@ has several aspects of testing.</p>
 </div>
 </div>
 </div>
+</div>
 <h1 id="_performance_tipps" class="sect0">Performance tipps</h1>
 <div class="sect1">
-<h2 id="_incremental_builds">30. Incremental Builds</h2>
+<h2 id="_incremental_builds">25. Incremental Builds</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>incremental builds in Maven.</p>
@@ -2460,7 +2453,7 @@ has several aspects of testing.</p>
 </div>
 <h1 id="_repository_manager" class="sect0">Repository Manager</h1>
 <div class="sect1">
-<h2 id="_overview_8">31. Overview</h2>
+<h2 id="_overview_8">26. Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter will give you an overview of the idea the intention of a repository manager.
@@ -2469,7 +2462,7 @@ It will also show and describe the advantages of the usage of a repository manag
 </div>
 </div>
 <div class="sect1">
-<h2 id="_test">32. Test</h2>
+<h2 id="_test">27. Test</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>TODO:</p>
@@ -2491,7 +2484,7 @@ It will also show and describe the advantages of the usage of a repository manag
 </div>
 <h1 id="_best_practice" class="sect0">Best Practice</h1>
 <div class="sect1">
-<h2 id="_generate_into_source_folder">33. Generate Into Source Folder</h2>
+<h2 id="_generate_into_source_folder">28. Generate Into Source Folder</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>generating code into src folder instead of 'target'.
@@ -2532,7 +2525,7 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dependencies_dependencymanagement">34. Dependencies / DependencyManagement</h2>
+<h2 id="_dependencies_dependencymanagement">29. Dependencies / DependencyManagement</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Scope only in real dependencies not in dependencyManagement</p>
@@ -2543,7 +2536,7 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_deps_via_props">35. Deps via Props</h2>
+<h2 id="_deps_via_props">30. Deps via Props</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Using properties to control the dependencies with a so called company pom?</p>
@@ -2554,7 +2547,7 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_company_wide_parents">36. Company wide parent(s)</h2>
+<h2 id="_company_wide_parents">31. Company wide parent(s)</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Manifest setup with master parent.</p>
@@ -2617,7 +2610,7 @@ Answer: create a mod-core, mod-war and that&#8217;s it?</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_building_for_different_environments">37. Building for different Environments</h2>
+<h2 id="_building_for_different_environments">32. Building for different Environments</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You are often face with the problem having different environments like
@@ -2626,7 +2619,7 @@ dev, test, prod this is just a simple example how real life is.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_do_good_integration_tests_for_maven_plugins">38. How to do good integration tests for maven plugins</h2>
+<h2 id="_how_to_do_good_integration_tests_for_maven_plugins">33. How to do good integration tests for maven plugins</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>One of the final tests should be to clean your local repository
@@ -2642,7 +2635,7 @@ mvn -Prun-its clean verify</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_nexus">39. Nexus</h2>
+<h2 id="_nexus">34. Nexus</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>why the order of the repositories does really matter&#8230;&#8203;</p>
@@ -2650,7 +2643,7 @@ mvn -Prun-its clean verify</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_branching_strategies">40. Branching Strategies</h2>
+<h2 id="_branching_strategies">35. Branching Strategies</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://stackoverflow.com/questions/24420474/do-you-really-need-to-version-the-trunk-of-a-maven-project" class="bare">http://stackoverflow.com/questions/24420474/do-you-really-need-to-version-the-trunk-of-a-maven-project</a></p>
@@ -2745,7 +2738,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2020-07-19 10:23:28 UTC
+Last updated 2020-07-19 10:32:53 UTC
 </div>
 </div>
 <style>
