@@ -6,7 +6,7 @@ How to develop a plugin.
 Basics. Annotations?
 Example project.
 
-== Reasons
+=== Reasons
 
 * Reasons to develop a plugin?
 * Why is it better to write a plugin instead using scripts/external execution of Java/Groovy/Kotlin whatever code?
@@ -20,19 +20,19 @@ The simple answer to this: If the needed functionality is not being provided by 
 
 Example when to create a plugin?
 
-== Basics
+=== Basics
 What is a Mojo?
 
 * The annotations for plugins which are needed?
 * How to build a plugin?
 * How to test a plugin?
 
-== Building a plugin
+=== Building a plugin
 
 * What is needed to build a plugin?
 * How does a Maven project look like for building a plugin?
 
-== Testing
+=== Testing
 
 Testing a plugin is one of the most challenging thing cause a plugin which is running inside a container (Maven Runtime)
 has several aspects of testing.
@@ -56,7 +56,7 @@ Testing frameworks / Support
 
 https://github.com/asciidoctor/asciidoctor-maven-plugin
 
-== Compatibility
+=== Compatibility
 
 There a different aspect of compatibility. The first one is:
 
