@@ -1,35 +1,64 @@
 = Plugin Development
 
+== Overview
+
 How to develop a plugin.
 Basics. Annotations?
 Example project.
 
 == Reasons
-Often i see people developing maven plugins which are superfluous, cause the functionality is already
-provided by one of the existing plugins.
-There existing serveral reasons to develop a maven plugin in particular if you are working in an environment
-which does not allow things.
 
-So the question is: When should i start to think about creating my own plugin?
-Simple answer if the needed functions are not provided by the existing ones.
+* Reasons to develop a plugin?
+* Why is it better to write a plugin instead using scripts/external execution of Java/Groovy/Kotlin whatever code?
 
-I can encourage you to mail information which kind of request you have to the mailing 
-list which gives the developers / commiters the chance to introduce such kind of requirements
-into the existings plugins if it makes sense.
-Or you fill in a jira ticket..
+Often I see people developing maven plugins which are superfluous, cause the functionality is already
+provided by one of the existing plugins or a combination of other plugins.
+
+So the question is: When should I start to think about creating my own plugin?
+The simple answer to this: If the needed functionality is not being provided by any existing plugin.
 
 
+Example when to create a plugin?
 
-Testing
+== Basics
+What is a Mojo?
 
-{link-maven-invoker-plugin}
-Folder structure 
+* The annotations for plugins which are needed?
+* How to build a plugin?
+* How to test a plugin?
+
+== Building a plugin
+
+* What is needed to build a plugin?
+* How does a Maven project look like for building a plugin?
+
+== Testing
+
+Testing a plugin is one of the most challenging thing cause a plugin which is running inside a container (Maven Runtime)
+has several aspects of testing.
+
+In general there at least three different typs of tests you usually (should) write:
+
+. The Java code (more or less independent) functionality you would like to put into a plugin.
+** Usually covered by unit/integration tests which you (should) already know.
+. The Mojo itself?
+. The interaction with a real project?
+** How does a plugin behave within a real project setup?
 
 
-Conventions
+
+Testing frameworks / Support
+
+* {link-maven-invoker-plugin}
+* https://github.com/khmarbaise/maven-it-extension
+* http://maven.apache.org/plugins/maven-invoker-plugin/index.html
 
 
-Testing with Spock:
 https://github.com/asciidoctor/asciidoctor-maven-plugin
 
+== Compatibility
 
+There a different aspect of compatibility. The first one is:
+
+* Which minimum Java version you should support?
+* Minimum Maven version you will require?
