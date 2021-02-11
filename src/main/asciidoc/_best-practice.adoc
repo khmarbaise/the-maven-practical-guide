@@ -91,9 +91,6 @@ http://stackoverflow.com/questions/23901560/how-to-handle-different-dependencies
 Ideas like this:
 http://developer-blog.cloudbees.com/2013/03/playing-trade-offs-with-maven.html
 
-This is a bad idea:
-http://stackoverflow.com/questions/24104735/embedding-dependencies-resources-in-maven
-
 What is a good solution for such kind of questions:
 http://stackoverflow.com/questions/24248873/maven-package-resources-with-classes
 Answer: create a mod-core, mod-war and that's it?
