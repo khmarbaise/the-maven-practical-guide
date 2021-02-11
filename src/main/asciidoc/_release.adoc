@@ -2,14 +2,30 @@
 
 == Overview
 
+Here you get an overview of the different options how to do a release with Maven.
+
 == The Traditional Maven Way
+
+* maven-release-plugin
+
+How it works? What is needed (how to configure it?)
+
 
 maven-release-plugin etc.
 How it works. Pro's and con's.
 
+Change the preparation goal in maven-release-plugin
+
 
 == Releases The CD Way
-Releases in the time of Continious Delivery. How to solve this via Maven?  Is this possible? Maven 3.2.1.
+Releases in the time of Continious Delivery. How to solve this via Maven?
+Is this possible? Maven 3.2.1.
+
+Using Ci Friendly.
+ with maven-scm-plugin.
+
+
+* Prevent problems with using property in distributionManagement
 
 
 
