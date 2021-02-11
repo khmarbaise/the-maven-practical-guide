@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="author" content="Karl-Heinz Marbaise, 2021-01-10">
+<meta name="author" content="Karl-Heinz Marbaise, 2021-02-11">
 <title>The Maven Practical Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -443,7 +443,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Karl-Heinz Marbaise</span><br>
 <span id="email" class="email"><a href="mailto:the-maven-practical-guide@maven-practical-guide.com">the-maven-practical-guide@maven-practical-guide.com</a></span><br>
-<span id="author2" class="author">2021-01-10</span><br>
+<span id="author2" class="author">2021-02-11</span><br>
 <span id="revnumber">version 0.1.0-SNAPSHOT</span>
 </div>
 <div id="toc" class="toc2">
@@ -2139,15 +2139,30 @@ following path:</p>
 <div class="sect1">
 <h2 id="_overview_6">13. Overview</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Here you get an overview of the different options how to do a release with Maven.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_the_traditional_maven_way">14. The Traditional Maven Way</h2>
 <div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>maven-release-plugin</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>How it works? What is needed (how to configure it?)</p>
+</div>
 <div class="paragraph">
 <p>maven-release-plugin etc.
 How it works. Pro&#8217;s and con&#8217;s.</p>
+</div>
+<div class="paragraph">
+<p>Change the preparation goal in maven-release-plugin</p>
 </div>
 </div>
 </div>
@@ -2155,7 +2170,19 @@ How it works. Pro&#8217;s and con&#8217;s.</p>
 <h2 id="_releases_the_cd_way">15. Releases The CD Way</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Releases in the time of Continious Delivery. How to solve this via Maven?  Is this possible? Maven 3.2.1.</p>
+<p>Releases in the time of Continious Delivery. How to solve this via Maven?
+Is this possible? Maven 3.2.1.</p>
+</div>
+<div class="paragraph">
+<p>Using Ci Friendly.
+ with maven-scm-plugin.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prevent problems with using property in distributionManagement</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><a href="http://www.youtube.com/watch?v=McTZtyb9M38" class="bare">http://www.youtube.com/watch?v=McTZtyb9M38</a></p>
@@ -2738,7 +2765,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2021-01-10 12:19:58 UTC
+Last updated 2021-02-11 20:38:59 UTC
 </div>
 </div>
 <style>
