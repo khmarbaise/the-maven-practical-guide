@@ -223,7 +223,7 @@ https://github.com/maven-nar/nar-maven-plugin
 https://github.com/marceloverdijk/lesscss-maven-plugin
 
 Take a deeper look into this
-http://docs.spring.io/spring-boot/docs/1.1.4.RELEASE/maven-plugin/usage.html
+http://docs.spring.io/spring-boot/docs/2.4.2/maven-plugin/usage.html
 spring-boot-maven-plugin
 
 Very interesting plugin:
