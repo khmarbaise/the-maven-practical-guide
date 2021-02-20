@@ -4,15 +4,25 @@
 
 == Overview
 
-Sometimes it is enough having a single pom file and a limited number of java classes
+Sometimes it is enough having a single pom file with a limited number of java classes
 which are combined into a single jar which is produced to get a full fledged project.
+
 But this is only in a limited number of cases a solution for all kind of project types.
 If we take a look at JEE projects which often contains several kinds of artifacts which
 will be combined into a final single artifact usually an EAR file than the single
 module setup is not really a good idea.
-For this kind of purposes it's verify useful having a so called multi module build
+
+Apart from that you could have a bit larger project which based on Spring Boot
+where you would like to separate different things into separate areas.
+
+It could be also the case that you created a library which consists of different
+areas where it could make sense to make separate parts of it.
+
+For this kind of purposes it's verify useful having a multi module build
 which combines the different artifacts under a single hood.
 
+
+=== Basic Structure
 
 The idea of a multi-module-build is having multiple maven modules which are
 released under the same version which are directly related.
@@ -20,11 +30,12 @@ released under the same version which are directly related.
 Let us start with a simple example project which contains several modules like
 the following:
 
--------------
+[source]
+----
 module-core
 module-client
 module-server
--------------
+----
 
 Before we know about multi-module-builds you should have created three
 separated maven projects and had to define dependencies between those modules
@@ -41,13 +52,13 @@ the depending module `module-client` as well? Exactly for such purposes a
 multi-module-build exists in Maven.
 
 
-=== Structure
+==== Directory Structure
 
-Based on the idea of the relationship of the modules it is necessary to create
-an appropriate folder structure which more or less shows the relationship of
+Based on the idea of the relationship of the modules it is useful to create
+an appropriate directory structure which more or less shows the relationship of
 the module to each other.
 
-
+[source]
 ---------------
  +--- pom.xml
    +--- module-core
@@ -118,18 +129,23 @@ at a module how its pom file looks like:
 
 
 
-
 http://stackoverflow.com/questions/11528877/releasing-a-multi-module-maven-project-hosted-in-single-git-repository/[See here]
 
 
 What is the basic idea of a multi module build? Same version? Same time of releasing them.
 
-  - Multiple Modules
-  - mvn install (first why?)
+Reasons to create a multi module setup:
+
+
+- Multiple Modules
+  - [.line-through]#mvn install (first why?)#
   - Unit Tests (mvn test)
   - Integration Test (mvn integration-test)
   - packaging
   - use of an module from a reactor build in other projects?
+  - Release all modules/projects at one point in time
+  - All the modules are related to each other ?
+
 
 Pro's and Cons'
 http://stackoverflow.com/questions/23584429/releasing-a-modular-maven-project
@@ -145,3 +161,8 @@ http://stackoverflow.com/questions/23936339/maven-parent-project-structure
 
 What if only a single modules code has been changed? Can i release only a single
 module from the multi module build? Draw backs?
+
+
+== Releasing a Multi module Project
+
+?
