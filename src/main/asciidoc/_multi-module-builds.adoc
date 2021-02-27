@@ -167,3 +167,22 @@ module from the multi module build? Draw backs?
 
 From root, single module?
 ?
+
+
+=== Examples
+
+==== XXX
+
+
+==== Spring Boot
+
+spring boot project setup.
+
+[source]
+---------------
+root
+ +--- pom.xml
+   +--- jpa
+   +--- controllers
+   +--- application
+---------------
