@@ -1,0 +1,10 @@
+= The Sites
+
+generating sites with Maven
+The maven `site` life cycle.
+
+
+== Maven Site Plugin
+
+* Configure the site?
+* What is needed?
