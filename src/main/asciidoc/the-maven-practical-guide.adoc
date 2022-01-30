@@ -135,7 +135,7 @@ Dependencies
 We should make some examples how dependencies are
 being solved (dependency puzzler).
 
-include::_basics.adoc[]
+include::_001_chapter.adoc[]
 
 include::_profiles.adoc[]
 
