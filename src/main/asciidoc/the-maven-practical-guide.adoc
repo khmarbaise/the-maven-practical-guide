@@ -83,7 +83,7 @@ include::_repository-manager.adoc[]
 
 include::_best-practice.adoc[]
 
-include::_XXX_sites.adoc_.adoc[]
+include::_XXX_sites.adoc[]
 
 :numbered!:
 
