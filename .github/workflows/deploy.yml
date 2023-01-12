@@ -36,9 +36,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-ubuntu-latest-
       - name: 'Setup Java Version'
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v3
         with:
-          java-version: 11
+          java-version: 17
+          distribution: 'temurin'
+          cache: maven
       - name: 'Build'
         run: mvn -V --no-transfer-progress clean verify site:site site:stage
       - name: 'Deploy to gh-pages'
