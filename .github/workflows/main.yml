@@ -37,6 +37,12 @@ jobs:
           key: ${{ runner.os }}-maven-ubuntu-latest-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-ubuntu-latest-
+      - name: 'Setup Java Version'
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'temurin'
+          cache: maven
       - name: 'Build'
         run: mvn -V --no-transfer-progress clean verify --fail-at-end
   windows:
