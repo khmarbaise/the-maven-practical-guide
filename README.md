@@ -17,20 +17,24 @@
 # The Maven Practical Guide
 
 [![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/apache/maven.svg?label=License)][license]
-[![JDKBuilds](https://github.com/khmarbaise/the-maven-practical-guide/workflows/JDKBuilds/badge.svg)][jdkbuilds]
 [![Main](https://github.com/khmarbaise/the-maven-practical-guide/workflows/Main/badge.svg)][mainbuilds]
 [![Site](https://github.com/khmarbaise/the-maven-practical-guide/workflows/SitePublishing/badge.svg)][published-site]
 [![Issues](https://img.shields.io/github/issues/khmarbaise/the-maven-practical-guide)](https://github.com/khmarbaise/the-maven-practical-guide/issues)
 [![Issues Closed](https://img.shields.io/github/issues-closed/khmarbaise/the-maven-practical-guide)](https://github.com/khmarbaise/the-maven-practical-guide/issues?q=is%3Aissue+is%3Aclosed)
- 
 
-* Snapshot State site: https://khmarbaise.github.io/the-maven-practical-guide/snapshot/
+# State
+The project is in an early state. 
 
-* HTML https://khmarbaise.github.io/the-maven-practical-guide/snapshot/the-maven-practical-guide.html
-* PDF https://khmarbaise.github.io//the-maven-practical-guide/snapshot/the-maven-practical-guide.pdf
+# Generated Sites
+
+* Maven Project Site
+  * Snapshot State site: https://khmarbaise.github.io/the-maven-practical-guide/snapshot/
+
+* The real guide:
+  * HTML https://khmarbaise.github.io/the-maven-practical-guide/snapshot/the-maven-practical-guide.html
+  * PDF https://khmarbaise.github.io//the-maven-practical-guide/snapshot/the-maven-practical-guide.pdf
 
 
-[jdkbuilds]: https://github.com/khmarbaise/the-maven-practical-guide/actions?query=workflow%3AJDKBuilds
 [mainbuilds]: https://github.com/khmarbaise/the-maven-practical-guide/actions?query=workflow%3AMain
 [license]: https://www.apache.org/licenses/LICENSE-2.0
 [published-site]: https://khmarbaise.github.io/the-maven-practical-guide/

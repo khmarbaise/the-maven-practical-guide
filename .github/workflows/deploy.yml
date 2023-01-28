@@ -15,12 +15,12 @@
 # specific language governing permissions and limitations
 # under the License.
 #
+---
 name: SitePublishing
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
 
 jobs:
   update-site:
@@ -32,7 +32,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-ubuntu-latest-${{ hashFiles('**/pom.xml') }}
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-ubuntu-latest-
       - name: 'Setup Java Version'
