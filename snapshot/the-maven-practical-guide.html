@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.17">
-<meta name="author" content="Karl-Heinz Marbaise, 2023-01-28">
+<meta name="author" content="Karl Heinz Marbaise">
 <title>The Maven Practical Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -530,9 +530,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <div id="header">
 <h1>The Maven Practical Guide</h1>
 <div class="details">
-<span id="author" class="author">Karl-Heinz Marbaise</span><br>
+<span id="author" class="author">Karl Heinz Marbaise</span><br>
 <span id="email" class="email"><a href="mailto:the-maven-practical-guide@maven-practical-guide.com">the-maven-practical-guide@maven-practical-guide.com</a></span><br>
-<span id="author2" class="author">2023-01-28</span><br>
 <span id="revnumber">version 0.1.0-SNAPSHOT</span>
 </div>
 <div id="toc" class="toc2">
@@ -556,133 +555,142 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 </ul>
 </li>
-<li><a href="#_multi_module_builds">Multi Module Builds</a>
+<li><a href="#_single_module_projects">Single Module Projects</a>
 <ul class="sectlevel1">
 <li><a href="#_overview_2">4. Overview</a>
 <ul class="sectlevel2">
 <li><a href="#_basic_structure">4.1. Basic Structure</a></li>
-<li><a href="#_releasing_a_multi_module_project">4.2. Releasing a Multi module Project</a></li>
-<li><a href="#_examples">4.3. Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_multi_module_builds">Multi Module Builds</a>
+<ul class="sectlevel1">
+<li><a href="#_overview_3">5. Overview</a>
+<ul class="sectlevel2">
+<li><a href="#_basic_structure_2">5.1. Basic Structure</a></li>
+<li><a href="#_releasing_a_multi_module_project">5.2. Releasing a Multi module Project</a></li>
+<li><a href="#_examples">5.3. Examples</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#_testing_with_maven">Testing with Maven</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_3">5. Overview</a>
+<li><a href="#_overview_4">6. Overview</a>
 <ul class="sectlevel2">
-<li><a href="#_unit_testing">5.1. Unit Testing</a></li>
-<li><a href="#_integration_testing">5.2. Integration Testing</a></li>
+<li><a href="#_unit_testing">6.1. Unit Testing</a></li>
+<li><a href="#_integration_testing">6.2. Integration Testing</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#_maven_assemblies">Maven Assemblies</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_4">6. Overview</a></li>
-<li><a href="#_the_maven_assembly_plugin">7. The Maven Assembly Plugin</a>
+<li><a href="#_overview_5">7. Overview</a></li>
+<li><a href="#_the_maven_assembly_plugin">8. The Maven Assembly Plugin</a>
 <ul class="sectlevel2">
-<li><a href="#_single_executable_artifact">7.1. Single Executable Artifact</a></li>
-<li><a href="#_creating_an_zip_archive">7.2. Creating an ZIP Archive</a></li>
-<li><a href="#_default_assemblies">7.3. Default Assemblies</a></li>
-<li><a href="#_predefined_descriptors">7.4. Predefined Descriptors</a></li>
-<li><a href="#_module_sets">7.5. Module Sets</a></li>
-<li><a href="#_dependency_sets">7.6. Dependency Sets</a></li>
-<li><a href="#_sources">7.7. Sources</a></li>
-<li><a href="#_predefined_descriptors_2">7.8. Predefined Descriptors</a></li>
+<li><a href="#_single_executable_artifact">8.1. Single Executable Artifact</a></li>
+<li><a href="#_creating_an_zip_archive">8.2. Creating an ZIP Archive</a></li>
+<li><a href="#_default_assemblies">8.3. Default Assemblies</a></li>
+<li><a href="#_predefined_descriptors">8.4. Predefined Descriptors</a></li>
+<li><a href="#_module_sets">8.5. Module Sets</a></li>
+<li><a href="#_dependency_sets">8.6. Dependency Sets</a></li>
+<li><a href="#_sources">8.7. Sources</a></li>
+<li><a href="#_predefined_descriptors_2">8.8. Predefined Descriptors</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#_plugins">Plugins</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_5">8. Overview</a>
+<li><a href="#_overview_6">9. Overview</a>
 <ul class="sectlevel2">
-<li><a href="#_the_plugin_sources">8.1. The Plugin Sources</a></li>
+<li><a href="#_the_plugin_sources">9.1. The Plugin Sources</a></li>
 </ul>
 </li>
-<li><a href="#_the_different_plugins">9. The Different Plugins</a>
+<li><a href="#_the_different_plugins">10. The Different Plugins</a>
 <ul class="sectlevel2">
-<li><a href="#_clean_everything">9.1. Clean Everything</a></li>
-<li><a href="#_resources">9.2. Resources</a></li>
-<li><a href="#_let_the_source_be_with_you">9.3. Let The Source Be With You</a></li>
-<li><a href="#_lets_see_if_the_code_is_working">9.4. Let&#8217;s See If The Code Is Working?</a></li>
-<li><a href="#_let_the_jars_come_to_me">9.5. Let The Jar&#8217;s Come To Me</a></li>
-<li><a href="#_install_the_archive">9.6. Install The Archive</a></li>
-<li><a href="#_distribute_it_to_the_world">9.7. Distribute It To The World</a></li>
-<li><a href="#_let_the_force_be_with_you">9.8. Let The Force Be With You</a></li>
+<li><a href="#_clean_everything">10.1. Clean Everything</a></li>
+<li><a href="#_resources">10.2. Resources</a></li>
+<li><a href="#_let_the_source_be_with_you">10.3. Let The Source Be With You</a></li>
+<li><a href="#_lets_see_if_the_code_is_working">10.4. Let&#8217;s See If The Code Is Working?</a></li>
+<li><a href="#_let_the_jars_come_to_me">10.5. Let The Jar&#8217;s Come To Me</a></li>
+<li><a href="#_install_the_archive">10.6. Install The Archive</a></li>
+<li><a href="#_distribute_it_to_the_world">10.7. Distribute It To The World</a></li>
+<li><a href="#_let_the_force_be_with_you">10.8. Let The Force Be With You</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#_making_releases">Making Releases</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_6">10. Overview</a></li>
-<li><a href="#_the_traditional_maven_way">11. The Traditional Maven Way</a></li>
-<li><a href="#_releases_the_cd_way">12. Releases The CD Way</a></li>
+<li><a href="#_overview_7">11. Overview</a></li>
+<li><a href="#_the_traditional_maven_way">12. The Traditional Maven Way</a></li>
+<li><a href="#_releases_the_cd_way">13. Releases The CD Way</a></li>
 </ul>
 </li>
 <li><a href="#_continious_integration_solution">Continious Integration Solution</a>
 <ul class="sectlevel1">
-<li><a href="#_more_details">13. More Details</a></li>
+<li><a href="#_more_details">14. More Details</a></li>
 </ul>
 </li>
 <li><a href="#_build_smells">Build Smells</a>
 <ul class="sectlevel1">
-<li><a href="#_creating_multiple_artifacts">14. Creating Multiple Artifacts</a></li>
-<li><a href="#_not_part_of_the_life_cycle">15. Not Part of the Life Cycle</a></li>
-<li><a href="#_multi_module_builds_2">16. Multi Module Builds</a>
+<li><a href="#_creating_multiple_artifacts">15. Creating Multiple Artifacts</a></li>
+<li><a href="#_not_part_of_the_life_cycle">16. Not Part of the Life Cycle</a></li>
+<li><a href="#_multi_module_builds_2">17. Multi Module Builds</a>
 <ul class="sectlevel2">
-<li><a href="#_module_structure">16.1. Module Structure</a></li>
-<li><a href="#_the_install_hack">16.2. The Install Hack</a></li>
-<li><a href="#_separation_of_concerns">16.3. Separation of Concerns</a></li>
+<li><a href="#_module_structure">17.1. Module Structure</a></li>
+<li><a href="#_the_install_hack">17.2. The Install Hack</a></li>
+<li><a href="#_separation_of_concerns">17.3. Separation of Concerns</a></li>
 </ul>
 </li>
-<li><a href="#_testing">17. Testing</a></li>
-<li><a href="#_assemblies">18. Assemblies</a></li>
-<li><a href="#_problem_with_profiles_and_dependencies">19. Problem with Profiles and Dependencies</a></li>
-<li><a href="#_what_about_dependencies_by_profiles">20. What about dependencies by profiles?</a></li>
+<li><a href="#_testing">18. Testing</a></li>
+<li><a href="#_assemblies">19. Assemblies</a></li>
+<li><a href="#_problem_with_profiles_and_dependencies">20. Problem with Profiles and Dependencies</a></li>
+<li><a href="#_what_about_dependencies_by_profiles">21. What about dependencies by profiles?</a></li>
 </ul>
 </li>
 <li><a href="#_plugin_development">Plugin Development</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_7">21. Overview</a>
+<li><a href="#_overview_8">22. Overview</a>
 <ul class="sectlevel2">
-<li><a href="#_reasons">21.1. Reasons</a></li>
-<li><a href="#_basics">21.2. Basics</a></li>
-<li><a href="#_building_a_plugin">21.3. Building a plugin</a></li>
-<li><a href="#_testing_2">21.4. Testing</a></li>
-<li><a href="#_compatibility">21.5. Compatibility</a></li>
+<li><a href="#_reasons">22.1. Reasons</a></li>
+<li><a href="#_basics">22.2. Basics</a></li>
+<li><a href="#_building_a_plugin">22.3. Building a plugin</a></li>
+<li><a href="#_testing_2">22.4. Testing</a></li>
+<li><a href="#_compatibility">22.5. Compatibility</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#_performance_tipps">Performance tipps</a>
 <ul class="sectlevel1">
-<li><a href="#_incremental_builds">22. Incremental Builds</a></li>
+<li><a href="#_incremental_builds">23. Incremental Builds</a></li>
 </ul>
 </li>
 <li><a href="#_repository_manager">Repository Manager</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_8">23. Overview</a></li>
-<li><a href="#_test">24. Test</a></li>
+<li><a href="#_overview_9">24. Overview</a></li>
+<li><a href="#_test">25. Test</a></li>
 </ul>
 </li>
 <li><a href="#_best_practice">Best Practice</a>
 <ul class="sectlevel1">
-<li><a href="#_generate_into_source_folder">25. Generate Into Source Folder</a></li>
-<li><a href="#_dependencies_dependencymanagement">26. Dependencies / DependencyManagement</a></li>
-<li><a href="#_deps_via_props">27. Deps via Props</a></li>
-<li><a href="#_company_wide_parents">28. Company wide parent(s)</a></li>
-<li><a href="#_building_for_different_environments">29. Building for different Environments</a></li>
-<li><a href="#_how_to_do_good_integration_tests_for_maven_plugins">30. How to do good integration tests for maven plugins</a></li>
-<li><a href="#_nexus">31. Nexus</a></li>
-<li><a href="#_branching_strategies">32. Branching Strategies</a></li>
+<li><a href="#_generate_into_source_folder">26. Generate Into Source Folder</a></li>
+<li><a href="#_dependencies_dependencymanagement">27. Dependencies / DependencyManagement</a></li>
+<li><a href="#_deps_via_props">28. Deps via Props</a></li>
+<li><a href="#_company_wide_parents">29. Company wide parent(s)</a></li>
+<li><a href="#_building_for_different_environments">30. Building for different Environments</a></li>
+<li><a href="#_how_to_do_good_integration_tests_for_maven_plugins">31. How to do good integration tests for maven plugins</a></li>
+<li><a href="#_nexus">32. Nexus</a></li>
+<li><a href="#_branching_strategies">33. Branching Strategies</a></li>
 </ul>
 </li>
 <li><a href="#_the_sites">The Sites</a>
 <ul class="sectlevel1">
-<li><a href="#_maven_site_plugin">33. Maven Site Plugin</a></li>
+<li><a href="#_maven_site_plugin">34. Maven Site Plugin</a></li>
 </ul>
 </li>
 <li><a href="#_example_appendix">Example Appendix</a>
@@ -702,21 +710,20 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_this_is_work_in_progress">THIS IS WORK IN PROGRESS</h2>
+<h2 id="_this_is_work_in_progress"><a class="link" href="#_this_is_work_in_progress">THIS IS WORK IN PROGRESS</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is work in progress.</p>
+<p>This guide is an attempt to write a practical guide about Apache Maven.
+Its idea is to give practical hints how to use Apache Maven and describe
+and show what are the best practices and why you should follow them.</p>
 </div>
 <div class="paragraph">
-<p>If you have any suggestions, improvements or issues
-please use the following issue tracking system:</p>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/khmarbaise/the-maven-practical-guide/issues" class="bare">https://github.com/khmarbaise/the-maven-practical-guide/issues</a></p>
+<p>If you have any suggestions, improvements or found issues please
+report them in the <a href="https://github.com/khmarbaise/the-maven-practical-guide/issues">issue tracking system</a>.</p>
 </div>
 </div>
 </div>
-<h1 id="_the_basics" class="sect0">The Basics</h1>
+<h1 id="_the_basics" class="sect0"><a class="link" href="#_the_basics">The Basics</a></h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
@@ -725,7 +732,8 @@ please use the following issue tracking system:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;modelVersion&gt;</span>4.0.0<span class="tag">&lt;/modelVersion&gt;</span>
-  
+
+  <span class="comment">&lt;!-- NEED TO REMOVE THE PARENT --&gt;</span>
   <span class="tag">&lt;parent&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>com.soebes.tmpg.examples.basics<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>basics-aggregator<span class="tag">&lt;/artifactId&gt;</span>
@@ -757,13 +765,13 @@ please use the following issue tracking system:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_build_life_cycle">1. The build life cycle</h2>
+<h2 id="_the_build_life_cycle"><a class="link" href="#_the_build_life_cycle">1. The build life cycle</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_profiles_in_maven">2. Profiles in Maven</h2>
+<h2 id="_profiles_in_maven"><a class="link" href="#_profiles_in_maven">2. Profiles in Maven</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Why and how to use Profiles.</p>
@@ -782,9 +790,9 @@ please use the following issue tracking system:</p>
 </div>
 </div>
 </div>
-<h1 id="_different_environments" class="sect0">Different Environments</h1>
+<h1 id="_different_environments" class="sect0"><a class="link" href="#_different_environments">Different Environments</a></h1>
 <div class="sect1">
-<h2 id="_overview">3. Overview</h2>
+<h2 id="_overview"><a class="link" href="#_overview">3. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In the wild a usual problem occurs having configurations for
@@ -818,11 +826,11 @@ which are different from environment to environment.</p>
 <p><a href="http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/" class="bare">http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/</a></p>
 </div>
 <div class="sect2">
-<h3 id="_the_solutions">3.1. The Solutions</h3>
+<h3 id="_the_solutions"><a class="link" href="#_the_solutions">3.1. The Solutions</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="_the_obvious_solution">3.2. The Obvious Solution</h3>
+<h3 id="_the_obvious_solution"><a class="link" href="#_the_obvious_solution">3.2. The Obvious Solution</a></h3>
 <div class="paragraph">
 <p>Many people using Maven would suggest to use profiles for such
 purposes. So you have different profiles which define the filtered
@@ -878,120 +886,188 @@ team mates? I bet you missed something.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_next">3.3. The next</h3>
+<h3 id="_the_next"><a class="link" href="#_the_next">3.3. The next</a></h3>
 
 </div>
 </div>
 </div>
-<h1 id="_multi_module_builds" class="sect0">Multi Module Builds</h1>
+<h1 id="_single_module_projects" class="sect0"><a class="link" href="#_single_module_projects">Single Module Projects</a></h1>
 <div class="sect1">
-<h2 id="_overview_2">4. Overview</h2>
+<h2 id="_overview_2"><a class="link" href="#_overview_2">4. Overview</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_basic_structure"><a class="link" href="#_basic_structure">4.1. Basic Structure</a></h3>
+<div class="paragraph">
+<p>Basic descriptions.</p>
+</div>
+<div class="sect3">
+<h4 id="_directory_structure"><a class="link" href="#_directory_structure">4.1.1. Directory Structure</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code> +--- pom.xml
+   +--- src
+         +--- main
+               +--- java
+xxxx</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_different_dependent_projects"><a class="link" href="#_different_dependent_projects">4.1.2. Different dependent projects</a></h4>
+
+</div>
+</div>
+</div>
+</div>
+<h1 id="_multi_module_builds" class="sect0"><a class="link" href="#_multi_module_builds">Multi Module Builds</a></h1>
+<div class="sect1">
+<h2 id="_overview_3"><a class="link" href="#_overview_3">5. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Sometimes it is enough having a single pom file with a limited number of java classes
-which are combined into a single jar which is produced to get a full fledged project.</p>
+<p>Sometimes it is sufficient having a single pom file and a limited number of Java classes
+which are combined into a single jar file.</p>
 </div>
 <div class="paragraph">
-<p>But this is only in a limited number of cases a solution for all kind of project types.
-If we take a look at JEE projects which often contains several kinds of artifacts which
-will be combined into a final single artifact usually an EAR file than the single
-module setup is not really a good idea.</p>
+<p>This is a solution in a number of cases but not for all kind of project
+types. In times of microservices projects becoming smaller even though
+it happens that you would like to separate out parts. For example having a generation
+of <a href="https://www.openapis.org/">OpenAPI based code</a>, or things like your jpa repositories (from
+a Spring Boot app) etc.</p>
 </div>
 <div class="paragraph">
-<p>Apart from that you could have a bit larger project which based on Spring Boot
-where you would like to separate different things into separate areas.</p>
+<p>If you think about creating a command line app including a web application where you
+share code. That means you would have a command line part (module), a web application
+part(module) and common code (module). This results in a nice multi-module-build.</p>
 </div>
 <div class="paragraph">
-<p>It could be also the case that you created a library which consists of different
-areas where it could make sense to make separate parts of it.</p>
+<p>In the JEE area where several parts of an enterprise applications make sense to
+separate the creation of those kind of archive like
+<a href="https://en.wikipedia.org/wiki/EAR_(file_format)">Enterprise Application Archive(ear)</a>,
+the <a href="https://en.wikipedia.org/wiki/WAR_(file_format)">web application archive(war)</a> etc.</p>
 </div>
 <div class="paragraph">
-<p>For this kind of purposes it&#8217;s verify useful having a multi module build
-which combines the different artifacts under a single hood.</p>
+<p>Nevertheless, project can become larger, when you realize it would make it easier
+to separate several part out parts into a higher level of groupings.</p>
+</div>
+<div class="paragraph">
+<p>In such cases it makes sense to create a multi-module-build. So start with a
+look on the basic structure of a multi-module-build.</p>
 </div>
 <div class="sect2">
-<h3 id="_basic_structure">4.1. Basic Structure</h3>
+<h3 id="_basic_structure_2"><a class="link" href="#_basic_structure_2">5.1. Basic Structure</a></h3>
 <div class="paragraph">
-<p>The idea of a multi-module-build is having multiple maven modules which are
-released under the same version which are directly related.</p>
+<p>Lets us take the example from the <a href="#_overview">Overview</a> chapter about the
+command line app. We could name those modules like this:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>module-cli</p>
+</li>
+<li>
+<p>module-web</p>
+</li>
+<li>
+<p>module-common</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_directory_structure_2"><a class="link" href="#_directory_structure_2">5.1.1. Directory Structure</a></h4>
 <div class="paragraph">
-<p>Let us start with a simple example project which contains several modules like
-the following:</p>
+<p>Based on this assumption a directory structure could look like this. We assume further that the <code>root</code>
+directory is the name of the git repository which will be created:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>module-core
-module-client
-module-server</code></pre>
+<pre class="CodeRay highlight"><code>root
+ +-- module-cli
+ +-- module-common
+ +-- module-web</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Before we know about multi-module-builds you should have created three
-separated maven projects and had to define dependencies between those modules
-and work on them without any relationship.  Obviously you can imagine that the
-above modules have relationship to each other, cause the <code>module-client</code> module
-has a dependency to the <code>module-core</code> whereas the <code>module-server</code> has a
-dependency to <code>module-core</code> and so on.</p>
+<p>Now let us dive into the details about such a project structure. What
+needs to be done to create such structure (apart from creating
+the directories). How could we build such a project and what kind of consequence
+are following from it.</p>
 </div>
-<div class="paragraph">
-<p>Wouldn&#8217;t it be the best if all the above module live within a single location
-(git repository or SVN trunk for example) where you could simply checkout
-those modules and work with your IDE on the whole project, cause if you need to
-change something in your <code>module-core</code> it&#8217;s very likely that you need to change
-the depending module <code>module-client</code> as well? Exactly for such purposes a
-multi-module-build exists in Maven.</p>
-</div>
-<div class="sect3">
-<h4 id="_directory_structure">4.1.1. Directory Structure</h4>
 <div class="paragraph">
 <p>Based on the idea of the relationship of the modules it is useful to create
-an appropriate directory structure which more or less shows the relationship of
-the module to each other.</p>
+an appropriate directory structure.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code> +--- pom.xml
-   +--- module-core
-   +--- module-client
-   +--- module-server</code></pre>
+   +--- module-cli
+   +--- module-web
+   +--- module-common</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_the_multi_module_parent"><a class="link" href="#_the_multi_module_parent">5.1.2. The Multi-Module-Parent</a></h4>
+<div class="paragraph">
+<p>There are some parts which you need to pay attention to, to get a good working
+experience. The first thing is the <code>pom.xml</code> file on the root level of this structure.
+This is usually called the "parent" or multi-module-parent. This looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;project</span>
+  <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://maven.apache.org/POM/4.0.0</span><span class="delimiter">&quot;</span></span>
+  <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
+  <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;modelVersion&gt;</span>4.0.0<span class="tag">&lt;/modelVersion&gt;</span>
+
+  ...
+
+  <span class="tag">&lt;groupId&gt;</span>com.soebes.mpg.examples.mmb<span class="tag">&lt;/groupId&gt;</span>
+  <span class="tag">&lt;artifactId&gt;</span>parent<span class="tag">&lt;/artifactId&gt;</span>
+  <span class="tag">&lt;version&gt;</span>1.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
+  <span class="tag">&lt;packaging&gt;</span>pom<span class="tag">&lt;/packaging&gt;</span>
+  ..
+  <span class="tag">&lt;modules&gt;</span>
+    <span class="tag">&lt;module&gt;</span>module-cli<span class="tag">&lt;/module&gt;</span>
+    <span class="tag">&lt;module&gt;</span>module-common<span class="tag">&lt;/module&gt;</span>
+    <span class="tag">&lt;module&gt;</span>module-web<span class="tag">&lt;/module&gt;</span>
+  <span class="tag">&lt;/modules&gt;</span>
+  ..
+<span class="tag">&lt;/project&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>There are some parts which you need to pay attention to, to get a good working
-environment. The first thing is the pom on the root level of this structure.
-This pom file contains no code nor does it produce an artifact as the usual
-maven project. This means in other words it does not produce an <code>jar</code>-File.
-This is the reason why this Maven project defines it&#8217;s packaging as <code>pom</code>.</p>
+<p>This <code>pom.xml</code> file contains the usual parts like groupId, artifactId, version but at least
+one very important difference to other project which is the <code>&lt;packaging&gt;pom&lt;/packaging&gt;</code>.
+And of course the module defined by the usage of the <code>&lt;modules&gt;..&lt;/modules&gt;</code> tag including the
+list of module which are defined by <code>&lt;module&gt;&#8230;&#8203;&lt;/module&gt;</code>. The names like <code>module-cli</code> etc.
+correspond to the directories on the file system.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
-
-  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-
-  &lt;parent&gt;
-    &lt;groupId&gt;com.soebes.smpp&lt;/groupId&gt;
-    &lt;artifactId&gt;smpp&lt;/artifactId&gt;
-    &lt;version&gt;2.1.0&lt;/version&gt;
-  &lt;/parent&gt;
-
-  &lt;groupId&gt;com.soebes.mpg.examples.mmb&lt;/groupId&gt;
-  &lt;artifactId&gt;parent&lt;/artifactId&gt;
-  &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
-  &lt;packaging&gt;pom&lt;/packaging&gt;
-  ..
-  &lt;modules&gt;
-    &lt;module&gt;module-core&lt;/module&gt;
-    &lt;module&gt;module-client&lt;/module&gt;
-    &lt;module&gt;module-server&lt;/module&gt;
-  &lt;/modules&gt;
-  ..
-&lt;/project&gt;</pre>
+<pre class="CodeRay highlight"><code> +--- pom.xml
+   +--- module-cli
+   +--- module-web
+   +--- module-common</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>In a usual Maven project you have a single <code>pom.xml</code> file, and then you start with
+the <code>src/</code> directory where your code lives. The directory is often enriched with
+other files like a <code>README.md</code> (or alike) etc.</p>
+</div>
+<div class="paragraph">
+<p>The <code>README.md</code>(or alike) of course are often being found in multi-module-build as well.</p>
+</div>
+<div class="paragraph">
+<p>This pom file contains no code nor does it produce an artifact as the usual
+maven project. This means in other words it does not produce an <code>jar</code>-File.
+This is the reason why this Maven project defines it&#8217;s packaging as <code>pom</code>.</p>
+</div>
+<div class="paragraph">
+<p>But on the level of the parent <code>pom.xml</code> you will not find any <code>src</code> directory.</p>
 </div>
 <div class="paragraph">
 <p>Apart from the above you need to define the list of modules which you
@@ -1000,23 +1076,24 @@ folders as their appropriate <code>artifactId</code>. So now let us take a look
 at a module how its pom file looks like:</p>
 </div>
 <div class="listingblock">
+<div class="title">pom.xml</div>
 <div class="content">
-<pre>&lt;project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;project</span>
+  <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://maven.apache.org/POM/4.0.0</span><span class="delimiter">&quot;</span></span>
+  <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
+  <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 
-  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  <span class="tag">&lt;modelVersion&gt;</span>4.0.0<span class="tag">&lt;/modelVersion&gt;</span>
 
-  &lt;parent&gt;
-    &lt;groupId&gt;com.soebes.mpg.examples.mmb&lt;/groupId&gt;
-    &lt;artifactId&gt;parent&lt;/artifactId&gt;
-    &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
-  &lt;/parent&gt;
+  <span class="tag">&lt;parent&gt;</span>
+    <span class="tag">&lt;groupId&gt;</span>com.soebes.mpg.examples.mmb<span class="tag">&lt;/groupId&gt;</span>
+    <span class="tag">&lt;artifactId&gt;</span>parent<span class="tag">&lt;/artifactId&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
+  <span class="tag">&lt;/parent&gt;</span>
 
-  &lt;artifactId&gt;module-core&lt;/artifactId&gt;
+  <span class="tag">&lt;artifactId&gt;</span>module-core<span class="tag">&lt;/artifactId&gt;</span>
 ...
-&lt;/project&gt;</pre>
+<span class="tag">&lt;/project&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1077,20 +1154,23 @@ module from the multi module build? Draw backs?</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_releasing_a_multi_module_project">4.2. Releasing a Multi module Project</h3>
+<h3 id="_releasing_a_multi_module_project"><a class="link" href="#_releasing_a_multi_module_project">5.2. Releasing a Multi module Project</a></h3>
 <div class="paragraph">
 <p>From root, single module?
 ?</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples">4.3. Examples</h3>
+<h3 id="_examples"><a class="link" href="#_examples">5.3. Examples</a></h3>
 <div class="sect3">
-<h4 id="_xxx">4.3.1. XXX</h4>
+<h4 id="_xxx"><a class="link" href="#_xxx">5.3.1. XXX</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_spring_boot">4.3.2. Spring Boot</h4>
+<h4 id="_spring_boot"><a class="link" href="#_spring_boot">5.3.2. Spring Boot</a></h4>
+<div class="paragraph">
+<p>A multi module project based on Spring Boot.</p>
+</div>
 <div class="paragraph">
 <p>spring boot project setup.</p>
 </div>
@@ -1107,9 +1187,9 @@ module from the multi module build? Draw backs?</p>
 </div>
 </div>
 </div>
-<h1 id="_testing_with_maven" class="sect0">Testing with Maven</h1>
+<h1 id="_testing_with_maven" class="sect0"><a class="link" href="#_testing_with_maven">Testing with Maven</a></h1>
 <div class="sect1">
-<h2 id="_overview_3">5. Overview</h2>
+<h2 id="_overview_4"><a class="link" href="#_overview_4">6. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Basic Unit Testing, Responsibilities of Plugins, Using JUnit, TestNG,
@@ -1136,7 +1216,7 @@ you tipps how to prevent several issues with testing.</p>
 <p><a href="https://blog.42.nl/articles/keeping-integration-tests-isolated/" class="bare">https://blog.42.nl/articles/keeping-integration-tests-isolated/</a></p>
 </div>
 <div class="sect2">
-<h3 id="_unit_testing">5.1. Unit Testing</h3>
+<h3 id="_unit_testing"><a class="link" href="#_unit_testing">6.1. Unit Testing</a></h3>
 <div class="paragraph">
 <p>Unit testing can be done out-of-box in Maven which means you just have
 to locate your unit tests into 'src/test/java' and follow the naming
@@ -1391,7 +1471,7 @@ JUnit, TestNG, Spock?, BDD ?</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_integration_testing">5.2. Integration Testing</h3>
+<h3 id="_integration_testing"><a class="link" href="#_integration_testing">6.2. Integration Testing</a></h3>
 <div class="paragraph">
 <p>What is integration tests?
 How to use? Naming convention?
@@ -1401,7 +1481,7 @@ In which cases should be used a separate module?</p>
 <p>Test an web application with Selenium? (Examples).</p>
 </div>
 <div class="sect3">
-<h4 id="_importance_of_separation">5.2.1. Importance of Separation</h4>
+<h4 id="_importance_of_separation"><a class="link" href="#_importance_of_separation">6.2.1. Importance of Separation</a></h4>
 <div class="paragraph">
 <p>Why is it important to separate between unit tests and integration
 tests?</p>
@@ -1430,9 +1510,9 @@ separately.</p>
 </div>
 </div>
 </div>
-<h1 id="_maven_assemblies" class="sect0">Maven Assemblies</h1>
+<h1 id="_maven_assemblies" class="sect0"><a class="link" href="#_maven_assemblies">Maven Assemblies</a></h1>
 <div class="sect1">
-<h2 id="_overview_4">6. Overview</h2>
+<h2 id="_overview_5"><a class="link" href="#_overview_5">7. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>During the usage you will often be faced with the situation to
@@ -1455,14 +1535,14 @@ how to prevent them.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_maven_assembly_plugin">7. The Maven Assembly Plugin</h2>
+<h2 id="_the_maven_assembly_plugin"><a class="link" href="#_the_maven_assembly_plugin">8. The Maven Assembly Plugin</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <a href="https://maven.apache.org/plugins/maven-assembly-plugin/">Maven Assembly Plugin</a> is especially created for such purposes to
 create any kind of archive type.</p>
 </div>
 <div class="sect2">
-<h3 id="_single_executable_artifact">7.1. Single Executable Artifact</h3>
+<h3 id="_single_executable_artifact"><a class="link" href="#_single_executable_artifact">8.1. Single Executable Artifact</a></h3>
 <div class="paragraph">
 <p>One of the requirements you will often be confronted with is to create an
 archive which can simply be executed on command line. This is often called an
@@ -1550,7 +1630,7 @@ only use for example purposes.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_creating_an_zip_archive">7.2. Creating an ZIP Archive</h3>
+<h3 id="_creating_an_zip_archive"><a class="link" href="#_creating_an_zip_archive">8.2. Creating an ZIP Archive</a></h3>
 <div class="paragraph">
 <p>The idea of an archive is have particular content which is defined
 by the project in the way you like to do that and define how it will look
@@ -1559,7 +1639,7 @@ the archive or not.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_default_assemblies">7.3. Default Assemblies</h3>
+<h3 id="_default_assemblies"><a class="link" href="#_default_assemblies">8.3. Default Assemblies</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1610,26 +1690,26 @@ mvn dependency:copy-dependencies -Dclassifier=sources -DoutputDirectory=target/s
 </div>
 </div>
 <div class="sect2">
-<h3 id="_predefined_descriptors">7.4. Predefined Descriptors</h3>
+<h3 id="_predefined_descriptors"><a class="link" href="#_predefined_descriptors">8.4. Predefined Descriptors</a></h3>
 <div class="paragraph">
 <p>The predefined descriptors fulfil the need of often requests archive types which should be usable in a very short time.
 You could use them in a very simple form.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_module_sets">7.5. Module Sets</h3>
+<h3 id="_module_sets"><a class="link" href="#_module_sets">8.5. Module Sets</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="_dependency_sets">7.6. Dependency Sets</h3>
+<h3 id="_dependency_sets"><a class="link" href="#_dependency_sets">8.6. Dependency Sets</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="_sources">7.7. Sources</h3>
+<h3 id="_sources"><a class="link" href="#_sources">8.7. Sources</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="_predefined_descriptors_2">7.8. Predefined Descriptors</h3>
+<h3 id="_predefined_descriptors_2"><a class="link" href="#_predefined_descriptors_2">8.8. Predefined Descriptors</a></h3>
 <div class="paragraph">
 <p>Currently there are four of them:</p>
 </div>
@@ -1652,9 +1732,9 @@ You could use them in a very simple form.</p>
 </div>
 </div>
 </div>
-<h1 id="_plugins" class="sect0">Plugins</h1>
+<h1 id="_plugins" class="sect0"><a class="link" href="#_plugins">Plugins</a></h1>
 <div class="sect1">
-<h2 id="_overview_5">8. Overview</h2>
+<h2 id="_overview_6"><a class="link" href="#_overview_6">9. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The plugins of Maven building the foundation of the Maven eco system,
@@ -1670,7 +1750,7 @@ plugins sources, the different ideas of the plugins and their typical
 usage within a Java project build.</p>
 </div>
 <div class="sect2">
-<h3 id="_the_plugin_sources">8.1. The Plugin Sources</h3>
+<h3 id="_the_plugin_sources"><a class="link" href="#_the_plugin_sources">9.1. The Plugin Sources</a></h3>
 <div class="paragraph">
 <p>In general there are two big sources of plugin. The first source is
 the area under the umbrella of the <a href="https://www.apache.org/">Apache Software Foundation</a>.
@@ -1700,7 +1780,7 @@ Processor Plugin)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_different_plugins">9. The Different Plugins</h2>
+<h2 id="_the_different_plugins"><a class="link" href="#_the_different_plugins">10. The Different Plugins</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this chapter we will take a look on more or less every plugin which
@@ -1712,7 +1792,7 @@ participant of the {link-build-life-cycle}.</p>
 in the majority of the cases its enough to build usual projects.</p>
 </div>
 <div class="sect2">
-<h3 id="_clean_everything">9.1. Clean Everything</h3>
+<h3 id="_clean_everything"><a class="link" href="#_clean_everything">10.1. Clean Everything</a></h3>
 <div class="paragraph">
 <p>If you want to be sure your build will start from scratch you need to
 wipe out everything which has been created by previous operations or
@@ -1743,7 +1823,7 @@ clean' call.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_resources">9.2. Resources</h3>
+<h3 id="_resources"><a class="link" href="#_resources">10.2. Resources</a></h3>
 <div class="paragraph">
 <p>Often it occurs that your java code needs some kind of configuration
 files.  One of the most famous examples for this kind of
@@ -1794,7 +1874,7 @@ the logging level or something else.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_let_the_source_be_with_you">9.3. Let The Source Be With You</h3>
+<h3 id="_let_the_source_be_with_you"><a class="link" href="#_let_the_source_be_with_you">10.3. Let The Source Be With You</a></h3>
 <div class="paragraph">
 <p>You usually write Java source code (ok ok sometimes you write
 difference sources like <a href="https://groovy-lang.org/">Groovy</a>, <a href="https://scala.org">Scala</a>, <a href="https://ceylon-lang.org">Ceylon</a> or
@@ -1814,7 +1894,7 @@ which is located in 'src/test/java' into 'target/test-classes'.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_lets_see_if_the_code_is_working">9.4. Let&#8217;s See If The Code Is Working?</h3>
+<h3 id="_lets_see_if_the_code_is_working"><a class="link" href="#_lets_see_if_the_code_is_working">10.4. Let&#8217;s See If The Code Is Working?</a></h3>
 <div class="paragraph">
 <p>After we have compiled the whole code we should run the unit tests to
 check our code. This is done before the code will be packaged into a
@@ -1827,7 +1907,7 @@ to run those unit tests.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_let_the_jars_come_to_me">9.5. Let The Jar&#8217;s Come To Me</h3>
+<h3 id="_let_the_jars_come_to_me"><a class="link" href="#_let_the_jars_come_to_me">10.5. Let The Jar&#8217;s Come To Me</a></h3>
 <div class="paragraph">
 <p>After the production code has been compiled into the appropriate
 '.class' files they will be packed into a jar file which is the base
@@ -1862,7 +1942,7 @@ non transitive behaviour of test-jar artifact. Solution create a usual separate 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_install_the_archive">9.6. Install The Archive</h3>
+<h3 id="_install_the_archive"><a class="link" href="#_install_the_archive">10.6. Install The Archive</a></h3>
 <div class="paragraph">
 <p>After the jar archive has been created the archive can be installed into the local
 repository to be consumed by other projects on the same machine. For such a purpose
@@ -1870,7 +1950,7 @@ the <a href="https://maven.apache.org/plugins/maven-install-plugin/">Maven Insta
 </div>
 </div>
 <div class="sect2">
-<h3 id="_distribute_it_to_the_world">9.7. Distribute It To The World</h3>
+<h3 id="_distribute_it_to_the_world"><a class="link" href="#_distribute_it_to_the_world">10.7. Distribute It To The World</a></h3>
 <div class="paragraph">
 <p>To break the limits of your machine you can distribute an jar archive to
 a remote repository which can be used by other users.
@@ -1909,7 +1989,7 @@ For this the <a href="https://maven.apache.org/plugins/maven-deploy-plugin/">Mav
 <p><a href="https://www.mojohaus.org/appassembler-maven-plugin">Mojo&#8217;s Appassembler Maven Plugin</a></p>
 </li>
 <li>
-<p><a href="http://https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Mojo&#8217;s Cargo Maven 2 Plugin</a></p>
+<p>{link-cargo-maven2-plugin}</p>
 </li>
 <li>
 <p><a href="https://www.mojohaus.org/exec-maven-plugin/">Mojo&#8217;s Exec Maven Plugin</a></p>
@@ -1974,7 +2054,7 @@ spring-boot-maven-plugin</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_let_the_force_be_with_you">9.8. Let The Force Be With You</h3>
+<h3 id="_let_the_force_be_with_you"><a class="link" href="#_let_the_force_be_with_you">10.8. Let The Force Be With You</a></h3>
 <div class="paragraph">
 <p>The larger a build becomes the more you need to control what happens
 within your build otherwise the {link-broken-window-problem} occurs
@@ -2143,9 +2223,9 @@ following path:</p>
 </div>
 </div>
 </div>
-<h1 id="_making_releases" class="sect0">Making Releases</h1>
+<h1 id="_making_releases" class="sect0"><a class="link" href="#_making_releases">Making Releases</a></h1>
 <div class="sect1">
-<h2 id="_overview_6">10. Overview</h2>
+<h2 id="_overview_7"><a class="link" href="#_overview_7">11. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Here you get an overview of the different options how to do a release with Maven.</p>
@@ -2153,7 +2233,7 @@ following path:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_traditional_maven_way">11. The Traditional Maven Way</h2>
+<h2 id="_the_traditional_maven_way"><a class="link" href="#_the_traditional_maven_way">12. The Traditional Maven Way</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2175,10 +2255,10 @@ How it works. Pro&#8217;s and con&#8217;s.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_releases_the_cd_way">12. Releases The CD Way</h2>
+<h2 id="_releases_the_cd_way"><a class="link" href="#_releases_the_cd_way">13. Releases The CD Way</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Releases in the time of Continious Delivery. How to solve this via Maven?
+<p>Releases in the time of Continuous Delivery. How to solve this via Maven?
 Is this possible? Maven 3.2.1.</p>
 </div>
 <div class="paragraph">
@@ -2207,9 +2287,9 @@ Is this possible? Maven 3.2.1.</p>
 </div>
 </div>
 </div>
-<h1 id="_continious_integration_solution" class="sect0">Continious Integration Solution</h1>
+<h1 id="_continious_integration_solution" class="sect0"><a class="link" href="#_continious_integration_solution">Continious Integration Solution</a></h1>
 <div class="sect1">
-<h2 id="_more_details">13. More Details</h2>
+<h2 id="_more_details"><a class="link" href="#_more_details">14. More Details</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Jenkins
@@ -2218,9 +2298,9 @@ Which Plugins of Jenkins can be usefull</p>
 </div>
 </div>
 </div>
-<h1 id="_build_smells" class="sect0">Build Smells</h1>
+<h1 id="_build_smells" class="sect0"><a class="link" href="#_build_smells">Build Smells</a></h1>
 <div class="sect1">
-<h2 id="_creating_multiple_artifacts">14. Creating Multiple Artifacts</h2>
+<h2 id="_creating_multiple_artifacts"><a class="link" href="#_creating_multiple_artifacts">15. Creating Multiple Artifacts</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Multiple Artifacts The Wrong Way</p>
@@ -2238,7 +2318,7 @@ create an other jar from packages a.b.d)?</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_not_part_of_the_life_cycle">15. Not Part of the Life Cycle</h2>
+<h2 id="_not_part_of_the_life_cycle"><a class="link" href="#_not_part_of_the_life_cycle">16. Not Part of the Life Cycle</a></h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
@@ -2248,10 +2328,10 @@ create an other jar from packages a.b.d)?</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_multi_module_builds_2">16. Multi Module Builds</h2>
+<h2 id="_multi_module_builds_2"><a class="link" href="#_multi_module_builds_2">17. Multi Module Builds</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_module_structure">16.1. Module Structure</h3>
+<h3 id="_module_structure"><a class="link" href="#_module_structure">17.1. Module Structure</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2261,7 +2341,7 @@ create an other jar from packages a.b.d)?</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_install_hack">16.2. The Install Hack</h3>
+<h3 id="_the_install_hack"><a class="link" href="#_the_install_hack">17.2. The Install Hack</a></h3>
 <div class="paragraph">
 <p>The Install Hack</p>
 </div>
@@ -2270,7 +2350,7 @@ create an other jar from packages a.b.d)?</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_separation_of_concerns">16.3. Separation of Concerns</h3>
+<h3 id="_separation_of_concerns"><a class="link" href="#_separation_of_concerns">17.3. Separation of Concerns</a></h3>
 <div class="paragraph">
 <p>Multiple Purposes of a Module</p>
 </div>
@@ -2281,7 +2361,7 @@ create an other jar from packages a.b.d)?</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_testing">17. Testing</h2>
+<h2 id="_testing"><a class="link" href="#_testing">18. Testing</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2297,7 +2377,7 @@ Configuration by using profile for unit and integration tests</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_assemblies">18. Assemblies</h2>
+<h2 id="_assemblies"><a class="link" href="#_assemblies">19. Assemblies</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2314,7 +2394,7 @@ Here:
 </div>
 </div>
 <div class="sect1">
-<h2 id="_problem_with_profiles_and_dependencies">19. Problem with Profiles and Dependencies</h2>
+<h2 id="_problem_with_profiles_and_dependencies"><a class="link" href="#_problem_with_profiles_and_dependencies">20. Problem with Profiles and Dependencies</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://blog.soebes.de/blog/2013/11/09/why-is-it-bad-to-activate-slash-deactive-modules-by-profiles-in-maven/" class="bare">http://blog.soebes.de/blog/2013/11/09/why-is-it-bad-to-activate-slash-deactive-modules-by-profiles-in-maven/</a></p>
@@ -2322,16 +2402,16 @@ Here:
 </div>
 </div>
 <div class="sect1">
-<h2 id="_what_about_dependencies_by_profiles">20. What about dependencies by profiles?</h2>
+<h2 id="_what_about_dependencies_by_profiles"><a class="link" href="#_what_about_dependencies_by_profiles">21. What about dependencies by profiles?</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Describe why and how and what the drawbacks are?</p>
 </div>
 </div>
 </div>
-<h1 id="_plugin_development" class="sect0">Plugin Development</h1>
+<h1 id="_plugin_development" class="sect0"><a class="link" href="#_plugin_development">Plugin Development</a></h1>
 <div class="sect1">
-<h2 id="_overview_7">21. Overview</h2>
+<h2 id="_overview_8"><a class="link" href="#_overview_8">22. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>How to develop a plugin.
@@ -2339,7 +2419,7 @@ Basics. Annotations?
 Example project.</p>
 </div>
 <div class="sect2">
-<h3 id="_reasons">21.1. Reasons</h3>
+<h3 id="_reasons"><a class="link" href="#_reasons">22.1. Reasons</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2363,7 +2443,7 @@ The simple answer to this: If the needed functionality is not being provided by 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_basics">21.2. Basics</h3>
+<h3 id="_basics"><a class="link" href="#_basics">22.2. Basics</a></h3>
 <div class="paragraph">
 <p>What is a Mojo?</p>
 </div>
@@ -2382,7 +2462,7 @@ The simple answer to this: If the needed functionality is not being provided by 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_building_a_plugin">21.3. Building a plugin</h3>
+<h3 id="_building_a_plugin"><a class="link" href="#_building_a_plugin">22.3. Building a plugin</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2395,7 +2475,7 @@ The simple answer to this: If the needed functionality is not being provided by 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_testing_2">21.4. Testing</h3>
+<h3 id="_testing_2"><a class="link" href="#_testing_2">22.4. Testing</a></h3>
 <div class="paragraph">
 <p>Testing a plugin is one of the most challenging thing cause a plugin which is running inside a container (Maven Runtime)
 has several aspects of testing.</p>
@@ -2451,7 +2531,7 @@ has several aspects of testing.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_compatibility">21.5. Compatibility</h3>
+<h3 id="_compatibility"><a class="link" href="#_compatibility">22.5. Compatibility</a></h3>
 <div class="paragraph">
 <p>There a different aspect of compatibility. The first one is:</p>
 </div>
@@ -2468,9 +2548,9 @@ has several aspects of testing.</p>
 </div>
 </div>
 </div>
-<h1 id="_performance_tipps" class="sect0">Performance tipps</h1>
+<h1 id="_performance_tipps" class="sect0"><a class="link" href="#_performance_tipps">Performance tipps</a></h1>
 <div class="sect1">
-<h2 id="_incremental_builds">22. Incremental Builds</h2>
+<h2 id="_incremental_builds"><a class="link" href="#_incremental_builds">23. Incremental Builds</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>incremental builds in Maven.</p>
@@ -2486,9 +2566,9 @@ has several aspects of testing.</p>
 </div>
 </div>
 </div>
-<h1 id="_repository_manager" class="sect0">Repository Manager</h1>
+<h1 id="_repository_manager" class="sect0"><a class="link" href="#_repository_manager">Repository Manager</a></h1>
 <div class="sect1">
-<h2 id="_overview_8">23. Overview</h2>
+<h2 id="_overview_9"><a class="link" href="#_overview_9">24. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter will give you an overview of the idea the intention of a repository manager.
@@ -2497,7 +2577,7 @@ It will also show and describe the advantages of the usage of a repository manag
 </div>
 </div>
 <div class="sect1">
-<h2 id="_test">24. Test</h2>
+<h2 id="_test"><a class="link" href="#_test">25. Test</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>TODO:</p>
@@ -2517,9 +2597,9 @@ It will also show and describe the advantages of the usage of a repository manag
 </div>
 </div>
 </div>
-<h1 id="_best_practice" class="sect0">Best Practice</h1>
+<h1 id="_best_practice" class="sect0"><a class="link" href="#_best_practice">Best Practice</a></h1>
 <div class="sect1">
-<h2 id="_generate_into_source_folder">25. Generate Into Source Folder</h2>
+<h2 id="_generate_into_source_folder"><a class="link" href="#_generate_into_source_folder">26. Generate Into Source Folder</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>generating code into src folder instead of 'target'.
@@ -2560,7 +2640,7 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dependencies_dependencymanagement">26. Dependencies / DependencyManagement</h2>
+<h2 id="_dependencies_dependencymanagement"><a class="link" href="#_dependencies_dependencymanagement">27. Dependencies / DependencyManagement</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Scope only in real dependencies not in dependencyManagement</p>
@@ -2571,7 +2651,7 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_deps_via_props">27. Deps via Props</h2>
+<h2 id="_deps_via_props"><a class="link" href="#_deps_via_props">28. Deps via Props</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Using properties to control the dependencies with a so called company pom?</p>
@@ -2582,7 +2662,7 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_company_wide_parents">28. Company wide parent(s)</h2>
+<h2 id="_company_wide_parents"><a class="link" href="#_company_wide_parents">29. Company wide parent(s)</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Manifest setup with master parent.</p>
@@ -2641,7 +2721,7 @@ Answer: create a mod-core, mod-war and that&#8217;s it?</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_building_for_different_environments">29. Building for different Environments</h2>
+<h2 id="_building_for_different_environments"><a class="link" href="#_building_for_different_environments">30. Building for different Environments</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You are often face with the problem having different environments like
@@ -2650,7 +2730,7 @@ dev, test, prod this is just a simple example how real life is.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_do_good_integration_tests_for_maven_plugins">30. How to do good integration tests for maven plugins</h2>
+<h2 id="_how_to_do_good_integration_tests_for_maven_plugins"><a class="link" href="#_how_to_do_good_integration_tests_for_maven_plugins">31. How to do good integration tests for maven plugins</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>One of the final tests should be to clean your local repository
@@ -2666,7 +2746,7 @@ mvn -Prun-its clean verify</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_nexus">31. Nexus</h2>
+<h2 id="_nexus"><a class="link" href="#_nexus">32. Nexus</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>why the order of the repositories does really matter&#8230;&#8203;</p>
@@ -2674,7 +2754,7 @@ mvn -Prun-its clean verify</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_branching_strategies">32. Branching Strategies</h2>
+<h2 id="_branching_strategies"><a class="link" href="#_branching_strategies">33. Branching Strategies</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://stackoverflow.com/questions/24420474/do-you-really-need-to-version-the-trunk-of-a-maven-project" class="bare">http://stackoverflow.com/questions/24420474/do-you-really-need-to-version-the-trunk-of-a-maven-project</a></p>
@@ -2684,7 +2764,7 @@ mvn -Prun-its clean verify</p>
 </div>
 </div>
 </div>
-<h1 id="_the_sites" class="sect0">The Sites</h1>
+<h1 id="_the_sites" class="sect0"><a class="link" href="#_the_sites">The Sites</a></h1>
 <div class="openblock partintro">
 <div class="content">
 generating sites with Maven
@@ -2692,7 +2772,7 @@ The maven <code>site</code> life cycle.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_maven_site_plugin">33. Maven Site Plugin</h2>
+<h2 id="_maven_site_plugin"><a class="link" href="#_maven_site_plugin">34. Maven Site Plugin</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2706,14 +2786,14 @@ The maven <code>site</code> life cycle.
 </div>
 </div>
 </div>
-<h1 id="_example_appendix" class="sect0">Example Appendix</h1>
+<h1 id="_example_appendix" class="sect0"><a class="link" href="#_example_appendix">Example Appendix</a></h1>
 <div class="openblock partintro">
 <div class="content">
 One or more optional appendixes go here at section level 1.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_appendix_sub_section">Appendix Sub-section</h2>
+<h2 id="_appendix_sub_section"><a class="link" href="#_appendix_sub_section">Appendix Sub-section</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Sub-section body.</p>
@@ -2721,7 +2801,7 @@ One or more optional appendixes go here at section level 1.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_example_glossary">Example Glossary</h2>
+<h2 id="_example_glossary"><a class="link" href="#_example_glossary">Example Glossary</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Glossaries are optional. Glossaries entries are an example of a style
@@ -2730,7 +2810,7 @@ of AsciiDoc labeled lists.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_example_colophon">Example Colophon</h2>
+<h2 id="_example_colophon"><a class="link" href="#_example_colophon">Example Colophon</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Text at the end of a book describing facts about its production.</p>
@@ -2742,7 +2822,7 @@ of AsciiDoc labeled lists.</p>
 </div>
 </div>
 </div>
-<h1 id="_example_bibliography" class="sect0">Example Bibliography</h1>
+<h1 id="_example_bibliography" class="sect0"><a class="link" href="#_example_bibliography">Example Bibliography</a></h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
@@ -2773,7 +2853,7 @@ ISBN 1-56592-580-7.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_example_index">Example Index</h2>
+<h2 id="_example_index"><a class="link" href="#_example_index">Example Index</a></h2>
 <div class="sectionbody">
 
 </div>
@@ -2782,7 +2862,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2023-01-28 14:05:35 UTC
+Last updated 2023-02-17 23:52:50 UTC
 </div>
 </div>
 </body>
