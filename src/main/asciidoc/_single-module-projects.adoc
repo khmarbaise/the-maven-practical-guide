@@ -1,0 +1,54 @@
+:sourcedir: examples/single-modules
+
+:web-application-archive: https://en.wikipedia.org/wiki/WAR_(file_format)
+:enterprise-application-archive: https://en.wikipedia.org/wiki/EAR_(file_format)
+:openapi-initiave: https://www.openapis.org/
+
+= Single Module Projects
+
+== Overview
+
+
+=== Basic Structure
+
+Basic descriptions.
+
+
+
+==== Directory Structure
+
+[source]
+---------------
+ +--- pom.xml
+   +--- src
+         +--- main
+               +--- java
+xxxx
+---------------
+
+
+==== Different dependent projects
+
+// Having a project common, cli and web.
+//
+// If you change common you have to (`mvn install`) and
+// then goto to the cli project and build it also
+// need to go to the web parts and build it as well.
+//
+// All of those projects are in different git repositories etc.
+// The handling will become cumbersome.
+// multi module-build. Nextchapter!
+// TODO: The following is old text from multi-module-build:
+// Before we know about multi-module-builds you should have created three
+// separated maven projects and had to define dependencies between those modules
+// and work on them without any relationship.  Obviously you can imagine that the
+// above modules have relationship to each other, cause the `module-client` module
+// has a dependency to the `module-core` whereas the `module-server` has a
+// dependency to `module-core` and so on.
+//
+// Wouldn't it be the best if all the above module live within a single location
+// (git repository or SVN trunk for example) where you could simply checkout
+// those modules and work with your IDE on the whole project, cause if you need to
+// change something in your `module-core` it's very likely that you need to change
+// the depending module `module-client` as well? Exactly for such purposes a
+// multi-module-build exists in Maven.

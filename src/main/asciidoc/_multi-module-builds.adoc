@@ -1,79 +1,96 @@
 :sourcedir: examples/multi-modules
 
+:web-application-archive: https://en.wikipedia.org/wiki/WAR_(file_format)
+:enterprise-application-archive: https://en.wikipedia.org/wiki/EAR_(file_format)
+:openapi-initiave: https://www.openapis.org/
+
 = Multi Module Builds
 
 == Overview
 
-Sometimes it is enough having a single pom file with a limited number of java classes
-which are combined into a single jar which is produced to get a full fledged project.
+Sometimes it is sufficient having a single pom file and a limited number of Java classes
+which are combined into a single jar file.
 
-But this is only in a limited number of cases a solution for all kind of project types.
-If we take a look at JEE projects which often contains several kinds of artifacts which
-will be combined into a final single artifact usually an EAR file than the single
-module setup is not really a good idea.
+This is a solution in a number of cases but not for all kind of project
+types. In times of microservices projects becoming smaller even though
+it happens that you would like to separate out parts. For example having a generation
+of {openapi-initiave}[OpenAPI based code], or things like your jpa repositories (from
+a Spring Boot app) etc.
 
-Apart from that you could have a bit larger project which based on Spring Boot
-where you would like to separate different things into separate areas.
+If you think about creating a command line app including a web application where you
+share code. That means you would have a command line part (module), a web application
+part(module) and common code (module). This results in a nice multi-module-build.
 
-It could be also the case that you created a library which consists of different
-areas where it could make sense to make separate parts of it.
+In the JEE area where several parts of an enterprise applications make sense to
+separate the creation of those kind of archive like
+{enterprise-application-archive}[Enterprise Application Archive(ear)],
+the {web-application-archive}[web application archive(war)] etc.
 
-For this kind of purposes it's verify useful having a multi module build
-which combines the different artifacts under a single hood.
+Nevertheless, project can become larger, when you realize it would make it easier
+to separate several part out parts into a higher level of groupings.
 
+In such cases it makes sense to create a multi-module-build. So start with a
+look on the basic structure of a multi-module-build.
 
 === Basic Structure
 
-The idea of a multi-module-build is having multiple maven modules which are
-released under the same version which are directly related.
+Lets us take the example from the link:#_overview[Overview] chapter about the
+command line app. We could name those modules like this:
 
-Let us start with a simple example project which contains several modules like
-the following:
+* module-cli
+* module-web
+* module-common
 
-[source]
-----
-module-core
-module-client
-module-server
-----
-
-Before we know about multi-module-builds you should have created three
-separated maven projects and had to define dependencies between those modules
-and work on them without any relationship.  Obviously you can imagine that the
-above modules have relationship to each other, cause the `module-client` module
-has a dependency to the `module-core` whereas the `module-server` has a
-dependency to `module-core` and so on.
-
-Wouldn't it be the best if all the above module live within a single location
-(git repository or SVN trunk for example) where you could simply checkout
-those modules and work with your IDE on the whole project, cause if you need to
-change something in your `module-core` it's very likely that you need to change
-the depending module `module-client` as well? Exactly for such purposes a
-multi-module-build exists in Maven.
-
+//TODO: Maybe I need to reconsider this?
+// In a single project structure you might have use to structure it by using package names,
+// but technically you would have run into several issues because in Apache Maven its basic
+// idea is having a single project will produce a single artifact like jar, ear, war or alike.
+// By using some tricky things you would have achieved to generate different artifacts from a single
+// project but that would have resulted into a lot configuration etc.
+//TODO: Try to make such set as an example!!! (Bad Example!)
 
 ==== Directory Structure
 
+Based on this assumption a directory structure could look like this. We assume further that the `root`
+directory is the name of the git repository which will be created:
+[source]
+----
+root
+ +-- module-cli
+ +-- module-common
+ +-- module-web
+----
+
+//FIXME: Maybe we should those hints in later chapters...
+// This kind of approach has a number of advantages, because you have all the
+// code in a single location. This setup will make it possible to make some
+// refactoring over different modules via your IDE etc.
+
+Now let us dive into the details about such a project structure. What
+needs to be done to create such structure (apart from creating
+the directories). How could we build such a project and what kind of consequence
+are following from it.
+
 Based on the idea of the relationship of the modules it is useful to create
-an appropriate directory structure which more or less shows the relationship of
-the module to each other.
+an appropriate directory structure.
 
 [source]
 ---------------
  +--- pom.xml
-   +--- module-core
-   +--- module-client
-   +--- module-server
+   +--- module-cli
+   +--- module-web
+   +--- module-common
 ---------------
 
+==== The Multi-Module-Parent
 
 There are some parts which you need to pay attention to, to get a good working
-environment. The first thing is the pom on the root level of this structure.
-This pom file contains no code nor does it produce an artifact as the usual
-maven project. This means in other words it does not produce an `jar`-File.
-This is the reason why this Maven project defines it's packaging as `pom`.
+experience. The first thing is the `pom.xml` file on the root level of this structure.
+This is usually called the "parent" or multi-module-parent. This looks like this:
 
----------------
+[source,xml]
+.pom.xml
+----
 <project
   xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -81,11 +98,7 @@ This is the reason why this Maven project defines it's packaging as `pom`.
 
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.soebes.smpp</groupId>
-    <artifactId>smpp</artifactId>
-    <version>2.1.0</version>
-  </parent>
+  ...
 
   <groupId>com.soebes.mpg.examples.mmb</groupId>
   <artifactId>parent</artifactId>
@@ -93,13 +106,44 @@ This is the reason why this Maven project defines it's packaging as `pom`.
   <packaging>pom</packaging>
   ..
   <modules>
-    <module>module-core</module>
-    <module>module-client</module>
-    <module>module-server</module>
+    <module>module-cli</module>
+    <module>module-common</module>
+    <module>module-web</module>
   </modules>
   ..
 </project>
+----
+This `pom.xml` file contains the usual parts like groupId, artifactId, version but at least
+one very important difference to other project which is the `<packaging>pom</packaging>`.
+And of course the module defined by the usage of the `<modules>..</modules>` tag including the
+list of module which are defined by `<module>...</module>`. The names like `module-cli` etc.
+correspond to the directories on the file system.
+
+//TODO: Hint not necessary but useful? Write about other options?
+[source]
 ---------------
+ +--- pom.xml
+   +--- module-cli
+   +--- module-web
+   +--- module-common
+---------------
+
+In a usual Maven project you have a single `pom.xml` file, and then you start with
+the `src/` directory where your code lives. The directory is often enriched with
+other files like a `README.md` (or alike) etc.
+
+The `README.md`(or alike) of course are often being found in multi-module-build as well.
+
+
+This pom file contains no code nor does it produce an artifact as the usual
+maven project. This means in other words it does not produce an `jar`-File.
+This is the reason why this Maven project defines it's packaging as `pom`.
+
+But on the level of the parent `pom.xml` you will not find any `src` directory.
+
+
+
+
 
 Apart from the above you need to define the list of modules which you
 would like include in this parent. It is best practice to name the
@@ -107,7 +151,9 @@ folders as their appropriate `artifactId`. So now let us take a look
 at a module how its pom file looks like:
 
 
----------------
+[source,xml]
+.pom.xml
+----
 <project
   xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -124,9 +170,7 @@ at a module how its pom file looks like:
   <artifactId>module-core</artifactId>
 ...
 </project>
----------------
-
-
+----
 
 
 http://stackoverflow.com/questions/11528877/releasing-a-multi-module-maven-project-hosted-in-single-git-repository/[See here]
@@ -176,6 +220,8 @@ From root, single module?
 
 ==== Spring Boot
 
+A multi module project based on Spring Boot.
+
 spring boot project setup.
 
 [source]
@@ -186,3 +232,4 @@ root
    +--- controllers
    +--- application
 ---------------
+

@@ -8,7 +8,8 @@
   <parent>
     <groupId>com.soebes.smpp</groupId>
     <artifactId>smpp</artifactId>
-    <version>5.3.13</version>
+    <version>5.3.14</version>
+    <relativePath />
   </parent>
 
   <groupId>com.soebes.tmpg</groupId>
@@ -17,7 +18,7 @@
   <packaging>pom</packaging>
 
   <name>TMPG</name>
-  <description>The Maven Practical Guide</description>
+  <description>The Maven Practical Guide (TMPG)</description>
   <url>https://maven-practical-guide.com</url>
   <inceptionYear>2014</inceptionYear>
 

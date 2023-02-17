@@ -1,8 +1,13 @@
 = The Maven Practical Guide
 Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.com>; {docdate}
 :doctype: book
-:toc: left
+:author: Karl Heinz Marbaise
+:appendix-number:
 :sectnums:
+:sectlinks:
+:xrefstyle: full
+:toc: left
+//
 
 :keywords: Maven,Documentation,Apache Maven
 :link-junit: https://junit.org[JUnit]
@@ -40,18 +45,17 @@ Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.com>; {docd
 :link-templating-maven-plugin: https://www.mojohaus.org/templating-maven-plugin/[Mojo's Templating Maven Plugin]
 :link-build-helper-maven-plugin: https://www.mojohaus.org/build-helper-maven-plugin/[Mojo's Build Helper Maven Plugin]
 :link-buildnumber-maven-plugin: https://www.mojohaus.org/buildnumber-maven-plugin/[Mojo's Buildnumber Maven Plugin]
-:link-cargo-maven2-plugin: http://https://codehaus-cargo.github.io/cargo/Maven2+plugin.html[Mojo's Cargo Maven 2 Plugin]
 
+:link-issue-tracker: https://github.com/khmarbaise/the-maven-practical-guide/issues
 [dedication]
 THIS IS WORK IN PROGRESS
 ------------------------
-This is work in progress.
+This guide is an attempt to write a practical guide about Apache Maven.
+Its idea is to give practical hints how to use Apache Maven and describe
+and show what are the best practices and why you should follow them.
 
-If you have any suggestions, improvements or issues
-please use the following issue tracking system:
-
-https://github.com/khmarbaise/the-maven-practical-guide/issues
-
+If you have any suggestions, improvements or found issues please
+report them in the {link-issue-tracker}[issue tracking system].
 
 
 
@@ -60,6 +64,8 @@ include::_001_chapter.adoc[]
 include::_profiles.adoc[]
 
 include::_different-environments.adoc[]
+
+include::_single-module-projects.adoc[]
 
 include::_multi-module-builds.adoc[]
 
