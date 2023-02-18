@@ -1,5 +1,5 @@
 = The Maven Practical Guide
-Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.com>; {docdate}
+Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.io>; {docdate}
 :doctype: book
 :author: Karl Heinz Marbaise
 :appendix-number:
