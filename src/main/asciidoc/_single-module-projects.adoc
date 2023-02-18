@@ -8,14 +8,18 @@
 
 == Overview
 
+An often used setup of a Maven project has a single `pom.xml` file which
+contains the definition for dependencies and plugins etc. The project has
+a single artifact as a result which is often a `jar` file, but of course
+you can create `war`, `ear` or alike. That will be defined by the given
+`<packaging>jar</packaging>` tag.
 
-=== Basic Structure
 
-Basic descriptions.
+=== Directory Structure
+The following directory structure shows the default directory layout of
+a Maven project. That a convention to go that way. I strongly recommend
+to keep that structure (link:_exceptions.adoc[more details ??)].
 
-
-
-==== Directory Structure
 
 [source]
 ---------------
@@ -23,7 +27,10 @@ Basic descriptions.
    +--- src
          +--- main
                +--- java
-xxxx
+               +--- resources
+         +--- test
+               +--- java
+               +--- resources
 ---------------
 
 

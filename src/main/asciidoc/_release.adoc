@@ -19,7 +19,7 @@ Change the preparation goal in maven-release-plugin
 
 == Releases The CD Way
 Releases in the time of Continuous Delivery. How to solve this via Maven?
-Is this possible? Maven 3.2.1.
+Is this possible? Maven 3.8.7, 3.9.0, 4.0.0...
 
 Using Ci Friendly.
  with maven-scm-plugin.

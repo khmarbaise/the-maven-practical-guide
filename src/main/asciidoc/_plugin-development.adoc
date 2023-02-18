@@ -6,6 +6,8 @@ How to develop a plugin.
 Basics. Annotations?
 Example project.
 
+How to test plugins?
+
 === Reasons
 
 * Reasons to develop a plugin?

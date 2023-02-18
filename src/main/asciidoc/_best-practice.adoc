@@ -1,4 +1,14 @@
-= Best Practice
+= Best Practices
+
+
+== Directory Layout
+
+keep the defaults...
+
+== Plugin Management
+
+Define the plugins via pluginManagement...
+
 
 == Generate Into Source Folder
 
@@ -11,7 +21,7 @@ Unfortunately in the wild you will find builds which do not follow the
 convention and for example generate things into `src folder which is
 a bad practice (Hint why?).
 
-So let use think about this a little bit more. The first thing
+So let use think about this a little more. The first thing
 is if you change something in `src` folder means your version control
 system will be alarmed about such a change which on the other hand means
 you will be alarmed about a change which is not really a change, cause

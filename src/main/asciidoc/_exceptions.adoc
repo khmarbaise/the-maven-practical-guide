@@ -1,0 +1,10 @@
+= Exceptions from Best Practices
+
+== Layout
+Sometimes people to say I don't want to follow
+best practices. For example using a different
+directory layout? You can do that if you really need that,
+but it depends...
+
+
+// The question is why do you need such thing?

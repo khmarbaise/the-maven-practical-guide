@@ -28,7 +28,7 @@ on:
 jobs:
     name: "Build"
     runs-on: ubuntu-latest
-    container: "maven:3.8.6-eclipse-temurin-17"
+    container: "maven:3.8.7-eclipse-temurin-17"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v2

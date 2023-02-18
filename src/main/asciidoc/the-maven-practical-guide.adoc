@@ -61,10 +61,6 @@ report them in the {link-issue-tracker}[issue tracking system].
 
 include::_001_chapter.adoc[]
 
-include::_profiles.adoc[]
-
-include::_different-environments.adoc[]
-
 include::_single-module-projects.adoc[]
 
 include::_multi-module-builds.adoc[]
@@ -89,7 +85,14 @@ include::_repository-manager.adoc[]
 
 include::_best-practice.adoc[]
 
+include::_exceptions.adoc[]
+
 include::_XXX_sites.adoc[]
+
+include::_profiles.adoc[]
+
+include::_different-environments.adoc[]
+
 
 :numbered!:
 
