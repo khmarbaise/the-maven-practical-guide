@@ -185,12 +185,11 @@ Idea and usage? Why?
 * {link-buildnumber-maven-plugin}
 * {link-build-helper-maven-plugin}
 * {link-appassembler-maven-plugin}
-* {link-cargo-maven2-plugin}
 * {link-exec-maven-plugin}
 * {link-sql-maven-plugin}
 * {link-templating-maven-plugin}
 * {link-versions-maven-plugin}
-* ??ß
+* More ?
 
 
 http://mojo.codehaus.org/clirr-maven-plugin/

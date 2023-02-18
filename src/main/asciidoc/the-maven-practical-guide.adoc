@@ -37,7 +37,6 @@ Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.io>; {docda
 :link-maven-enforcer-plugin: https://maven.apache.org/plugins/maven-enforcer-plugin/[Maven Enforcer Plugin]
 :link-maven-invoker-plugin: https://maven.apache.org/plugins/maven-invoker-plugin/[Maven Invoker Plugin]
 :link-appassembler-maven-plugin: https://www.mojohaus.org/appassembler-maven-plugin[Mojo's Appassembler Maven Plugin]
-:link-jdepend-maven-plugin: https://www.mojohaus.org/jdepend-maven-plugin/[Mojo's JDepend Maven Plugin]
 :link-exec-maven-plugin: https://www.mojohaus.org/exec-maven-plugin/[Mojo's Exec Maven Plugin]
 :link-versions-maven-plugin: https://www.mojohaus.org/version-maven-plugin/[Mojo's Versions Maven Plugin]
 :link-sql-maven-plugin: https://www.mojohaus.org/sql-maven-plugin/[Mojo's SQL Maven Plugin]
