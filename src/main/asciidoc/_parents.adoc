@@ -1,0 +1,16 @@
+:sourcedir: examples/???
+
+= Parent
+
+the intention of a parent in general, super-pom,
+corporate parent?
+What should be part of a parent? What should NOT being
+part of a parent?
+
+
+== Overview
+
+
+
+
+

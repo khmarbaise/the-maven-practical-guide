@@ -36,6 +36,10 @@ to keep that structure (link:_exceptions.adoc[more details ??)].
 
 ==== Different dependent projects
 
+Having several projects? Identifying duplication for example
+plugin configuration, pluginManagement etc.
+TODO: Add chapter about parents...
+
 // Having a project common, cli and web.
 //
 // If you change common you have to (`mvn install`) and
