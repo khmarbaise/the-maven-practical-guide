@@ -1,5 +1,10 @@
 = The Start
 What is the idea of the book? Which things you should consider and why you should read this book.
 
-This book is not a reference about Maven, cause there already existing good books about that.
+This book is intended to show how to use Apache Maven for practical purpose, and
+it's not intended as a reference guide. Those references are available
+on the Apache Maven pages. Of course often I will need to make some references
+and explain the details to make the reader (you) understand why I'm telling you
+to do things to do in a particular way.
+
 

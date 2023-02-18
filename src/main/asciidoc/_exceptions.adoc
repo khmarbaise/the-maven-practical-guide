@@ -6,5 +6,10 @@ best practices. For example using a different
 directory layout? You can do that if you really need that,
 but it depends...
 
+The first question I ask in such a situation is: Why do you like to
+do that? What kind of problem are you trying to solve?
+
+
+
 
 // The question is why do you need such thing?
