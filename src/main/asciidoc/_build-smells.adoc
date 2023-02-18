@@ -20,10 +20,12 @@ http://stackoverflow.com/questions/11448184/maven-jar-plugin-include-upper-dir
 
 == Multi Module Builds
 
+accessing other modules via `${project.basedir}/../..` ?
+
 
 === Module Structure
 
-- Parent of a multi-module is *not located* at root level of the structure?
+- Parent of a multi-module-build is *not located* at root level of the structure?
 
 === The Install Hack
 
@@ -37,6 +39,8 @@ Multiple Purposes of a Module
 
 Use a module for only one purpose not for many. (Separation of Concern)
 
+Trying to build different artifacts with a single project setup instead
+of going for multi-module-setup. Clean separation.
 
 == Testing 
 

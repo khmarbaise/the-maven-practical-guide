@@ -6,18 +6,18 @@
 == Overview
 
 During the usage you will often be faced with the situation to
-create a kind of a distribution archive for example 'dist.zip' or
+create a kind of distribution archive for example 'dist.zip' or
 'dist.tar.gz' or other kind of archive flavors. Things which also
 happen are to create a so called 'ueber' jar which you can use to call
 your java application from the command line (There are other
 opportunities as well see Chapter...).
-Furthermore you often have the requirement to create archives
+Furthermore, you often have the requirement to create archives
 with different configurations for different environments this
 also achievable.
 
 This chapter will give a wide
 overview of the possibilities how you can create the different flavors
-of archives which you need to fullfil the requirements of your builds
+of archives which you need to fulfill the requirements of your builds
 furthermore we will take a look what kind of mistakes you can make and
 how to prevent them.
 
@@ -48,13 +48,13 @@ dependencies you have defined in your pom file as part of the resulting
 jar which is named by using a classifier `jar-with-dependencies` to
 make it distinguishable from the other artifacts. The other aspect of
 this example project is that you can see how simple it is to create
-such an artifact. One thing which should be mentioned about the
+such an artifact. One thing which should be mentioned the
 {link-maven-assembly-plugin}. It is not bound to any
 {link-life-cycle-phase} by default which means you need to bind it to
-the life-cylce explicitly if you like to use it.
+the life-cycle explicitly if you like to use it.
 
 A note about the given example. In real life you should find this
-example suspicious, cause it will use a typical test dependency (TestNG)
+example suspicious, because it will use a typical test dependency (TestNG)
 without the scope `test` which is usually wrong. In this case it is
 only use for example purposes.
 

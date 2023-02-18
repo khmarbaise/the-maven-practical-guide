@@ -57,7 +57,9 @@ and show what are the best practices and why you should follow them.
 If you have any suggestions, improvements or found issues please
 report them in the {link-issue-tracker}[issue tracking system].
 
-
+This is also in its early stage so a large number of areas are
+just a containing a couple of sentences or even only a couple
+of words (a kind of reminder on my own) etc.
 
 include::_001_chapter.adoc[]
 
