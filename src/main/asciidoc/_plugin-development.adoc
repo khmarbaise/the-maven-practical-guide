@@ -29,6 +29,8 @@ What is a Mojo?
 * How to build a plugin?
 * How to test a plugin?
 
+* How to create a very basic plugin
+
 === Building a plugin
 
 * What is needed to build a plugin?

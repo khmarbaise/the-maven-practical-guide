@@ -248,7 +248,7 @@ wrong Maven version was to use the `prerequsites` tag like this:
 [source,xml,numbered]
 --------------------------------------
 <prerequisites>
-  <maven>2.2.1</maven>
+  <maven>3.8.7</maven>
 </prerequisites>
 --------------------------------------
 
