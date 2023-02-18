@@ -111,7 +111,7 @@ the logging level or something else.
 === Let The Source Be With You
 
 You usually write Java source code (ok ok sometimes you write
-difference sources like {link-groovy}, {link-scala}, {link-ceylon} or
+difference sources like {link-groovy}, {link-scala} or
 whatever) and of course you would like to compile such code into
 usable class files which can be used to run your application
 or to run your unit tests.
