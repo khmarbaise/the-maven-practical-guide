@@ -728,6 +728,11 @@ and show what are the best practices and why you should follow them.</p>
 <p>If you have any suggestions, improvements or found issues please
 report them in the <a href="https://github.com/khmarbaise/the-maven-practical-guide/issues">issue tracking system</a>.</p>
 </div>
+<div class="paragraph">
+<p>This is also in its early stage so a large number of areas are
+just a containing a couple of sentences or even only a couple
+of words (a kind of reminder on my own) etc.</p>
+</div>
 </div>
 </div>
 <h1 id="_the_basics" class="sect0"><a class="link" href="#_the_basics">The Basics</a></h1>
@@ -1411,19 +1416,19 @@ separately.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>During the usage you will often be faced with the situation to
-create a kind of a distribution archive for example 'dist.zip' or
+create a kind of distribution archive for example 'dist.zip' or
 'dist.tar.gz' or other kind of archive flavors. Things which also
 happen are to create a so called 'ueber' jar which you can use to call
 your java application from the command line (There are other
 opportunities as well see Chapter&#8230;&#8203;).
-Furthermore you often have the requirement to create archives
+Furthermore, you often have the requirement to create archives
 with different configurations for different environments this
 also achievable.</p>
 </div>
 <div class="paragraph">
 <p>This chapter will give a wide
 overview of the possibilities how you can create the different flavors
-of archives which you need to fullfil the requirements of your builds
+of archives which you need to fulfill the requirements of your builds
 furthermore we will take a look what kind of mistakes you can make and
 how to prevent them.</p>
 </div>
@@ -1504,14 +1509,14 @@ dependencies you have defined in your pom file as part of the resulting
 jar which is named by using a classifier <code>jar-with-dependencies</code> to
 make it distinguishable from the other artifacts. The other aspect of
 this example project is that you can see how simple it is to create
-such an artifact. One thing which should be mentioned about the
+such an artifact. One thing which should be mentioned the
 <a href="https://maven.apache.org/plugins/maven-assembly-plugin/">Maven Assembly Plugin</a>. It is not bound to any
 <a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html">Build Life Cycle Phase</a> by default which means you need to bind it to
-the life-cylce explicitly if you like to use it.</p>
+the life-cycle explicitly if you like to use it.</p>
 </div>
 <div class="paragraph">
 <p>A note about the given example. In real life you should find this
-example suspicious, cause it will use a typical test dependency (TestNG)
+example suspicious, because it will use a typical test dependency (TestNG)
 without the scope <code>test</code> which is usually wrong. In this case it is
 only use for example purposes.</p>
 </div>
@@ -2225,12 +2230,15 @@ create an other jar from packages a.b.d)?</p>
 <div class="sect1">
 <h2 id="_multi_module_builds_2"><a class="link" href="#_multi_module_builds_2">15. Multi Module Builds</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>accessing other modules via <code>${project.basedir}/../..</code> ?</p>
+</div>
 <div class="sect2">
 <h3 id="_module_structure"><a class="link" href="#_module_structure">15.1. Module Structure</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Parent of a multi-module is <strong>not located</strong> at root level of the structure?</p>
+<p>Parent of a multi-module-build is <strong>not located</strong> at root level of the structure?</p>
 </li>
 </ul>
 </div>
@@ -2251,6 +2259,10 @@ create an other jar from packages a.b.d)?</p>
 </div>
 <div class="paragraph">
 <p>Use a module for only one purpose not for many. (Separation of Concern)</p>
+</div>
+<div class="paragraph">
+<p>Trying to build different artifacts with a single project setup instead
+of going for multi-module-setup. Clean separation.</p>
 </div>
 </div>
 </div>
@@ -2909,7 +2921,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2023-02-18 21:27:59 UTC
+Last updated 2023-02-18 21:48:59 UTC
 </div>
 </div>
 </body>
