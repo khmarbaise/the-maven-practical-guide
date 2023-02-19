@@ -87,6 +87,8 @@ include::_repository-manager.adoc[]
 
 include::_best-practice.adoc[]
 
+include::_code-coverage.adoc[]
+
 include::_exceptions.adoc[]
 
 include::_XXX_sites.adoc[]
