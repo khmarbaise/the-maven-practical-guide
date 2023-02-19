@@ -1,8 +1,6 @@
 = Best Practices
 
 
-== Directory Layout
-
 keep the defaults...
 
 == Plugin Management
@@ -12,13 +10,13 @@ Define the plugins via pluginManagement...
 
 == Generate Into Source Folder
 
-generating code into src folder instead of 'target'.
+generating code into src folder instead of `target`.
 Pro/Cons on that approach..
 
 In Maven the convention exists to put everything which is generated,
 compiled etc. into the `target` folder of the appropriate module.
 Unfortunately in the wild you will find builds which do not follow the
-convention and for example generate things into `src folder which is
+convention and for example generate things into `src` folder which is
 a bad practice (Hint why?).
 
 So let use think about this a little more. The first thing
