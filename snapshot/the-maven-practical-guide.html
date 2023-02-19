@@ -883,7 +883,15 @@ part of a parent?
 <div class="sect1">
 <h2 id="_overview"><a class="link" href="#_overview">5. Overview</a></h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>What is the target of a parent?</p>
+</div>
+<div class="paragraph">
+<p>Which kind of parents do exist?</p>
+</div>
+<div class="paragraph">
+<p>Corporate parent, multi-module-parent? Is there a difference?</p>
+</div>
 </div>
 </div>
 <h1 id="_multi_module_builds" class="sect0"><a class="link" href="#_multi_module_builds">Multi Module Builds</a></h1>
@@ -1827,17 +1835,17 @@ in the majority of the cases its enough to build usual projects.</p>
 <p>If you want to be sure your build will start from scratch you need to
 wipe out everything which has been created by previous operations or
 the build itself. So the <a href="https://maven.apache.org/plugins/maven-clean-plugin/">Maven Clean Plugin</a> is your friend
-which will delete the 'target' folder of your project or in every
-module in case of a multi-module build. This can be simply achieved by
+which will delete the <code>target</code> folder of your project or in every
+module in case of a multi-module-build. This can be simply achieved by
 calling maven like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>mvn clean</pre>
+<pre class="CodeRay highlight"><code data-lang="bash">mvn clean</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Usualy you won&#8217;t ever think about the <a href="https://maven.apache.org/plugins/maven-clean-plugin/">Maven Clean Plugin</a>, cause
+<p>Usually you won&#8217;t ever think about the <a href="https://maven.apache.org/plugins/maven-clean-plugin/">Maven Clean Plugin</a>, cause
 by default it&#8217;s bound to the 'clean' <a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html">Build Life Cycle Phase</a> and there
 is no reason to change the configuration of the
 <a href="https://maven.apache.org/plugins/maven-clean-plugin/">Maven Clean Plugin</a> or something similar. In rare situations it
@@ -1846,7 +1854,7 @@ supplemental folders or files which should be deleted during a 'mvn
 clean' call.</p>
 </div>
 <div class="paragraph">
-<p>HINT: Something about the clean life cylce of the maven super pom!!</p>
+<p>HINT: Something about the clean life cycle of the maven super pom!!</p>
 </div>
 <div class="paragraph">
 <p>In the clean life cycle the following phases exist: pre-clean, clean, post-clean.</p>
@@ -3118,7 +3126,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2023-02-19 16:05:58 UTC
+Last updated 2023-02-19 16:29:45 UTC
 </div>
 </div>
 </body>
