@@ -1,5 +1,8 @@
 = Exceptions from Best Practices
 
+This part will describe/discuss exceptions from the best practices
+or in other words ignoring conventions over configuration.
+
 == Layout
 Sometimes people to say I don't want to follow
 best practices. For example using a different

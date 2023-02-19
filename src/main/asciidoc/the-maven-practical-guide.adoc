@@ -46,8 +46,7 @@ Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.io>; {docda
 
 :link-issue-tracker: https://github.com/khmarbaise/the-maven-practical-guide/issues
 [dedication]
-THIS IS WORK IN PROGRESS
-------------------------
+== THIS IS WORK IN PROGRESS
 This guide is an attempt to write a practical guide about Apache Maven.
 Its idea is to give practical hints how to use Apache Maven and describe
 and show what are the best practices and why you should follow them.

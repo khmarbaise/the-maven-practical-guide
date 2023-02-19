@@ -3,8 +3,6 @@
 
 = Different Environments
 
-== Overview
-
 In the wild a usual problem occurs having configurations for
 different environments like development, test, q&a and production.
 The differences between those environments are most likely
@@ -30,9 +28,10 @@ http://blog.soebes.de/blog/2011/07/29/maven-configuration-for-multipe-environmen
 
 http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/
 
-=== The Solutions
 
-=== The Obvious Solution
+== The Solutions
+
+== The Obvious Solution
 
 Many people using Maven would suggest to use profiles for such
 purposes. So you have different profiles which define the filtered
@@ -77,4 +76,4 @@ Picture of the application ?
 
 What are the drawbacks of such a solution?
 
-=== The next
+== The next
