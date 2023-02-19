@@ -682,51 +682,50 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 <li><a href="#_best_practices">Best Practices</a>
 <ul class="sectlevel1">
-<li><a href="#_directory_layout">32. Directory Layout</a></li>
-<li><a href="#_plugin_management">33. Plugin Management</a></li>
-<li><a href="#_generate_into_source_folder">34. Generate Into Source Folder</a></li>
-<li><a href="#_dependencies_dependencymanagement">35. Dependencies / DependencyManagement</a></li>
-<li><a href="#_deps_via_props">36. Deps via Props</a></li>
-<li><a href="#_company_wide_parents">37. Company wide parent(s)</a></li>
-<li><a href="#_building_for_different_environments">38. Building for different Environments</a></li>
-<li><a href="#_how_to_do_good_integration_tests_for_maven_plugins">39. How to do good integration tests for maven plugins</a></li>
-<li><a href="#_nexus">40. Nexus</a></li>
-<li><a href="#_branching_strategies">41. Branching Strategies</a></li>
+<li><a href="#_plugin_management">32. Plugin Management</a></li>
+<li><a href="#_generate_into_source_folder">33. Generate Into Source Folder</a></li>
+<li><a href="#_dependencies_dependencymanagement">34. Dependencies / DependencyManagement</a></li>
+<li><a href="#_deps_via_props">35. Deps via Props</a></li>
+<li><a href="#_company_wide_parents">36. Company wide parent(s)</a></li>
+<li><a href="#_building_for_different_environments">37. Building for different Environments</a></li>
+<li><a href="#_how_to_do_good_integration_tests_for_maven_plugins">38. How to do good integration tests for maven plugins</a></li>
+<li><a href="#_nexus">39. Nexus</a></li>
+<li><a href="#_branching_strategies">40. Branching Strategies</a></li>
 </ul>
 </li>
 <li><a href="#_exceptions_from_best_practices">Exceptions from Best Practices</a>
 <ul class="sectlevel1">
-<li><a href="#_layout">42. Layout</a></li>
+<li><a href="#_layout">41. Layout</a></li>
 </ul>
 </li>
 <li><a href="#_site">Site</a>
 <ul class="sectlevel1">
-<li><a href="#_maven_site_plugin">43. Maven Site Plugin</a></li>
+<li><a href="#_maven_site_plugin">42. Maven Site Plugin</a></li>
 </ul>
 </li>
 <li><a href="#_profiles">Profiles</a>
 <ul class="sectlevel1">
-<li><a href="#_basics_2">44. Basics</a>
+<li><a href="#_basics_2">43. Basics</a>
 <ul class="sectlevel2">
-<li><a href="#_environment_dependent">44.1. Environment Dependent</a></li>
+<li><a href="#_environment_dependent">43.1. Environment Dependent</a></li>
 </ul>
 </li>
-<li><a href="#_bad_practices">45. Bad Practices</a></li>
+<li><a href="#_bad_practices">44. Bad Practices</a></li>
 </ul>
 </li>
 <li><a href="#_different_environments">Different Environments</a>
 <ul class="sectlevel1">
-<li><a href="#_the_solutions">46. The Solutions</a></li>
-<li><a href="#_the_obvious_solution">47. The Obvious Solution</a></li>
-<li><a href="#_the_next">48. The next</a></li>
+<li><a href="#_the_solutions">45. The Solutions</a></li>
+<li><a href="#_the_obvious_solution">46. The Obvious Solution</a></li>
+<li><a href="#_the_next">47. The next</a></li>
 </ul>
 </li>
 <li><a href="#_maven_4">Maven 4</a>
 <ul class="sectlevel1">
-<li><a href="#_consumer_vs_build_pom">49. Consumer vs. Build POM</a></li>
-<li><a href="#_improved_reactor_behaviour">50. Improved Reactor Behaviour</a></li>
-<li><a href="#_caching">51. Caching</a></li>
-<li><a href="#_plugins_2">52. Plugins</a></li>
+<li><a href="#_consumer_vs_build_pom">48. Consumer vs. Build POM</a></li>
+<li><a href="#_improved_reactor_behaviour">49. Improved Reactor Behaviour</a></li>
+<li><a href="#_caching">50. Caching</a></li>
+<li><a href="#_plugins_2">51. Plugins</a></li>
 </ul>
 </li>
 <li><a href="#_example_appendix">Example Appendix</a>
@@ -2639,16 +2638,13 @@ It will also show and describe the advantages of the usage of a repository manag
 </div>
 </div>
 <h1 id="_best_practices" class="sect0"><a class="link" href="#_best_practices">Best Practices</a></h1>
-<div class="sect1">
-<h2 id="_directory_layout"><a class="link" href="#_directory_layout">32. Directory Layout</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>keep the defaults&#8230;&#8203;</p>
-</div>
+<div class="openblock partintro">
+<div class="content">
+keep the defaults&#8230;&#8203;
 </div>
 </div>
 <div class="sect1">
-<h2 id="_plugin_management"><a class="link" href="#_plugin_management">33. Plugin Management</a></h2>
+<h2 id="_plugin_management"><a class="link" href="#_plugin_management">32. Plugin Management</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Define the plugins via pluginManagement&#8230;&#8203;</p>
@@ -2656,17 +2652,17 @@ It will also show and describe the advantages of the usage of a repository manag
 </div>
 </div>
 <div class="sect1">
-<h2 id="_generate_into_source_folder"><a class="link" href="#_generate_into_source_folder">34. Generate Into Source Folder</a></h2>
+<h2 id="_generate_into_source_folder"><a class="link" href="#_generate_into_source_folder">33. Generate Into Source Folder</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>generating code into src folder instead of 'target'.
+<p>generating code into src folder instead of <code>target</code>.
 Pro/Cons on that approach..</p>
 </div>
 <div class="paragraph">
 <p>In Maven the convention exists to put everything which is generated,
 compiled etc. into the <code>target</code> folder of the appropriate module.
 Unfortunately in the wild you will find builds which do not follow the
-convention and for example generate things into `src folder which is
+convention and for example generate things into <code>src</code> folder which is
 a bad practice (Hint why?).</p>
 </div>
 <div class="paragraph">
@@ -2697,7 +2693,7 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dependencies_dependencymanagement"><a class="link" href="#_dependencies_dependencymanagement">35. Dependencies / DependencyManagement</a></h2>
+<h2 id="_dependencies_dependencymanagement"><a class="link" href="#_dependencies_dependencymanagement">34. Dependencies / DependencyManagement</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Scope only in real dependencies not in dependencyManagement</p>
@@ -2708,7 +2704,7 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_deps_via_props"><a class="link" href="#_deps_via_props">36. Deps via Props</a></h2>
+<h2 id="_deps_via_props"><a class="link" href="#_deps_via_props">35. Deps via Props</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Using properties to control the dependencies with a so called company pom?</p>
@@ -2719,7 +2715,7 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_company_wide_parents"><a class="link" href="#_company_wide_parents">37. Company wide parent(s)</a></h2>
+<h2 id="_company_wide_parents"><a class="link" href="#_company_wide_parents">36. Company wide parent(s)</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Manifest setup with master parent.</p>
@@ -2778,7 +2774,7 @@ Answer: create a mod-core, mod-war and that&#8217;s it?</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_building_for_different_environments"><a class="link" href="#_building_for_different_environments">38. Building for different Environments</a></h2>
+<h2 id="_building_for_different_environments"><a class="link" href="#_building_for_different_environments">37. Building for different Environments</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You are often face with the problem having different environments like
@@ -2787,7 +2783,7 @@ dev, test, prod this is just a simple example how real life is.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_do_good_integration_tests_for_maven_plugins"><a class="link" href="#_how_to_do_good_integration_tests_for_maven_plugins">39. How to do good integration tests for maven plugins</a></h2>
+<h2 id="_how_to_do_good_integration_tests_for_maven_plugins"><a class="link" href="#_how_to_do_good_integration_tests_for_maven_plugins">38. How to do good integration tests for maven plugins</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>One of the final tests should be to clean your local repository
@@ -2803,7 +2799,7 @@ mvn -Prun-its clean verify</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_nexus"><a class="link" href="#_nexus">40. Nexus</a></h2>
+<h2 id="_nexus"><a class="link" href="#_nexus">39. Nexus</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>why the order of the repositories does really matter&#8230;&#8203;</p>
@@ -2811,7 +2807,7 @@ mvn -Prun-its clean verify</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_branching_strategies"><a class="link" href="#_branching_strategies">41. Branching Strategies</a></h2>
+<h2 id="_branching_strategies"><a class="link" href="#_branching_strategies">40. Branching Strategies</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://stackoverflow.com/questions/24420474/do-you-really-need-to-version-the-trunk-of-a-maven-project" class="bare">http://stackoverflow.com/questions/24420474/do-you-really-need-to-version-the-trunk-of-a-maven-project</a></p>
@@ -2829,7 +2825,7 @@ or in other words ignoring conventions over configuration.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_layout"><a class="link" href="#_layout">42. Layout</a></h2>
+<h2 id="_layout"><a class="link" href="#_layout">41. Layout</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Sometimes people to say I don&#8217;t want to follow
@@ -2856,7 +2852,7 @@ The maven <code>site</code> life cycle.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_maven_site_plugin"><a class="link" href="#_maven_site_plugin">43. Maven Site Plugin</a></h2>
+<h2 id="_maven_site_plugin"><a class="link" href="#_maven_site_plugin">42. Maven Site Plugin</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2888,16 +2884,16 @@ The maven <code>site</code> life cycle.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_basics_2"><a class="link" href="#_basics_2">44. Basics</a></h2>
+<h2 id="_basics_2"><a class="link" href="#_basics_2">43. Basics</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_environment_dependent"><a class="link" href="#_environment_dependent">44.1. Environment Dependent</a></h3>
+<h3 id="_environment_dependent"><a class="link" href="#_environment_dependent">43.1. Environment Dependent</a></h3>
 
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_bad_practices"><a class="link" href="#_bad_practices">45. Bad Practices</a></h2>
+<h2 id="_bad_practices"><a class="link" href="#_bad_practices">44. Bad Practices</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://blog.soebes.de/blog/2013/11/09/why-is-it-bad-to-activate-slash-deactive-modules-by-profiles-in-maven/">Don&#8217;t use profiles to activate/deactive modules</a></p>
@@ -2941,13 +2937,13 @@ which are different from environment to environment.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_solutions"><a class="link" href="#_the_solutions">46. The Solutions</a></h2>
+<h2 id="_the_solutions"><a class="link" href="#_the_solutions">45. The Solutions</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_obvious_solution"><a class="link" href="#_the_obvious_solution">47. The Obvious Solution</a></h2>
+<h2 id="_the_obvious_solution"><a class="link" href="#_the_obvious_solution">46. The Obvious Solution</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Many people using Maven would suggest to use profiles for such
@@ -3005,7 +3001,7 @@ teammates? I bet you missed something.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_next"><a class="link" href="#_the_next">48. The next</a></h2>
+<h2 id="_the_next"><a class="link" href="#_the_next">47. The next</a></h2>
 <div class="sectionbody">
 
 </div>
@@ -3023,25 +3019,25 @@ Compatibility.?</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_consumer_vs_build_pom"><a class="link" href="#_consumer_vs_build_pom">49. Consumer vs. Build POM</a></h2>
+<h2 id="_consumer_vs_build_pom"><a class="link" href="#_consumer_vs_build_pom">48. Consumer vs. Build POM</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_improved_reactor_behaviour"><a class="link" href="#_improved_reactor_behaviour">50. Improved Reactor Behaviour</a></h2>
+<h2 id="_improved_reactor_behaviour"><a class="link" href="#_improved_reactor_behaviour">49. Improved Reactor Behaviour</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_caching"><a class="link" href="#_caching">51. Caching</a></h2>
+<h2 id="_caching"><a class="link" href="#_caching">50. Caching</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_plugins_2"><a class="link" href="#_plugins_2">52. Plugins</a></h2>
+<h2 id="_plugins_2"><a class="link" href="#_plugins_2">51. Plugins</a></h2>
 <div class="sectionbody">
 
 </div>
@@ -3122,7 +3118,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2023-02-19 12:59:11 UTC
+Last updated 2023-02-19 16:05:58 UTC
 </div>
 </div>
 </body>
