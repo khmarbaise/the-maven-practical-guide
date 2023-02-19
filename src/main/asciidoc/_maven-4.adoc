@@ -1,0 +1,16 @@
+= Maven 4
+
+What kind of things have been enhanced, changed, improved.
+Compatibility.?
+
+Plugins?
+
+
+== Consumer vs. Build POM
+
+== Improved Reactor Behaviour
+
+== Caching
+
+
+== Plugins

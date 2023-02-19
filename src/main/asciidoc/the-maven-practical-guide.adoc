@@ -97,6 +97,8 @@ include::_profiles.adoc[]
 
 include::_different-environments.adoc[]
 
+include::_maven-4.adoc[]
+
 
 :numbered!:
 
