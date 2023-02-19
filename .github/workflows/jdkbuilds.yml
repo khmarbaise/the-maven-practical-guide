@@ -15,7 +15,6 @@
 # specific language governing permissions and limitations
 # under the License.
 #
----
 name: JDKBuilds
 
 on:
@@ -27,6 +26,7 @@ on:
       - '*'
 
 jobs:
+  build:
     name: "Build"
     runs-on: ubuntu-latest
     container: "maven:3.8.7-eclipse-temurin-17"
