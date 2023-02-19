@@ -683,24 +683,33 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#_branching_strategies">34. Branching Strategies</a></li>
 </ul>
 </li>
+<li><a href="#_code_coverage">Code Coverage</a>
+<ul class="sectlevel1">
+<li><a href="#_overview_10">35. Overview</a>
+<ul class="sectlevel2">
+<li><a href="#_jacoco">35.1. JaCoCo</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#_exceptions_from_best_practices">Exceptions from Best Practices</a>
 <ul class="sectlevel1">
-<li><a href="#_layout">35. Layout</a></li>
+<li><a href="#_layout">36. Layout</a></li>
 </ul>
 </li>
 <li><a href="#_the_sites">The Sites</a>
 <ul class="sectlevel1">
-<li><a href="#_maven_site_plugin">36. Maven Site Plugin</a></li>
-<li><a href="#_profiles_in_maven">37. Profiles in Maven</a></li>
+<li><a href="#_maven_site_plugin">37. Maven Site Plugin</a></li>
+<li><a href="#_profiles_in_maven">38. Profiles in Maven</a></li>
 </ul>
 </li>
 <li><a href="#_different_environments">Different Environments</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_10">38. Overview</a>
+<li><a href="#_overview_11">39. Overview</a>
 <ul class="sectlevel2">
-<li><a href="#_the_solutions">38.1. The Solutions</a></li>
-<li><a href="#_the_obvious_solution">38.2. The Obvious Solution</a></li>
-<li><a href="#_the_next">38.3. The next</a></li>
+<li><a href="#_the_solutions">39.1. The Solutions</a></li>
+<li><a href="#_the_obvious_solution">39.2. The Obvious Solution</a></li>
+<li><a href="#_the_next">39.3. The next</a></li>
 </ul>
 </li>
 </ul>
@@ -2714,9 +2723,29 @@ mvn -Prun-its clean verify</p>
 </div>
 </div>
 </div>
+<h1 id="_code_coverage" class="sect0"><a class="link" href="#_code_coverage">Code Coverage</a></h1>
+<div class="sect1">
+<h2 id="_overview_10"><a class="link" href="#_overview_10">35. Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>what is code coverage &#8230;&#8203;</p>
+</div>
+<div class="sect2">
+<h3 id="_jacoco"><a class="link" href="#_jacoco">35.1. JaCoCo</a></h3>
+<div class="sect3">
+<h4 id="_single_module_setup"><a class="link" href="#_single_module_setup">35.1.1. single Module Setup</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_multi_module_setup"><a class="link" href="#_multi_module_setup">35.1.2. Multi Module Setup</a></h4>
+
+</div>
+</div>
+</div>
+</div>
 <h1 id="_exceptions_from_best_practices" class="sect0"><a class="link" href="#_exceptions_from_best_practices">Exceptions from Best Practices</a></h1>
 <div class="sect1">
-<h2 id="_layout"><a class="link" href="#_layout">35. Layout</a></h2>
+<h2 id="_layout"><a class="link" href="#_layout">36. Layout</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Sometimes people to say I don&#8217;t want to follow
@@ -2738,7 +2767,7 @@ The maven <code>site</code> life cycle.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_maven_site_plugin"><a class="link" href="#_maven_site_plugin">36. Maven Site Plugin</a></h2>
+<h2 id="_maven_site_plugin"><a class="link" href="#_maven_site_plugin">37. Maven Site Plugin</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2753,7 +2782,7 @@ The maven <code>site</code> life cycle.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_profiles_in_maven"><a class="link" href="#_profiles_in_maven">37. Profiles in Maven</a></h2>
+<h2 id="_profiles_in_maven"><a class="link" href="#_profiles_in_maven">38. Profiles in Maven</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Why and how to use Profiles.</p>
@@ -2774,7 +2803,7 @@ The maven <code>site</code> life cycle.
 </div>
 <h1 id="_different_environments" class="sect0"><a class="link" href="#_different_environments">Different Environments</a></h1>
 <div class="sect1">
-<h2 id="_overview_10"><a class="link" href="#_overview_10">38. Overview</a></h2>
+<h2 id="_overview_11"><a class="link" href="#_overview_11">39. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In the wild a usual problem occurs having configurations for
@@ -2808,11 +2837,11 @@ which are different from environment to environment.</p>
 <p><a href="http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/" class="bare">http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/</a></p>
 </div>
 <div class="sect2">
-<h3 id="_the_solutions"><a class="link" href="#_the_solutions">38.1. The Solutions</a></h3>
+<h3 id="_the_solutions"><a class="link" href="#_the_solutions">39.1. The Solutions</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="_the_obvious_solution"><a class="link" href="#_the_obvious_solution">38.2. The Obvious Solution</a></h3>
+<h3 id="_the_obvious_solution"><a class="link" href="#_the_obvious_solution">39.2. The Obvious Solution</a></h3>
 <div class="paragraph">
 <p>Many people using Maven would suggest to use profiles for such
 purposes. So you have different profiles which define the filtered
@@ -2868,7 +2897,7 @@ team mates? I bet you missed something.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_next"><a class="link" href="#_the_next">38.3. The next</a></h3>
+<h3 id="_the_next"><a class="link" href="#_the_next">39.3. The next</a></h3>
 
 </div>
 </div>
@@ -2949,7 +2978,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2023-02-18 22:26:08 UTC
+Last updated 2023-02-19 09:24:26 UTC
 </div>
 </div>
 </body>
