@@ -48,15 +48,17 @@ in the majority of the cases its enough to build usual projects.
 If you want to be sure your build will start from scratch you need to
 wipe out everything which has been created by previous operations or
 the build itself. So the {link-maven-clean-plugin} is your friend
-which will delete the 'target' folder of your project or in every
-module in case of a multi-module build. This can be simply achieved by
+which will delete the `target` folder of your project or in every
+module in case of a multi-module-build. This can be simply achieved by
 calling maven like this:
 
-[listing]
+[source,bash]
+----
 mvn clean
+----
 
 
-Usualy you won't ever think about the {link-maven-clean-plugin}, cause
+Usually you won't ever think about the {link-maven-clean-plugin}, cause
 by default it's bound to the 'clean' {link-life-cycle-phase} and there
 is no reason to change the configuration of the
 {link-maven-clean-plugin} or something similar. In rare situations it
@@ -64,7 +66,7 @@ could happen that you need to change the configuration and add
 supplemental folders or files which should be deleted during a 'mvn
 clean' call.
 
-HINT: Something about the clean life cylce of the maven super pom!!
+HINT: Something about the clean life cycle of the maven super pom!!
 
 In the clean life cycle the following phases exist: pre-clean, clean, post-clean.
 

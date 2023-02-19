@@ -10,6 +10,14 @@ part of a parent?
 
 == Overview
 
+What is the target of a parent?
+
+Which kind of parents do exist?
+
+Corporate parent, multi-module-parent? Is there a difference?
+
+
+
 
 
 
