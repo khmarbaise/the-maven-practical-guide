@@ -31,8 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     container: "maven:3.8.7-eclipse-temurin-17"
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}

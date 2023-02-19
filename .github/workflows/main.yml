@@ -30,8 +30,8 @@ jobs:
     runs-on: ubuntu-latest
     container: "maven:3.8.6-eclipse-temurin-17"
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-ubuntu-latest-${{ hashFiles('**/pom.xml') }}
@@ -49,8 +49,8 @@ jobs:
     name: 'Windows'
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-windows-latest-${{ hashFiles('**/pom.xml') }}
@@ -69,8 +69,8 @@ jobs:
     name: 'Mac OS'
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-macos-latest-${{ hashFiles('**/pom.xml') }}
