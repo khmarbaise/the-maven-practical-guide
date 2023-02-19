@@ -1,4 +1,6 @@
-= The Sites
+= Site
+
+Reporting in Maven. How to configure it? What can be done?
 
 generating sites with Maven
 The maven `site` life cycle.

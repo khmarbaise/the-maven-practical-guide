@@ -69,6 +69,8 @@ include::_multi-module-builds.adoc[]
 
 include::_testing.adoc[]
 
+include::_code-coverage.adoc[]
+
 include::_assemblies.adoc[]
 
 include::_plugins.adoc[]
@@ -86,8 +88,6 @@ include::_performance.adoc[]
 include::_repository-manager.adoc[]
 
 include::_best-practice.adoc[]
-
-include::_code-coverage.adoc[]
 
 include::_exceptions.adoc[]
 

@@ -1,5 +1,9 @@
 = Plugin Configuration
 
+How to configure plugins for the life cycle
+
+
+== General Configuration
 
 Let us start with a minimal `pom` file.
 

@@ -1,11 +1,10 @@
 = Repository Manager
 
-== Overview
-
 This chapter will give you an overview of the idea the intention of a repository manager.
 It will also show and describe the advantages of the usage of a repository manager.
 
-== Test
+
+== Reasons
 
 
 TODO:

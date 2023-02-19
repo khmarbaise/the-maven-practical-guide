@@ -1,7 +1,5 @@
 = Making Releases
 
-== Overview
-
 Here you get an overview of the different options how to do a release with Maven.
 
 == The Traditional Maven Way

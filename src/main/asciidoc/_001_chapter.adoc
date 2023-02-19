@@ -1,6 +1,14 @@
 = The Basics
 
+Overview about the basics, components of a `pom.xml` file.
+What is a life cycle..
+
+
+
+== The Foundation
+
 Let us start with a minimal `pom` file.
+
 
 [source,xml]
 ----
@@ -10,5 +18,13 @@ include::{includesource}/examples/basics/simple/pom.xml[tags=first]
 <2> The artifactId
 <3> The version
 
-
 == The build life cycle
+
+The life cycle phases...
+
+=== Directory Structure
+
+
+== The Coordinates
+
+groupId, artifactId, version.

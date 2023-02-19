@@ -22,16 +22,16 @@ furthermore we will take a look what kind of mistakes you can make and
 how to prevent them.
 
 
-== The Maven Assembly Plugin
+=== The Maven Assembly Plugin
 
 The {link-maven-assembly-plugin} is especially created for such purposes to
 create any kind of archive type.
 
-=== Single Executable Artifact
+==== Single Executable Artifact
 
 One of the requirements you will often be confronted with is to create an
 archive which can simply be executed on command line. This is often called an
-'ueber-jar' or 'fat-jar' (or Maven tongue: jar-with-dependencies).  This can simply be accomplished by
+`ueber-jar` or `fat-jar` (or Maven tongue: jar-with-dependencies).  This can simply be accomplished by
 using {link-maven-assembly-plugin}'s {link-pre-defined-descriptors}.
 
 The following pom.xml example will give you an impression how the
@@ -60,18 +60,19 @@ only use for example purposes.
 
 The created `jar-with-dependencies` can simply be used by the following:
 
--------------------
+[source,bash]
+----
 java -jar target/assembly-jar-with-dependencies-0.1.0-SNAPSHOTS-jar-with-dependency.jar
--------------------
+----
 
-=== Creating an ZIP Archive
+==== Creating an ZIP Archive
 
 The idea of an archive is have particular content which is defined
 by the project in the way you like to do that and define how it will look
 like within the archive. This means having a folder structure within
 the archive or not.
 
-=== Default Assemblies
+==== Default Assemblies
 
 
   - Default assemblies
@@ -93,10 +94,11 @@ Examples.
 You would like to create an archive with all sources of your project as well as the sources
 of all the used dependencies:
 
--------------------
+[source,bash]
+----
 mvn dependency:sources
 mvn dependency:copy-dependencies -Dclassifier=sources -DoutputDirectory=target/sources
--------------------
+----
 
 Add here all the examples from my example-assemblies
 
@@ -104,20 +106,20 @@ Add here all the examples from my example-assemblies
 Special requirements which you can fulfil with maven-assembly-plugin
 https://stackoverflow.com/questions/24311053/how-to-get-the-content-of-a-directory-inside-of-war-that-is-inside-of-an-ear-tha
 
-=== Predefined Descriptors
+==== Predefined Descriptors
 
 The predefined descriptors fulfil the need of often requests archive types which should be usable in a very short time.
 You could use them in a very simple form.
 
 
-=== Module Sets
+==== Module Sets
 
-=== Dependency Sets
+==== Dependency Sets
 
-=== Sources
+==== Sources
 
 
-=== Predefined Descriptors
+==== Predefined Descriptors
 
 Currently there are four of them:
 

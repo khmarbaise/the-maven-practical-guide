@@ -1,8 +1,8 @@
-= Continious Integration Solution
+= Continuous Integration Solution
 
 == More Details
 Jenkins 
 how to work in relationship with Jenkins. 
-Which Plugins of Jenkins can be usefull
+Which Plugins of Jenkins can be useful
 
 

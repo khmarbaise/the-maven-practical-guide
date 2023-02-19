@@ -6,8 +6,6 @@
 
 = Multi Module Builds
 
-== Overview
-
 Sometimes it is sufficient having a single pom file and a limited number of Java classes
 which are combined into a single jar file.
 
@@ -32,9 +30,9 @@ to separate several part out parts into a higher level of groupings.
 In such cases it makes sense to create a multi-module-build. So start with a
 look on the basic structure of a multi-module-build.
 
-=== Basic Structure
+== Basic Structure
 
-Lets us take the example from the link:#_overview[Overview] chapter about the
+Lets us take the example from the link:#_multi_module_builds[Overview] chapter about the
 command line app. We could name those modules like this:
 
 * module-cli
@@ -49,7 +47,7 @@ command line app. We could name those modules like this:
 // project but that would have resulted into a lot configuration etc.
 //TODO: Try to make such set as an example!!! (Bad Example!)
 
-==== Directory Structure
+=== Directory Structure
 
 Based on this assumption a directory structure could look like this. We assume further that the `root`
 directory is the name of the git repository which will be created:
@@ -82,7 +80,7 @@ an appropriate directory structure.
    +--- module-common
 ---------------
 
-==== The Multi-Module-Parent
+=== The Multi-Module-Parent
 
 There are some parts which you need to pay attention to, to get a good working
 experience. The first thing is the `pom.xml` file on the root level of this structure.
@@ -207,7 +205,7 @@ What if only a single modules code has been changed? Can i release only a single
 module from the multi module build? Draw backs?
 
 
-=== Releasing a Multi module Project
+== Releasing a Multi module Project
 
 From root, single module?
 ?
@@ -218,7 +216,7 @@ From root, single module?
 ==== XXX
 
 
-==== Spring Boot
+== Spring Boot
 
 A multi module project based on Spring Boot.
 

@@ -59,10 +59,10 @@ mvn -Pdevelopment,test,qa,production clean package
 
 The disadvantage of this approach is that you have to give all these
 parameters every time you call Maven maybe in several permutations
-depending for which environment you would like to build. What does in
-practice happen?  You simple forget them. Have you remembered to change
+depending on which environment you would like to build. What does in
+practice happen?  You simply forget them. Have you remembered to change
 the configuration of your CI solution? Have you informed all your
-team mates? I bet you missed something.
+teammates? I bet you missed something.
 
 So solution should work by simply calling Maven like this:
 -------------------

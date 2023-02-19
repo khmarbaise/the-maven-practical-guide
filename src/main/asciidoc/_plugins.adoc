@@ -1,6 +1,5 @@
 = Plugins
 
-== Overview
 The plugins of Maven building the foundation of the Maven eco system,
 cause if you download Maven itself it's a relative small archive
 (less than 8 {link-mib}) and Maven itself is more or less only a IoC
@@ -12,7 +11,8 @@ This chapter will give you an overview of the different areas of
 plugins sources, the different ideas of the plugins and their typical
 usage within a Java project build.
 
-=== The Plugin Sources
+
+== The Plugin Sources
 
 In general there are two big sources of plugin. The first source is
 the area under the umbrella of the {link-apache-software-foundation}.
@@ -34,7 +34,7 @@ Describe more sources and other plugins
 Groovy Plugins
 
 
-== The Different Plugins
+=== The Different Plugins
 
 In this chapter we will take a look on more or less every plugin which
 is a participant of a usual Java build or to be more accurate a
@@ -43,7 +43,7 @@ participant of the {link-build-life-cycle}.
 The lifecycle contains already bindings for usual plugins so 
 in the majority of the cases its enough to build usual projects.
 
-=== Clean Everything
+==== Clean Everything
 
 If you want to be sure your build will start from scratch you need to
 wipe out everything which has been created by previous operations or
@@ -68,7 +68,7 @@ HINT: Something about the clean life cylce of the maven super pom!!
 
 In the clean life cycle the following phases exist: pre-clean, clean, post-clean.
 
-=== Resources
+==== Resources
 
 Often it occurs that your java code needs some kind of configuration
 files.  One of the most famous examples for this kind of
@@ -108,7 +108,7 @@ the logging level or something else.
 
 * {link-maven-resources-plugin}
 
-=== Let The Source Be With You
+==== Let The Source Be With You
 
 You usually write Java source code (ok ok sometimes you write
 difference sources like {link-groovy}, {link-scala} or
@@ -124,7 +124,7 @@ into the 'target/classes' folder. Apart from that the Maven Compiler
 Plugin is also responsible to compile your unit/integration test code
 which is located in 'src/test/java' into 'target/test-classes'.
 
-=== Let's See If The Code Is Working?
+==== Let's See If The Code Is Working?
 
 After we have compiled the whole code we should run the unit tests to
 check our code. This is done before the code will be packaged into a
@@ -135,7 +135,7 @@ For this purpose the {link-maven-surefire-plugin} is responsible
 to run those unit tests.
 
 
-=== Let The Jar's Come To Me
+==== Let The Jar's Come To Me
 
 After the production code has been compiled into the appropriate
 '.class' files they will be packed into a jar file which is the base
@@ -159,13 +159,13 @@ See examples (testing with common code).
 Creating test-jars
 non transitive behaviour of test-jar artifact. Solution create a usual separate module.
 
-=== Install The Archive
+==== Install The Archive
 
 After the jar archive has been created the archive can be installed into the local 
 repository to be consumed by other projects on the same machine. For such a purpose
 the {link-maven-install-plugin} is responsible.
 
-=== Distribute It To The World
+==== Distribute It To The World
 
 To break the limits of your machine you can distribute an jar archive to 
 a remote repository which can be used by other users.
@@ -228,7 +228,7 @@ spring-boot-maven-plugin
 Very interesting plugin:
 http://www.javacodegeeks.com/2014/08/maven-git-release.html
 
-=== Let The Force Be With You
+==== Let The Force Be With You
 
 The larger a build becomes the more you need to control what happens
 within your build otherwise the {link-broken-window-problem} occurs
