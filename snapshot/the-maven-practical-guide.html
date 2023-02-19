@@ -716,21 +716,17 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 </li>
 <li><a href="#_different_environments">Different Environments</a>
 <ul class="sectlevel1">
-<li><a href="#_overview_3">46. Overview</a>
-<ul class="sectlevel2">
-<li><a href="#_the_solutions">46.1. The Solutions</a></li>
-<li><a href="#_the_obvious_solution">46.2. The Obvious Solution</a></li>
-<li><a href="#_the_next">46.3. The next</a></li>
-</ul>
-</li>
+<li><a href="#_the_solutions">46. The Solutions</a></li>
+<li><a href="#_the_obvious_solution">47. The Obvious Solution</a></li>
+<li><a href="#_the_next">48. The next</a></li>
 </ul>
 </li>
 <li><a href="#_maven_4">Maven 4</a>
 <ul class="sectlevel1">
-<li><a href="#_consumer_vs_build_pom">47. Consumer vs. Build POM</a></li>
-<li><a href="#_improved_reactor_behaviour">48. Improved Reactor Behaviour</a></li>
-<li><a href="#_caching">49. Caching</a></li>
-<li><a href="#_plugins_2">50. Plugins</a></li>
+<li><a href="#_consumer_vs_build_pom">49. Consumer vs. Build POM</a></li>
+<li><a href="#_improved_reactor_behaviour">50. Improved Reactor Behaviour</a></li>
+<li><a href="#_caching">51. Caching</a></li>
+<li><a href="#_plugins_2">52. Plugins</a></li>
 </ul>
 </li>
 <li><a href="#_example_appendix">Example Appendix</a>
@@ -2826,6 +2822,12 @@ mvn -Prun-its clean verify</p>
 </div>
 </div>
 <h1 id="_exceptions_from_best_practices" class="sect0"><a class="link" href="#_exceptions_from_best_practices">Exceptions from Best Practices</a></h1>
+<div class="openblock partintro">
+<div class="content">
+This part will describe/discuss exceptions from the best practices
+or in other words ignoring conventions over configuration.
+</div>
+</div>
 <div class="sect1">
 <h2 id="_layout"><a class="link" href="#_layout">42. Layout</a></h2>
 <div class="sectionbody">
@@ -2903,9 +2905,8 @@ The maven <code>site</code> life cycle.</p>
 </div>
 </div>
 <h1 id="_different_environments" class="sect0"><a class="link" href="#_different_environments">Different Environments</a></h1>
-<div class="sect1">
-<h2 id="_overview_3"><a class="link" href="#_overview_3">46. Overview</a></h2>
-<div class="sectionbody">
+<div class="openblock partintro">
+<div class="content">
 <div class="paragraph">
 <p>In the wild a usual problem occurs having configurations for
 different environments like development, test, q&amp;a and production.
@@ -2937,12 +2938,17 @@ which are different from environment to environment.</p>
 <div class="paragraph">
 <p><a href="http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/" class="bare">http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/</a></p>
 </div>
-<div class="sect2">
-<h3 id="_the_solutions"><a class="link" href="#_the_solutions">46.1. The Solutions</a></h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_solutions"><a class="link" href="#_the_solutions">46. The Solutions</a></h2>
+<div class="sectionbody">
 
 </div>
-<div class="sect2">
-<h3 id="_the_obvious_solution"><a class="link" href="#_the_obvious_solution">46.2. The Obvious Solution</a></h3>
+</div>
+<div class="sect1">
+<h2 id="_the_obvious_solution"><a class="link" href="#_the_obvious_solution">47. The Obvious Solution</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Many people using Maven would suggest to use profiles for such
 purposes. So you have different profiles which define the filtered
@@ -2997,10 +3003,11 @@ teammates? I bet you missed something.</p>
 <p>What are the drawbacks of such a solution?</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_the_next"><a class="link" href="#_the_next">46.3. The next</a></h3>
-
 </div>
+<div class="sect1">
+<h2 id="_the_next"><a class="link" href="#_the_next">48. The next</a></h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <h1 id="_maven_4" class="sect0"><a class="link" href="#_maven_4">Maven 4</a></h1>
@@ -3016,25 +3023,25 @@ Compatibility.?</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_consumer_vs_build_pom"><a class="link" href="#_consumer_vs_build_pom">47. Consumer vs. Build POM</a></h2>
+<h2 id="_consumer_vs_build_pom"><a class="link" href="#_consumer_vs_build_pom">49. Consumer vs. Build POM</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_improved_reactor_behaviour"><a class="link" href="#_improved_reactor_behaviour">48. Improved Reactor Behaviour</a></h2>
+<h2 id="_improved_reactor_behaviour"><a class="link" href="#_improved_reactor_behaviour">50. Improved Reactor Behaviour</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_caching"><a class="link" href="#_caching">49. Caching</a></h2>
+<h2 id="_caching"><a class="link" href="#_caching">51. Caching</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_plugins_2"><a class="link" href="#_plugins_2">50. Plugins</a></h2>
+<h2 id="_plugins_2"><a class="link" href="#_plugins_2">52. Plugins</a></h2>
 <div class="sectionbody">
 
 </div>
@@ -3115,7 +3122,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2023-02-19 12:52:33 UTC
+Last updated 2023-02-19 12:59:11 UTC
 </div>
 </div>
 </body>
