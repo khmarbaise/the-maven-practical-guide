@@ -24,8 +24,8 @@ separate the creation of those kind of archive like
 {enterprise-application-archive}[Enterprise Application Archive(ear)],
 the {web-application-archive}[web application archive(war)] etc.
 
-Nevertheless, project can become larger, when you realize it would make it easier
-to separate several part out parts into a higher level of groupings.
+Nevertheless, a project can become larger, when you realize it would make it easier
+to separate several parts out into a higher level of groupings.
 
 In such cases it makes sense to create a multi-module-build. So start with a
 look on the basic structure of a multi-module-build.
@@ -84,7 +84,7 @@ an appropriate directory structure.
 
 There are some parts which you need to pay attention to, to get a good working
 experience. The first thing is the `pom.xml` file on the root level of this structure.
-This is usually called the "parent" or multi-module-parent. This looks like this:
+This is usually called the "parent" or multi-module-parent. This looks very similar like this:
 
 [source,xml]
 .pom.xml
