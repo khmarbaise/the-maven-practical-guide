@@ -51,3 +51,10 @@ jobs:
           BRANCH: gh-pages
           FOLDER: target/staging
           TARGET_FOLDER: snapshot
+      - name: 'Deploy to gh-pages root'
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: target/staging
+          TARGET_FOLDER: .
