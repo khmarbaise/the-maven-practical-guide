@@ -28,11 +28,11 @@ The project is in an early state.
 # Generated Sites
 
 * Maven Project Site
-  * Snapshot State site: https://khmarbaise.github.io/the-maven-practical-guide/snapshot/
+  * Snapshot State site: https://khmarbaise.github.io/the-maven-practical-guide
 
 * The real guide:
-  * HTML https://khmarbaise.github.io/the-maven-practical-guide/snapshot/the-maven-practical-guide.html
-  * PDF https://khmarbaise.github.io//the-maven-practical-guide/snapshot/the-maven-practical-guide.pdf
+  * HTML https://khmarbaise.github.io/the-maven-practical-guide/the-maven-practical-guide.html
+  * PDF https://khmarbaise.github.io//the-maven-practical-guide/the-maven-practical-guide.pdf
 
 
 [mainbuilds]: https://github.com/khmarbaise/the-maven-practical-guide/actions?query=workflow%3AMain
