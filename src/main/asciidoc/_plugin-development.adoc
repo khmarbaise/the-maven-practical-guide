@@ -6,6 +6,8 @@ Example project.
 
 How to test plugins?
 
+NOTE: Think about a good example here?
+
 == Reasons
 
 * Reasons to develop a plugin?

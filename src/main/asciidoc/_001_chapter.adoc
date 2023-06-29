@@ -24,6 +24,8 @@ The life cycle phases...
 
 === Directory Structure
 
+Describe the basic directory structure.
+
 
 == The Coordinates
 

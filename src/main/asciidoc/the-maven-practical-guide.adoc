@@ -14,6 +14,7 @@ Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.io>; {docda
 :link-testng: https://testng.org[TestNG]
 :link-mib: https://en.wikipedia.org/wiki/Binary_prefix#Specific_units_of_IEC_60027-2_A.2_and_ISO.2FIEC_80000[MiB]
 :link-groovy: https://groovy-lang.org/[Groovy]
+:link-kotlin: https://kotlinlang.org/[Kotlin]
 :link-scala: https://scala.org[Scala]
 :link-ruby: https://www.ruby-lang.org[Ruby]
 :link-apache-software-foundation: https://www.apache.org/[Apache Software Foundation]

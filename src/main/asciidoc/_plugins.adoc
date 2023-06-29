@@ -22,9 +22,11 @@ you will find plugins like {link-maven-compiler-plugin},
 functionality for your build.
 
 The second source is the https://www.mojohaus.org/plugins.html[MojoHaus]
-area which also provides a large number of maven plugins.
+area which also provides a large number of maven plugins (for example
+versions-maven-plugin, build-help-maven-plugin,
+buildnumber-maven-plugin).
 
-Other sources of PLugins (JBoss, Tomcat, Antlr, google code (Maven
+Other sources of Plugins (JBoss, Tomcat, Antlr, google code (Maven
 Processor Plugin) 
 
 jaxws-maven-plugin ? (URL?)
@@ -66,7 +68,7 @@ could happen that you need to change the configuration and add
 supplemental folders or files which should be deleted during a 'mvn
 clean' call.
 
-HINT: Something about the clean life cycle of the maven super pom!!
+NOTE: HINT: Something about the clean life cycle of the maven super pom!!
 
 In the clean life cycle the following phases exist: pre-clean, clean, post-clean.
 
@@ -77,13 +79,13 @@ files.  One of the most famous examples for this kind of
 configurations is one of those numerous logging frameworks like log4j,
 logback, log4j2 etc.  So the question is where to locate such
 configuration files? The {link-default-folder-layout} gives you the
-hint to put such things into 'src/main/resources' which is of
+hint to put such things into `src/main/resources` which is of
 course intended for the production code (in other words which is
-packaged later into the jar file). Furthermore it is often the case as
-well as having different configuration files for your unit tests cause
-you would like having a different logging level in your unit test so
+packaged later into the jar file). Furthermore, it is often the case as
+well as having different configuration files for your unit tests because
+you would like having a different logging level in your unit test, so
 you need a different set of files which should be located into
-'src/test/resources'. This means in other words those files will not
+`src/test/resources`. This means in other words those files will not
 be packaged into the resulting jar file.
 
 TODO: Move the following to test phase
@@ -91,18 +93,18 @@ TODO: Move the following to test phase
 HINT about super pom !
 
 So usually you can simply put your appropriate configuration files
-into 'src/test/resources' or 'src/main/resources' and they will
+into `src/test/resources` or `src/main/resources` and they will
 automatically be copied into 'target/classes' or
 'target/test-classes'.  But why are they copied ? The most important
 point about this is that you can use such resources by the usual java
 resources way like this:
 
-code example (getClass().getResourcesAsStream("/log4j.properties");
+code example (`getClass().getResourcesAsStream("/log4j.properties");`)
 This works for unit tests and for your production code! (good example?)
 
 One important thing to mention is that the order on your class path 
 is that the resources from your test resources coming first before
-your production code which means you can give a different configurtation file
+your production code which means you can give a different configuration file
 for every file which you already use in your production code and so you
 can change the behaviour in your unit tests to change things for example
 the logging level or something else.
@@ -112,45 +114,45 @@ the logging level or something else.
 
 ==== Let The Source Be With You
 
-You usually write Java source code (ok ok sometimes you write
-difference sources like {link-groovy}, {link-scala} or
-whatever) and of course you would like to compile such code into
+You usually write Java source code. Ok, ok sometimes you write
+source code in different languages {link-groovy}, {link-kotlin}, {link-scala} or
+whatever and of course you would like to compile such code into
 usable class files which can be used to run your application
-or to run your unit tests.
+or to run your unit tests. We will focus here on Java source code
+first.
 
 This is the purpose of the {link-maven-compiler-plugin} which will
 compile your source code into class files.
 
-The source code is located in 'src/main/java' and will be compiled
-into the 'target/classes' folder. Apart from that the Maven Compiler
+The source code is located in `src/main/java` and will be compiled
+into the `target/classes` folder. Apart from that the Maven Compiler
 Plugin is also responsible to compile your unit/integration test code
-which is located in 'src/test/java' into 'target/test-classes'.
+which is located in `src/test/java` into `target/test-classes`.
 
 ==== Let's See If The Code Is Working?
 
 After we have compiled the whole code we should run the unit tests to
 check our code. This is done before the code will be packaged into a
 jar file, cause if one of your unit tests will fail your build will
-fail and no packages are being built.
+fail and no packages (jar files) are being built.
 
 For this purpose the {link-maven-surefire-plugin} is responsible
 to run those unit tests.
 
-
 ==== Let The Jar's Come To Me
 
 After the production code has been compiled into the appropriate
-'.class' files they will be packed into a jar file which is the base
+`.class` files they will be packed into a jar file which is the base
 unit to be distributed.  The jar will contain only the files from
-'target/classes'.  So if you don't do something special your unit
+`target/classes`.  So if you don't do something special your unit
 tests will never be packed into jar files.
 
 The {link-maven-jar-plugin} is bound to the 'package' build life cycle
 phase to create a jar file. This jar file contains only the files from
-the 'src/main/java' inclusive the resources from 'src/main/resources'
+the `src/main/java` inclusive the resources from `src/main/resources`
 area (Let use call it the production code area).
 
-There exsist situations where you like to package your test code into
+There exist situations where you like to package your test code into
 a jar as well. This can be achieved by using the `test-jar` goal of the
 {link-maven-jar-plugin}. 
 
@@ -159,7 +161,7 @@ See examples (testing with common code).
 * {link-maven-jar-plugin}
 +
 Creating test-jars
-non transitive behaviour of test-jar artifact. Solution create a usual separate module.
+no transitive behaviour of test-jar artifact. Solution create a usual separate module.
 
 ==== Install The Archive
 
@@ -194,7 +196,7 @@ Idea and usage? Why?
 * More ?
 
 
-http://mojo.codehaus.org/clirr-maven-plugin/
+http://mojo.codehaus.org/clirr-maven-plugin/ (really up-to-date? Not yet anymore.)
 
 
 Google Code:
@@ -202,13 +204,13 @@ maven-processor-plugin
 http://stackoverflow.com/questions/24345920/could-i-use-java-6-annotation-processors-jsr-269-to-produce-code-for-gwt-in-ma
 
 
-http://mvnplugins.fusesource.org/maven/1.4/maven-uberize-plugin/compared-to-shade.html
+(DOES NOT EXIST ANYMORE: http://mvnplugins.fusesource.org/maven/1.4/maven-uberize-plugin/compared-to-shade.html)
 
 maven-graph-plugin
 
 https://github.com/fusesource/mvnplugins/
 
-(Looks intresting)
+(Looks interesting)
 http://site.kuali.org/maven/plugins/graph-maven-plugin/1.2.3/dependency-graphs.html
 Can add the graphs a reports to the build. 
 Take a deeper look into it.
@@ -255,8 +257,8 @@ wrong Maven version was to use the `prerequsites` tag like this:
 --------------------------------------
 
 but based on the improvements in Maven within Maven 3 the
-'prerequsites' part in the pom has been marked as depcrecated and will
-not be checked. So to make sure a build will only works with a
+'prerequisites' part in the pom has been marked as deprecated and will
+not be checked. So to make sure a build will only work with a
 particular Maven version for example 3.1.1 you need to go the
 following path:
 
@@ -328,4 +330,3 @@ following path:
   </executions>
 </plugin>
 --------------------------------------
-
