@@ -819,7 +819,9 @@ What is a life cycle..
 </div>
 <div class="sect2">
 <h3 id="_directory_structure"><a class="link" href="#_directory_structure">2.1. Directory Structure</a></h3>
-
+<div class="paragraph">
+<p>Describe the basic directory structure.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1803,10 +1805,12 @@ functionality for your build.</p>
 </div>
 <div class="paragraph">
 <p>The second source is the <a href="https://www.mojohaus.org/plugins.html">MojoHaus</a>
-area which also provides a large number of maven plugins.</p>
+area which also provides a large number of maven plugins (for example
+versions-maven-plugin, build-help-maven-plugin,
+buildnumber-maven-plugin).</p>
 </div>
 <div class="paragraph">
-<p>Other sources of PLugins (JBoss, Tomcat, Antlr, google code (Maven
+<p>Other sources of Plugins (JBoss, Tomcat, Antlr, google code (Maven
 Processor Plugin)</p>
 </div>
 <div class="paragraph">
@@ -1853,8 +1857,17 @@ could happen that you need to change the configuration and add
 supplemental folders or files which should be deleted during a 'mvn
 clean' call.</p>
 </div>
-<div class="paragraph">
-<p>HINT: Something about the clean life cycle of the maven super pom!!</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+HINT: Something about the clean life cycle of the maven super pom!!
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>In the clean life cycle the following phases exist: pre-clean, clean, post-clean.</p>
@@ -1868,13 +1881,13 @@ files.  One of the most famous examples for this kind of
 configurations is one of those numerous logging frameworks like log4j,
 logback, log4j2 etc.  So the question is where to locate such
 configuration files? The <a href="https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html">Default Folder Layout</a> gives you the
-hint to put such things into 'src/main/resources' which is of
+hint to put such things into <code>src/main/resources</code> which is of
 course intended for the production code (in other words which is
-packaged later into the jar file). Furthermore it is often the case as
-well as having different configuration files for your unit tests cause
-you would like having a different logging level in your unit test so
+packaged later into the jar file). Furthermore, it is often the case as
+well as having different configuration files for your unit tests because
+you would like having a different logging level in your unit test, so
 you need a different set of files which should be located into
-'src/test/resources'. This means in other words those files will not
+<code>src/test/resources</code>. This means in other words those files will not
 be packaged into the resulting jar file.</p>
 </div>
 <div class="paragraph">
@@ -1885,20 +1898,20 @@ be packaged into the resulting jar file.</p>
 </div>
 <div class="paragraph">
 <p>So usually you can simply put your appropriate configuration files
-into 'src/test/resources' or 'src/main/resources' and they will
+into <code>src/test/resources</code> or <code>src/main/resources</code> and they will
 automatically be copied into 'target/classes' or
 'target/test-classes'.  But why are they copied ? The most important
 point about this is that you can use such resources by the usual java
 resources way like this:</p>
 </div>
 <div class="paragraph">
-<p>code example (getClass().getResourcesAsStream("/log4j.properties");
+<p>code example (<code>getClass().getResourcesAsStream("/log4j.properties");</code>)
 This works for unit tests and for your production code! (good example?)</p>
 </div>
 <div class="paragraph">
 <p>One important thing to mention is that the order on your class path
 is that the resources from your test resources coming first before
-your production code which means you can give a different configurtation file
+your production code which means you can give a different configuration file
 for every file which you already use in your production code and so you
 can change the behaviour in your unit tests to change things for example
 the logging level or something else.</p>
@@ -1914,21 +1927,22 @@ the logging level or something else.</p>
 <div class="sect3">
 <h4 id="_let_the_source_be_with_you"><a class="link" href="#_let_the_source_be_with_you">16.1.3. Let The Source Be With You</a></h4>
 <div class="paragraph">
-<p>You usually write Java source code (ok ok sometimes you write
-difference sources like <a href="https://groovy-lang.org/">Groovy</a>, <a href="https://scala.org">Scala</a> or
-whatever) and of course you would like to compile such code into
+<p>You usually write Java source code. Ok, ok sometimes you write
+source code in different languages <a href="https://groovy-lang.org/">Groovy</a>, <a href="https://kotlinlang.org/">Kotlin</a>, <a href="https://scala.org">Scala</a> or
+whatever and of course you would like to compile such code into
 usable class files which can be used to run your application
-or to run your unit tests.</p>
+or to run your unit tests. We will focus here on Java source code
+first.</p>
 </div>
 <div class="paragraph">
 <p>This is the purpose of the <a href="https://maven.apache.org/plugins/maven-compiler-plugin/">Maven Compiler Plugin</a> which will
 compile your source code into class files.</p>
 </div>
 <div class="paragraph">
-<p>The source code is located in 'src/main/java' and will be compiled
-into the 'target/classes' folder. Apart from that the Maven Compiler
+<p>The source code is located in <code>src/main/java</code> and will be compiled
+into the <code>target/classes</code> folder. Apart from that the Maven Compiler
 Plugin is also responsible to compile your unit/integration test code
-which is located in 'src/test/java' into 'target/test-classes'.</p>
+which is located in <code>src/test/java</code> into <code>target/test-classes</code>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1937,7 +1951,7 @@ which is located in 'src/test/java' into 'target/test-classes'.</p>
 <p>After we have compiled the whole code we should run the unit tests to
 check our code. This is done before the code will be packaged into a
 jar file, cause if one of your unit tests will fail your build will
-fail and no packages are being built.</p>
+fail and no packages (jar files) are being built.</p>
 </div>
 <div class="paragraph">
 <p>For this purpose the <a href="https://maven.apache.org/plugins/maven-surefire-plugin/">Maven Surefire Plugin</a> is responsible
@@ -1948,19 +1962,19 @@ to run those unit tests.</p>
 <h4 id="_let_the_jars_come_to_me"><a class="link" href="#_let_the_jars_come_to_me">16.1.5. Let The Jar&#8217;s Come To Me</a></h4>
 <div class="paragraph">
 <p>After the production code has been compiled into the appropriate
-'.class' files they will be packed into a jar file which is the base
+<code>.class</code> files they will be packed into a jar file which is the base
 unit to be distributed.  The jar will contain only the files from
-'target/classes'.  So if you don&#8217;t do something special your unit
+<code>target/classes</code>.  So if you don&#8217;t do something special your unit
 tests will never be packed into jar files.</p>
 </div>
 <div class="paragraph">
 <p>The <a href="https://maven.apache.org/plugins/maven-jar-plugin/">Maven Jar Plugin</a> is bound to the 'package' build life cycle
 phase to create a jar file. This jar file contains only the files from
-the 'src/main/java' inclusive the resources from 'src/main/resources'
+the <code>src/main/java</code> inclusive the resources from <code>src/main/resources</code>
 area (Let use call it the production code area).</p>
 </div>
 <div class="paragraph">
-<p>There exsist situations where you like to package your test code into
+<p>There exist situations where you like to package your test code into
 a jar as well. This can be achieved by using the <code>test-jar</code> goal of the
 <a href="https://maven.apache.org/plugins/maven-jar-plugin/">Maven Jar Plugin</a>.</p>
 </div>
@@ -1973,7 +1987,7 @@ a jar as well. This can be achieved by using the <code>test-jar</code> goal of t
 <p><a href="https://maven.apache.org/plugins/maven-jar-plugin/">Maven Jar Plugin</a></p>
 <div class="paragraph">
 <p>Creating test-jars
-non transitive behaviour of test-jar artifact. Solution create a usual separate module.</p>
+no transitive behaviour of test-jar artifact. Solution create a usual separate module.</p>
 </div>
 </li>
 </ul>
@@ -2044,7 +2058,7 @@ For this the <a href="https://maven.apache.org/plugins/maven-deploy-plugin/">Mav
 </ul>
 </div>
 <div class="paragraph">
-<p><a href="http://mojo.codehaus.org/clirr-maven-plugin/" class="bare">http://mojo.codehaus.org/clirr-maven-plugin/</a></p>
+<p><a href="http://mojo.codehaus.org/clirr-maven-plugin/" class="bare">http://mojo.codehaus.org/clirr-maven-plugin/</a> (really up-to-date? Not yet anymore.)</p>
 </div>
 <div class="paragraph">
 <p>Google Code:
@@ -2052,7 +2066,7 @@ maven-processor-plugin
 <a href="http://stackoverflow.com/questions/24345920/could-i-use-java-6-annotation-processors-jsr-269-to-produce-code-for-gwt-in-ma" class="bare">http://stackoverflow.com/questions/24345920/could-i-use-java-6-annotation-processors-jsr-269-to-produce-code-for-gwt-in-ma</a></p>
 </div>
 <div class="paragraph">
-<p><a href="http://mvnplugins.fusesource.org/maven/1.4/maven-uberize-plugin/compared-to-shade.html" class="bare">http://mvnplugins.fusesource.org/maven/1.4/maven-uberize-plugin/compared-to-shade.html</a></p>
+<p>(DOES NOT EXIST ANYMORE: <a href="http://mvnplugins.fusesource.org/maven/1.4/maven-uberize-plugin/compared-to-shade.html" class="bare">http://mvnplugins.fusesource.org/maven/1.4/maven-uberize-plugin/compared-to-shade.html</a>)</p>
 </div>
 <div class="paragraph">
 <p>maven-graph-plugin</p>
@@ -2061,7 +2075,7 @@ maven-processor-plugin
 <p><a href="https://github.com/fusesource/mvnplugins/" class="bare">https://github.com/fusesource/mvnplugins/</a></p>
 </div>
 <div class="paragraph">
-<p>(Looks intresting)
+<p>(Looks interesting)
 <a href="http://site.kuali.org/maven/plugins/graph-maven-plugin/1.2.3/dependency-graphs.html" class="bare">http://site.kuali.org/maven/plugins/graph-maven-plugin/1.2.3/dependency-graphs.html</a>
 Can add the graphs a reports to the build.
 Take a deeper look into it.
@@ -2122,8 +2136,8 @@ wrong Maven version was to use the <code>prerequsites</code> tag like this:</p>
 </div>
 <div class="paragraph">
 <p>but based on the improvements in Maven within Maven 3 the
-'prerequsites' part in the pom has been marked as depcrecated and will
-not be checked. So to make sure a build will only works with a
+'prerequisites' part in the pom has been marked as deprecated and will
+not be checked. So to make sure a build will only work with a
 particular Maven version for example 3.1.1 you need to go the
 following path:</p>
 </div>
@@ -2459,6 +2473,18 @@ Example project.</p>
 </div>
 <div class="paragraph">
 <p>How to test plugins?</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Think about a good example here?
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -3126,7 +3152,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2023-06-29 19:55:00 UTC
+Last updated 2023-06-29 20:26:06 UTC
 </div>
 </div>
 </body>
