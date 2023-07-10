@@ -120,8 +120,8 @@ of AsciiDoc labeled lists.
 Text at the end of a book describing facts about its production.
 
 This books has been created by using the following tools:
-http://git-scm.com[Git], http://asciidoc.org/[AsciiDoc] and
-http://www.vim.org[Vim] for text editing.
+https://git-scm.com[Git], https://asciidoc.org/[AsciiDoc] and
+https://www.jetbrains.com/idea/[IDEA IntelliJ] for text editing.
 
 = Example Bibliography
 
