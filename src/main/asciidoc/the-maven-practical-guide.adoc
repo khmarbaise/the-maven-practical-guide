@@ -1,5 +1,5 @@
 = The Maven Practical Guide
-Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.io>; {docdate}
+Karl-Heinz Marbaise <tmpg@maven-practical-guide.io>; {docdate}
 :doctype: book
 :author: Karl Heinz Marbaise
 :appendix-number:
@@ -22,6 +22,8 @@ Karl-Heinz Marbaise <the-maven-practical-guide@maven-practical-guide.io>; {docda
 :link-asf-plugins: https://maven.apache.org/plugins/index.html[Apache Software Foundation Maven Plugin List]
 :link-life-cycle-phase: https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html[Build Life Cycle Phase]
 :link-default-folder-layout: https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html[Default Folder Layout]
+:link-download-maven: https://maven.apache.org/download.cgi
+:link-install-maven: https://maven.apache.org/install.html
 :link-maven-assembly-plugin: https://maven.apache.org/plugins/maven-assembly-plugin/[Maven Assembly Plugin]
 :link-maven-clean-plugin: https://maven.apache.org/plugins/maven-clean-plugin/[Maven Clean Plugin]
 :link-maven-compiler-plugin: https://maven.apache.org/plugins/maven-compiler-plugin/[Maven Compiler Plugin]

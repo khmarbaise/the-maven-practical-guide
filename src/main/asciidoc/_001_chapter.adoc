@@ -1,14 +1,61 @@
 = The Basics
 
+Requirement: Install Maven ? Download it from?
+
+Download Maven {link-download-maven} and install {link-install-maven}.
+
 Overview about the basics, components of a `pom.xml` file.
 What is a life cycle..
+
+Checking that the installation has worked
+[source,bash]
+----
+mvn --version
+----
+This should print out something similar like the following on a MacOS:
+
+[source,text]
+----
+$ mvn --version
+Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+Maven home: /Users/khm/tools/maven
+Java version: 17.0.7, vendor: Eclipse Adoptium, runtime: xxxxx
+Default locale: en_DE, platform encoding: UTF-8
+OS name: "mac os x", version: "13.4.1", arch: "aarch64", family: "mac"
+----
+
+On a linux like system it would print something like this:
+
+TODO: Real output of a debian system:
+[source,text]
+----
+$ mvn --version
+Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+Maven home: /Users/khm/tools/maven
+Java version: 17.0.7, vendor: Eclipse Adoptium, runtime: xxxxx
+Default locale: en_DE, platform encoding: UTF-8
+OS name: "mac os x", version: "13.4.1", arch: "aarch64", family: "mac"
+----
+
+On a Windows system it should look similar like this:
+
+TODO: Real output of Windows:
+[source,text]
+----
+c:\> mvn --version
+Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+Maven home: /Users/khm/tools/maven
+Java version: 17.0.7, vendor: Eclipse Adoptium, runtime: xxxxx
+Default locale: en_DE, platform encoding: UTF-8
+OS name: "mac os x", version: "13.4.1", arch: "aarch64", family: "mac"
+----
 
 
 
 == The Foundation
 
-Let us start with a minimal `pom` file.
-
+Let us start with a minimal `pom` file. It's required that you put the content
+into a file called `pom.xml` in a separate directory on your system:
 
 [source,xml]
 ----

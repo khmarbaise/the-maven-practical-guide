@@ -11,19 +11,19 @@ Explain the basic project setup..
 
 Using fraction example.
 
-== Unit Testing
+=== Unit Testing
 
 Basic unit testing, naming conventions, skip execution of unit tests
 
 Using JUnit Jupiter as example because it state of the art.
 
 
-== Integration Testing
+=== Integration Testing
 
 Basic combination of unit- and integration testing, naming conventions, skip execution
 of integration tests or both.
 
-== Testing Suites
+=== Testing Suites
 
 With JUnit Jupiter
 
