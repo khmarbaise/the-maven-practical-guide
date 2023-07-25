@@ -2,8 +2,45 @@
 
 = Testing with Maven
 
-Basic Unit Testing, Responsibilities of Plugins, Using JUnit, TestNG,
-multi module builds and unit tests.
+create a general summary (overview). The goal which should be reached
+in this section.
+
+== Project Setup
+
+Explain the basic project setup..
+
+Using fraction example.
+
+== Unit Testing
+
+Basic unit testing, naming conventions, skip execution of unit tests
+
+Using JUnit Jupiter as example because it state of the art.
+
+
+== Integration Testing
+
+Basic combination of unit- and integration testing, naming conventions, skip execution
+of integration tests or both.
+
+== Testing Suites
+
+With JUnit Jupiter
+
+== Testing Frameworks
+
+=== JUnit 4
+
+=== Test NG
+
+=== JUnit Jupiter
+
+=== Combining
+
+Combination of all of them within a single build.
+
+
+
 
 This part will give some practical hints how you can use unit- and
 integration tests in relationship with Maven. Furthermore it will give
@@ -145,16 +182,6 @@ http://tempusfugitlibrary.org/documentation/
 http://labs.carrotsearch.com/randomizedtesting.html
 
 http://zeroturnaround.com/rebellabs/the-correct-way-to-use-integration-tests-in-your-build-process/
-
-== Testing Frameworks
-
-=== JUnit 4
-
-=== JUnit Jupiter
-
-=== Test NG
-
-=== Combining
 
 == Combining Unit- and Integration Testing
 

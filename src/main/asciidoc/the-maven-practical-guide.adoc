@@ -63,11 +63,12 @@ include::_001_chapter.adoc[]
 
 include::_single-module-projects.adoc[]
 
+include::_testing.adoc[]
+
 include::_parents.adoc[]
 
 include::_multi-module-builds.adoc[]
 
-include::_testing.adoc[]
 
 include::_code-coverage.adoc[]
 

@@ -17,6 +17,13 @@ The following directory structure shows the default directory layout of
 a Maven project. That a convention to go that way. I strongly recommend
 to keep that structure (link:_exceptions.adoc[more details ??)].
 
+TODO:
+
+ * Based pom.xml without any supplemental configuration (in particular plugins)
+ ** Consequences of that?
+ * The need for pluginManagement (pinning plugin versions? )
+ ** Why is that needed?
+ * More reasons?
 
 [source]
 ---------------
@@ -36,6 +43,9 @@ to keep that structure (link:_exceptions.adoc[more details ??)].
 Having several projects? Identifying duplication for example
 plugin configuration, pluginManagement etc.
 TODO: Add chapter about parents...
+
+This should be moved to a location after testing setup and single
+module build.
 
 // Having a project common, cli and web.
 //
