@@ -24,9 +24,11 @@ get the whole lecture of GearConf2013
 
 How to build for prod, dev, qa environment etc.
 
-http://blog.soebes.de/blog/2011/07/29/maven-configuration-for-multipe-environments/
+https://blog.soebes.io/posts/2016/05/2016-05-08-building-for-multiple-environments/
 
-http://blog.soebes.de/blog/2011/08/11/maven-configuration-for-multipe-environments-ii/
+https://blog.soebes.io/posts/2011/2011-07-29-maven-configuration-for-multipe-environments/
+
+https://blog.soebes.io/posts/2011/2011-08-11-maven-configuration-for-multipe-environments-ii/
 
 
 == The Solutions
