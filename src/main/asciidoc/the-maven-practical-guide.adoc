@@ -6,6 +6,7 @@ Karl-Heinz Marbaise <tmpg@maven-practical-guide.io>; {docdate}
 :sectnums:
 :sectnumlevels: 2
 :sectlinks:
+:partnums:
 :xrefstyle: full
 :toc: left
 //
@@ -55,6 +56,20 @@ FIXME: Add more about me.
 something more about me ;-)
 
 I'm ... the xxx.
+
+[abstract]
+--
+This is the Abstract of this document.
+--
+
+[colophon]
+== Colophon
+
+(C) 2014-2023 by Karl Heinz Marbaise
+
+This books has been created by using the following tools:
+https://git-scm.com[Git], https://asciidoc.org/[AsciiDoc] and
+https://www.jetbrains.com/idea/[IDEA IntelliJ] for text editing.
 
 [dedication]
 == THIS IS WORK IN PROGRESS
@@ -110,9 +125,7 @@ include::_different-environments.adoc[]
 
 include::_maven-4.adoc[]
 
-
-:numbered!:
-
+[appendix]
 = Example Appendix
 
 One or more optional appendixes go here at section level 1.
@@ -125,14 +138,6 @@ Sub-section body.
 == Example Glossary
 Glossaries are optional. Glossaries entries are an example of a style
 of AsciiDoc labeled lists.
-
-== Example Colophon
-
-Text at the end of a book describing facts about its production.
-
-This books has been created by using the following tools:
-https://git-scm.com[Git], https://asciidoc.org/[AsciiDoc] and
-https://www.jetbrains.com/idea/[IDEA IntelliJ] for text editing.
 
 = Example Bibliography
 
@@ -150,9 +155,15 @@ The bibliography list is a style of AsciiDoc bulleted list.
 .Articles
 - [[[abc2003]]] Gall Anonim. 'An article', Whatever. 2003.
 
-[index]
+[glossary]
+== Glossary
 
-== Example Index
+Maven:: What is Maven
+GAV::
+groupId, artifactId, version
+
+[index]
+== Index
 
 ////////////////////////////////////////////////////////////////
 The index is normally left completely empty, it's contents being

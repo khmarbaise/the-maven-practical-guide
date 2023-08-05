@@ -13,12 +13,17 @@ Using fraction example.
 
 === Unit Testing
 
-Basic unit testing, naming conventions, skip execution of unit tests
+(((Testing, "Unit testing")))
+Basic ((unit testing)), naming conventions, skip execution of unit tests
 
+(((Frameworks, "JUnit Jupiter")))
+(((JUnit, "JUnit Jupiter")))
 Using JUnit Jupiter as example because it state of the art.
 
 
 === Integration Testing
+
+(((Testing, "Integration Testing")))
 
 Basic combination of unit- and integration testing, naming conventions, skip execution
 of integration tests or both.
