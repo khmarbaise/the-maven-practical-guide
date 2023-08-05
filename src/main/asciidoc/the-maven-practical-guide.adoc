@@ -4,6 +4,7 @@ Karl-Heinz Marbaise <tmpg@maven-practical-guide.io>; {docdate}
 :author: Karl Heinz Marbaise
 :appendix-number:
 :sectnums:
+:sectnumlevels: 2
 :sectlinks:
 :xrefstyle: full
 :toc: left
@@ -48,6 +49,13 @@ Karl-Heinz Marbaise <tmpg@maven-practical-guide.io>; {docdate}
 :link-buildnumber-maven-plugin: https://www.mojohaus.org/buildnumber-maven-plugin/[Mojo's Buildnumber Maven Plugin]
 
 :link-issue-tracker: https://github.com/khmarbaise/the-maven-practical-guide/issues
+
+.About {author}
+FIXME: Add more about me.
+something more about me ;-)
+
+I'm ... the xxx.
+
 [dedication]
 == THIS IS WORK IN PROGRESS
 This guide is an attempt to write a practical guide about Apache Maven.

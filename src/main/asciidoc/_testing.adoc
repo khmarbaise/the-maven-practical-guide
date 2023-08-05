@@ -27,15 +27,15 @@ of integration tests or both.
 
 With JUnit Jupiter
 
-== Testing Frameworks
+=== Testing Frameworks
 
-=== JUnit 4
+==== JUnit 4
 
-=== Test NG
+==== Test NG
 
-=== JUnit Jupiter
+==== JUnit Jupiter
 
-=== Combining
+==== Combining
 
 Combination of all of them within a single build.
 
@@ -58,7 +58,7 @@ http://stackoverflow.com/questions/8295100/how-to-re-run-failed-junit-tests-imme
 
 https://blog.42.nl/articles/keeping-integration-tests-isolated/
 
-== Unit Testing
+=== Unit Testing
 
 Unit testing can be done out-of-box in Maven which means you just have
 to locate your unit tests into 'src/test/java' and follow the naming
@@ -152,7 +152,7 @@ Support of testing frameworks
 JUnit, TestNG, Spock?, BDD ?
 
 
-== Integration Testing
+=== Integration Testing
 
 What is integration tests?
 How to use? Naming convention?
@@ -161,7 +161,7 @@ In which cases should be used a separate module?
 
 Test an web application with Selenium? (Examples).
 
-=== Importance of Separation
+==== Importance of Separation
 
 Why is it important to separate between unit tests and integration
 tests?
@@ -183,7 +183,7 @@ http://labs.carrotsearch.com/randomizedtesting.html
 
 http://zeroturnaround.com/rebellabs/the-correct-way-to-use-integration-tests-in-your-build-process/
 
-== Combining Unit- and Integration Testing
+=== Combining Unit- and Integration Testing
 
 ?? Controlling what should be executed and what not?
 

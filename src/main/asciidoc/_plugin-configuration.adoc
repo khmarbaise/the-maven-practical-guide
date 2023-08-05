@@ -16,6 +16,7 @@ include::{includesource}/examples/basics/simple/pom.xml[tags=first]
 <3> The version
 
 
+:keywords: comma-separated values, stored, in an HTML, meta, tag
 
 There are several options to configure a plugin.
 
