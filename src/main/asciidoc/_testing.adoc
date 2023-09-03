@@ -45,8 +45,6 @@ With JUnit Jupiter
 Combination of all of them within a single build.
 
 
-
-
 This part will give some practical hints how you can use unit- and
 integration tests in relationship with Maven. Furthermore it will give
 you tipps how to prevent several issues with testing.
@@ -193,3 +191,7 @@ http://zeroturnaround.com/rebellabs/the-correct-way-to-use-integration-tests-in-
 ?? Controlling what should be executed and what not?
 
 ??
+
+==== End To End Testing
+
+How? Using a profile? Better solutions?
