@@ -158,7 +158,8 @@ a jar as well. This can be achieved by using the `test-jar` goal of the
 
 See examples (testing with common code).
 
-* {link-maven-jar-plugin}
+* {link-maven-jar-plugina}
+
 +
 Creating test-jars
 no transitive behaviour of test-jar artifact. Solution create a usual separate module.
@@ -265,13 +266,6 @@ following path:
 [source,xml,numbered]
 --------------------------------------
 <project ...>
-
-  <!-- This marked as deprecated for Maven 3.X. This is checked by maven-enforcer-plugin -->
-  <!--  https://issues.apache.org/jira/browse/MNG-4840 -->
-  <!--  https://issues.apache.org/jira/browse/MNG-5297 -->
-  <prerequisites>
-    <maven>${maven.version}</maven>
-  </prerequisites>
 
   <build>
     <plugins>
