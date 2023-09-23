@@ -23,6 +23,9 @@ on:
     branches:
       - 'master'
 
+permissions:
+  contents: write
+
 jobs:
   update-site:
     name: Linux
@@ -45,16 +48,14 @@ jobs:
       - name: 'Build'
         run: mvn -V --no-transfer-progress clean verify site:site site:stage
       - name: 'Deploy to gh-pages'
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
           folder: target/staging/book/the-maven-practical-guide.html
-          target_folder: index.html
+          target-folder: "./index.html"
+          force: true
       - name: 'Deploy to gh-pages'
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: target/staging/book/the-maven-practical-guide.pdf
-          target_folder: index.pdf
+          folder: "target/staging/book/the-maven-practical-guide.pdf"
+          target-folder: "index.pdf"
+          force: true
