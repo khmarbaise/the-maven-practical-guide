@@ -16,11 +16,11 @@
 -->
 # The Maven Practical Guide
 
-On this page you can find [The Maven Practical Guide](https://the-maven-practical-guide.io/the-maven-practical-guide.html)
+On this page you can find [The Maven Practical Guide](https://the-maven-practical-guide.io/book/the-maven-practical-guide.html)
 which contains a lot of information and explanations how to use Apache Maven in practical
 situations.
 
-A [PDF Version is available as well](https://the-maven-practical-guide.io/the-maven-practical-guide.pdf).
+A [PDF Version is available as well](https://the-maven-practical-guide.io/book/the-maven-practical-guide.pdf).
 
   
 
