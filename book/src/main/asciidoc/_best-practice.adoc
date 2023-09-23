@@ -66,11 +66,11 @@ Manifest setup with master parent.
     <addMavenDescriptor>true</addMavenDescriptor>
     <index>true</index>
     <manifest>
-      <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-      <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+      <addDefaultImplementationEntries>true</addDefaultImplementationEntries> <!--1-->
+      <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries> <!--2-->
     </manifest>
     <manifestEntries>
-      <artifactId>${project.artifactId}</artifactId>
+      <artifactId>${project.artifactId}</artifactId> <!--3-->
       <groupId>${project.groupId}</groupId>
       <version>${project.version}</version>
       <buildNumber>${buildNumber}</buildNumber>
@@ -79,6 +79,10 @@ Manifest setup with master parent.
   </archive>
 </configuration>
 ----
+<1> The groupId
+<2> The artifactId
+<3> The version
+
 
 What should be defined in such a parent?
 http://stackoverflow.com/questions/24409889/where-should-i-keep-my-companys-parent-pom
