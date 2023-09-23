@@ -1,4 +1,4 @@
-:sourcedir: examples/testing
+:includesource: ../../../examples/testing
 
 = Testing with Maven
 
@@ -68,7 +68,7 @@ to locate your unit tests into 'src/test/java' and follow the naming
 conventions. The resulting and recommended folder structure will be show
 in the following example.
 
-[source,xml,numbered]
+[source,xml]
 --------------------------------------
 .
 |-- pom.xml
@@ -112,7 +112,7 @@ The following simple example will show how a basic unit test can look
 like.
 [source,java]
 ----
-include::{includesource}/examples/testing/ut-example/src/test/java/com/soebes/training/maven/simple/BitMaskTest.java[]
+include::{includesource}/ut-example/src/test/java/com/soebes/training/maven/simple/BitMaskTest.java[]
 ----
 
 So if you follow the conventions in Maven and put your tests into the
@@ -133,7 +133,7 @@ that's it.
 
 [source,xml]
 ----
-include::{includesource}/examples/testing/ut-example/pom.xml[tags=first]
+include::{includesource}/ut-example/pom.xml[tags=first]
 ----
 
 If you prefer {link-testng} to use for your unit tests you can simply
@@ -143,7 +143,7 @@ differences between {link-junit} and {link-testng} itself.
 
 [source,xml]
 ----
-include::{includesource}/examples/testing/ut-example-testng/pom.xml[]
+include::{includesource}/ut-example-testng/pom.xml[]
 ----
 
 

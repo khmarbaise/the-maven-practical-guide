@@ -3,6 +3,8 @@ Karl-Heinz Marbaise <tmpg@maven-practical-guide.io>; {docdate}
 :doctype: book
 :author: Karl Heinz Marbaise
 :appendix-number:
+:revnumber: {projectVersion}
+:revdate: {localdate}
 :sectnums:
 :sectnumlevels: 2
 :sectlinks:
@@ -65,24 +67,21 @@ This is the Abstract of this document.
 [colophon]
 == Colophon
 
-(C) 2014-2023 by Karl Heinz Marbaise
+© 2014-2023 by Karl Heinz Marbaise
 
-This books has been created by using the following tools:
-https://git-scm.com[Git], https://asciidoc.org/[AsciiDoc] and
-https://www.jetbrains.com/idea/[IDEA IntelliJ] for text editing.
+NOTE: Copies of this document may be made for your own use and for distribution to others, provided that you do not
+charge any fee for such copies and further provided that each copy contains this Copyright Notice, whether distributed
+in print or electronically.
 
 [dedication]
-== THIS IS WORK IN PROGRESS
-This guide is an attempt to write a practical guide about Apache Maven.
-Its idea is to give practical hints how to use Apache Maven and describe
-and show what are the best practices and why you should follow them.
 
-If you have any suggestions, improvements or found issues please
-report them in the {link-issue-tracker}[issue tracking system].
+:leveloffset: +1
+:!numbered:
 
-This is also in its early stage so a large number of areas are
-just a containing a couple of sentences or even only a couple
-of words (a kind of reminder on my own) etc.
+include::00-preface.adoc[]
+
+:numbered:
+
 
 include::_001_chapter.adoc[]
 

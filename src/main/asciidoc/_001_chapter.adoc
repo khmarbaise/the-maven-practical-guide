@@ -1,4 +1,5 @@
 = The Basics
+:includesource: ../../../examples/basics
 
 Requirement: Install Maven ? Download it from?
 
@@ -57,9 +58,9 @@ OS name: "mac os x", version: "13.4.1", arch: "aarch64", family: "mac"
 Let us start with a minimal `pom` file. It's required that you put the content
 into a file called `pom.xml` in a separate directory on your system:
 
-[source,xml]
+[source,xml,+attributes]
 ----
-include::{includesource}/examples/basics/simple/pom.xml[tags=first]
+include::{includesource}/simple/pom.xml[tags=first]
 ----
 <1> The groupId
 <2> The artifactId

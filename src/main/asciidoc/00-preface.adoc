@@ -1,0 +1,31 @@
+[preface]
+[[preface]]
+= Preface
+
+[[preface.project-metadata]]
+== Project Metadata
+
+* Version control https://github.com/khmarbaise/the-maven-practical-guide
+* Bug tracker: https://github.com/khmarbaise/the-maven-practical-guide/issues
+
+This book has been created by using the following tools:
+https://git-scm.com[Git], https://asciidoc.org/[AsciiDoc] and
+https://www.jetbrains.com/idea/[IDEA IntelliJ] for text editing.
+
+
+== THIS IS WORK IN PROGRESS
+This guide is an attempt to write a practical guide about Apache Maven.
+Its idea is to give practical hints how to use Apache Maven and describe
+and show what are the best practices and why you should follow them.
+
+If you have any suggestions, improvements or found issues please
+report them via the <<preface.project-metadata, bug tracker, mentioned in metadata area>>.
+
+This is also in its early stage so a large number of areas are
+just a containing a couple of sentences or even less.
+Those simply reminders to my own.
+
+== Overview
+
+This is a more or less full documentation about Apache Maven.
+
