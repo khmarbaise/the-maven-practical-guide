@@ -1,6 +1,6 @@
 = Plugins
 
-The plugins of Maven building the foundation of the Maven eco system,
+The plugins of Maven building the foundation of the Maven ecosystem,
 cause if you download Maven itself it's a relative small archive
 (less than 8 {link-mib}) and Maven itself is more or less only a IoC
 container which supports the life-cycle and other small things. If you
