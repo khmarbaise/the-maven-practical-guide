@@ -1,4 +1,4 @@
-:includesource: ../../../examples/assemblies
+:sourcedir: ../../../../examples/assemblies
 :link-pre-defined-descriptors: https://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html[pre-defined descriptors]
 
 = Maven Assemblies
@@ -40,7 +40,7 @@ a `jar-with-dependencies`.
 
 [source,xml]
 ----
-include::{includesource}/assembly-jar-with-dependencies/pom.xml[]
+include::{sourcedir}/assembly-jar-with-dependencies/pom.xml[]
 ----
 
 By using the above pom you will get a jar which contains all the

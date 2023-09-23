@@ -1,4 +1,4 @@
-:includesource: ../../../examples/basics
+:sourcedir: ../../../../examples/basics
 
 = Plugin Configuration
 
@@ -9,9 +9,9 @@ How to configure plugins for the life cycle
 
 Let us start with a minimal `pom` file.
 
-[source,xml]
+[source,xml,numbers]
 ----
-include::{includesource}/simple/pom.xml[tags=first]
+include::{sourcedir}/simple/pom.xml[tags=first]
 ----
 <1> The groupId
 <2> The artifactId
@@ -22,7 +22,7 @@ include::{includesource}/simple/pom.xml[tags=first]
 
 There are several options to configure a plugin.
 
- *
- *
+ * xx
+ * xxx
 
 == The build life cycle

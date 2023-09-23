@@ -264,6 +264,7 @@ particular Maven version for example 3.1.1 you need to go the
 following path:
 
 [source,xml,numbered]
+.Example Configuration to define minimum Maven version
 --------------------------------------
 <project ...>
 
@@ -299,6 +300,7 @@ following path:
 
 
 [source,xml,numbered]
+.Example Configuration to require same version
 --------------------------------------
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>

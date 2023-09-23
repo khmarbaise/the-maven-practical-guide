@@ -1,4 +1,4 @@
-:includesource: ../../../examples/testing
+:sourcedir: ../../../../examples/testing
 
 = Testing with Maven
 
@@ -110,9 +110,11 @@ https://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#includes
 
 The following simple example will show how a basic unit test can look
 like.
+
+.This is an Example
 [source,java]
 ----
-include::{includesource}/ut-example/src/test/java/com/soebes/training/maven/simple/BitMaskTest.java[]
+include::{sourcedir}/ut-example/src/test/java/com/soebes/training/maven/simple/BitMaskTest.java[]
 ----
 
 So if you follow the conventions in Maven and put your tests into the
@@ -132,8 +134,9 @@ you just simply add the appropriate dependency to your 'pom.xml' and
 that's it.
 
 [source,xml]
+.Unit Testing Example(1)
 ----
-include::{includesource}/ut-example/pom.xml[tags=first]
+include::{sourcedir}/ut-example/pom.xml[tags=first]
 ----
 
 If you prefer {link-testng} to use for your unit tests you can simply
@@ -142,8 +145,9 @@ well without any supplemental change except the changes based on the
 differences between {link-junit} and {link-testng} itself.
 
 [source,xml]
+.Unit Testing Example(2)
 ----
-include::{includesource}/ut-example-testng/pom.xml[]
+include::{sourcedir}/ut-example-testng/pom.xml[]
 ----
 
 

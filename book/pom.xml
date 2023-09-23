@@ -1,0 +1,58 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.soebes.tmpg</groupId>
+    <artifactId>the-maven-practical-guide</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+
+  <packaging>pom</packaging>
+  <artifactId>book</artifactId>
+  <name>TMPG :: Book</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.soebes.tmpg.examples</groupId>
+      <artifactId>examples-aggregator</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+      <type>pom</type>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.asciidoctor</groupId>
+        <artifactId>asciidoctor-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>html</id>
+            <phase>package</phase>
+            <goals>
+              <goal>process-asciidoc</goal>
+            </goals>
+            <configuration>
+              <backend>html</backend>
+            </configuration>
+          </execution>
+          <execution>
+            <id>pdf</id>
+            <phase>package</phase>
+            <goals>
+              <goal>process-asciidoc</goal>
+            </goals>
+            <configuration>
+              <backend>pdf</backend>
+              <sourceDocumentName>the-maven-practical-guide.adoc</sourceDocumentName>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
