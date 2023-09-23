@@ -95,12 +95,15 @@ The folder `src/main/java` plus an appropriate package structure will
 contain your production code whereas the `src/test/java` plus the
 package structure will contain your unit test area.
 
+https://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#includes
+
 .Naming Schema for Unit Tests
 [width="60%",options="header"]
 |==============================================
 | Name Pattern    | Example
 | Test*.java      | TestBitMask.java
 | *Test.java      | BitMaskTest.java
+| *Tests.java     | BitMaskTests.java
 | *TestCase.java  | BitMaskTestCase.java
 |==============================================
 

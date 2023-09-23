@@ -246,7 +246,7 @@ practices within a build. The tool to do so is the
 
 
 One of the basic things is to force your build is built with the
-correct Maven version, cause htere exist some things which don't work
+correct Maven version, cause here exist some things which don't work
 with older Maven versions etc.  The way to prevent building with the
 wrong Maven version was to use the `prerequsites` tag like this:
 
@@ -324,3 +324,10 @@ following path:
   </executions>
 </plugin>
 --------------------------------------
+
+
+=== Maven compiler
+
+Just a try. It's related to this blog post:
+
+* https://blog.soebes.io/posts/2023/06/2023-06-24-how-to-use-jdk21-preview-features-incubator/
