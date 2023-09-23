@@ -47,14 +47,14 @@ jobs:
       - name: 'Deploy to gh-pages'
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: target/staging
-          TARGET_FOLDER: snapshot
-      - name: 'Deploy to gh-pages root'
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: target/staging/book/the-maven-practical-guide.html
+          target_folder: index.html
+      - name: 'Deploy to gh-pages'
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: target/staging
-          TARGET_FOLDER: .
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: target/staging/book/the-maven-practical-guide.pdf
+          target_folder: index.pdf
