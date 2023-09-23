@@ -2820,11 +2820,11 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
     &lt;addMavenDescriptor&gt;true&lt;/addMavenDescriptor&gt;
     &lt;index&gt;true&lt;/index&gt;
     &lt;manifest&gt;
-      &lt;addDefaultImplementationEntries&gt;true&lt;/addDefaultImplementationEntries&gt;
-      &lt;addDefaultSpecificationEntries&gt;true&lt;/addDefaultSpecificationEntries&gt;
+      &lt;addDefaultImplementationEntries&gt;true&lt;/addDefaultImplementationEntries&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;addDefaultSpecificationEntries&gt;true&lt;/addDefaultSpecificationEntries&gt; <i class="conum" data-value="2"></i><b>(2)</b>
     &lt;/manifest&gt;
     &lt;manifestEntries&gt;
-      &lt;artifactId&gt;${project.artifactId}&lt;/artifactId&gt;
+      &lt;artifactId&gt;${project.artifactId}&lt;/artifactId&gt; <i class="conum" data-value="3"></i><b>(3)</b>
       &lt;groupId&gt;${project.groupId}&lt;/groupId&gt;
       &lt;version&gt;${project.version}&lt;/version&gt;
       &lt;buildNumber&gt;${buildNumber}&lt;/buildNumber&gt;
@@ -2833,6 +2833,22 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
   &lt;/archive&gt;
 &lt;/configuration&gt;</code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The groupId</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The artifactId</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The version</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>What should be defined in such a parent?
@@ -3185,7 +3201,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2023-09-23 23:18:12 UTC
+Last updated 2023-09-23 23:26:32 UTC
 </div>
 </div>
 <script src="js/highlight/highlight.min.js"></script>
