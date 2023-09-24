@@ -1,0 +1,42 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- tag::first[] -->
+  <parent>
+    <groupId>com.soebes.tmpg.examples.testing</groupId>
+    <artifactId>tmpg-examples-aggregator</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.soebes.tpmg.examples.testing.ut-example</groupId>
+  <artifactId>unit-test-example-junit-jupiter</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+
+  <name>TMPG :: Testing :: Unit Test Example (JUnit Jupiter)</name>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>5.10.0</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- end::first[] -->
+</project>

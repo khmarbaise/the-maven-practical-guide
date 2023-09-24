@@ -18,5 +18,7 @@
 
   <modules>
     <module>ut-example</module>
+    <module>ut-example-testng</module>
+    <module>ut-example-junit-jupiter</module>
   </modules>
 </project>
