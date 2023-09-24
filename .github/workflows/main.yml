@@ -45,27 +45,6 @@ jobs:
           cache: maven
       - name: 'Build'
         run: mvn -V --no-transfer-progress clean verify --fail-at-end
-  windows:
-    name: 'Windows'
-    runs-on: windows-latest
-    container: "maven:3.9.4-eclipse-temurin-17"
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/cache@v3
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-windows-latest-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-windows-latest-
-      - name: 'Setup Java Version'
-        uses: actions/setup-java@v3
-        with:
-          java-version: 17
-          distribution: 'temurin'
-          cache: maven
-      - name: 'Build'
-        shell: bash
-        run: mvn -V --no-transfer-progress clean verify --fail-at-end
   mac:
     name: 'Mac OS'
     runs-on: macos-latest
