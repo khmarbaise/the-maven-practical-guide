@@ -50,12 +50,10 @@ jobs:
       - name: 'Deploy to gh-pages'
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          folder: target/staging/book/the-maven-practical-guide.html
-          target-folder: "./index.html"
+          folder: "target/staging"
           force: true
       - name: 'Deploy to gh-pages'
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          folder: "target/staging/book/the-maven-practical-guide.pdf"
-          target-folder: "index.pdf"
+          folder: "target/staging"
           force: true
