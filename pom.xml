@@ -115,7 +115,6 @@
               <toclevels>4</toclevels>
               <numbered>true</numbered>
               <revnumber>${project.version}</revnumber>
-              <includedir>${session.rootDirectory}</includedir>
             </attributes>
             <requires>
               <require>asciidoctor-diagram</require>
