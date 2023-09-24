@@ -1,6 +1,5 @@
 [[basics]]
 = The Basics
-:sourcedir: ../../../../examples/basics/
 
 Requirement: Install Maven ? Download it from?
 
@@ -62,7 +61,7 @@ into a file called `pom.xml` in a separate directory on your system:
 icon:plus-circle[role=green] denotes a public type, icon:minus-circle[role=red]
 [source,xml,+attributes]
 ----
-include::{sourcedir}/simple/pom.xml[tags=first]
+include::../../../../examples/basics/simple/pom.xml[tags=first]
 ----
 <1> The groupId
 <2> The artifactId

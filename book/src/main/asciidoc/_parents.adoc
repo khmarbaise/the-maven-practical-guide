@@ -1,5 +1,3 @@
-:sourcedir: examples/???
-
 = Parent
 
 the intention of a parent in general, super-pom,

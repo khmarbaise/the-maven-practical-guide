@@ -1,5 +1,3 @@
-:sourcedir: ../../../../examples/testing
-
 = Testing with Maven
 
 create a general summary (overview). The goal which should be reached
@@ -114,7 +112,7 @@ like.
 .This is an Example
 [source,java]
 ----
-include::{sourcedir}/ut-example/src/test/java/com/soebes/training/maven/simple/BitMaskTest.java[]
+include::../../../../examples/testing/ut-example/src/test/java/com/soebes/training/maven/simple/BitMaskTest.java[]
 ----
 
 So if you follow the conventions in Maven and put your tests into the
@@ -136,7 +134,7 @@ that's it.
 [source,xml]
 .Unit Testing Example(1)
 ----
-include::{sourcedir}/ut-example/pom.xml[tags=first]
+include::../../../../examples/testing/ut-example/pom.xml[tags=first]
 ----
 
 If you prefer {link-testng} to use for your unit tests you can simply
@@ -147,7 +145,7 @@ differences between {link-junit} and {link-testng} itself.
 [source,xml]
 .Unit Testing Example(2)
 ----
-include::{sourcedir}/ut-example-testng/pom.xml[]
+include::../../../../examples/testing/ut-example-testng/pom.xml[]
 ----
 
 

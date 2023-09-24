@@ -55,6 +55,8 @@
 
   <properties>
     <smpp.component>the-maven-practical-guide</smpp.component>
+    <!-- The minimum maven version we expect to build with. -->
+    <minimum.maven.version>3.9.3</minimum.maven.version>
   </properties>
   <modules>
     <module>examples</module>
@@ -113,6 +115,7 @@
               <toclevels>4</toclevels>
               <numbered>true</numbered>
               <revnumber>${project.version}</revnumber>
+              <includedir>${session.rootDirectory}</includedir>
             </attributes>
             <requires>
               <require>asciidoctor-diagram</require>

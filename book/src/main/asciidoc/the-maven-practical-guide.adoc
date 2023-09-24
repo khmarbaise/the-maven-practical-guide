@@ -108,6 +108,8 @@ include::_build-smells.adoc[]
 
 include::_plugin-development.adoc[]
 
+include::_plugin-configuration.adoc[]
+
 include::_performance.adoc[]
 
 include::_repository-manager.adoc[]
