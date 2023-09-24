@@ -29,6 +29,7 @@ Using Ci Friendly.
 http://www.youtube.com/watch?v=McTZtyb9M38
 
 http://maven.40175.n5.nabble.com/Continuous-Delivery-and-Maven-td3245370.html
+https://dev.to/khmarbaise/continuous-delivery-with-apache-maven--4i03
 
 http://stackoverflow.com/questions/18456111/what-is-the-maven-way-for-project-versions-when-doing-continuous-delivery
 
