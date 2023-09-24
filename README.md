@@ -35,6 +35,18 @@ The project is in an early state.
   * PDF https://khmarbaise.github.io//the-maven-practical-guide/the-maven-practical-guide.pdf
 
 
+# Dependency Updates
+
+```shell
+mvn -N versions:display-dependency-updates
+```
+# Plugin Updates
+
+```shell
+mvn -N versions:display-plugin-updates
+```
+
+
 [mainbuilds]: https://github.com/khmarbaise/the-maven-practical-guide/actions?query=workflow%3AMain
 [license]: https://www.apache.org/licenses/LICENSE-2.0
 [published-site]: https://khmarbaise.github.io/the-maven-practical-guide/
