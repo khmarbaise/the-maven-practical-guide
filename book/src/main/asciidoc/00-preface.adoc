@@ -19,7 +19,7 @@ Its idea is to give practical hints how to use Apache Maven and describe
 and show what are the best practices and why you should follow them.
 
 If you have any suggestions, improvements or found issues please
-report them via the <<preface.project-metadata, bug tracker, mentioned in metadata area>>.
+report them via the <<preface.project-metadata, bug tracker>>, mentioned in metadata area.
 
 This is also in its early stage so a large number of areas are
 just a containing a couple of sentences or even less.

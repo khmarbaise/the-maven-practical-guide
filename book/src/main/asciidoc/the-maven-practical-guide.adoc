@@ -85,6 +85,8 @@ include::00-preface.adoc[]
 
 include::_001_chapter.adoc[]
 
+include::10-foundation.adoc[]
+
 include::_single-module-projects.adoc[]
 
 include::_testing.adoc[]
