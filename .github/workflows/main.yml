@@ -28,7 +28,7 @@ jobs:
   linux:
     name: Linux
     runs-on: ubuntu-latest
-    container: "maven:3.8.6-eclipse-temurin-17"
+    container: "maven:3.9.4-eclipse-temurin-17"
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
