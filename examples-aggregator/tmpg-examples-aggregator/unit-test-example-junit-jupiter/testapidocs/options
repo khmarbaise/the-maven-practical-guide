@@ -1,0 +1,29 @@
+-classpath
+'/home/runner/work/the-maven-practical-guide/the-maven-practical-guide/examples/testing/ut-example-junit-jupiter/target/classes:/home/runner/work/the-maven-practical-guide/the-maven-practical-guide/examples/testing/ut-example-junit-jupiter/target/test-classes:/home/runner/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/home/runner/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/home/runner/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/runner/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/home/runner/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/home/runner/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar'
+-encoding
+'UTF-8'
+-protected
+-quiet
+--release
+11
+-sourcepath
+'/home/runner/work/the-maven-practical-guide/the-maven-practical-guide/examples/testing/ut-example-junit-jupiter/src/test/java:/home/runner/work/the-maven-practical-guide/the-maven-practical-guide/examples/testing/ut-example-junit-jupiter/target/generated-test-sources/test-annotations'
+-author
+-bottom
+'Copyright &#169; 2014&#x2013;2023 <a href="https://www.soebes.com">SoftwareEntwicklung Beratung Schulung</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/runner/work/the-maven-practical-guide/the-maven-practical-guide/examples/testing/ut-example-junit-jupiter/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'TMPG :: Testing :: Unit Test Example (JUnit Jupiter) 0.1.0-SNAPSHOT Test API'
+-link
+'../apidocs'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/runner/work/the-maven-practical-guide/the-maven-practical-guide/examples/testing/ut-example-junit-jupiter/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'TMPG :: Testing :: Unit Test Example (JUnit Jupiter) 0.1.0-SNAPSHOT Test API'

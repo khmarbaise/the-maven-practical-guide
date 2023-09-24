@@ -147,7 +147,60 @@
 <h2><a name="CPD_Results"></a>CPD Results</h2>
 <p>The following document contains the results of PMD's  <a class="externalLink" href="https://pmd.github.io/latest/pmd_userdocs_cpd.html">CPD</a> 6.53.0.</p></section><section>
 <h2><a name="Duplications"></a>Duplications</h2>
-<p>CPD found no problems in your source code.</p></section>
+<table border="0" class="table table-striped">
+<tr class="a">
+<th>File</th>
+<th>Project</th>
+<th>Line</th></tr>
+<tr class="b">
+<td>com/soebes/training/maven/simple/BitMask.java</td>
+<td>TMPG :: Testing :: Unit Test Example (JUnit Jupiter)</td>
+<td>11</td></tr>
+<tr class="a">
+<td>com/soebes/training/maven/simple/BitMask.java</td>
+<td>TMPG :: Testing :: Unit Test Example (TestNG)</td>
+<td>11</td></tr>
+<tr class="b">
+<td>com/soebes/training/maven/simple/BitMask.java</td>
+<td>TMPG :: Testing :: Unit Test Example</td>
+<td>11</td></tr>
+<tr class="a"><td colspan='3'>
+<div>
+<pre>public class BitMask {
+
+    private long bitMaskValue;
+
+    public long getBitMaskValue() {
+        return bitMaskValue;
+    }
+
+    public BitMask() {
+        bitMaskValue = 0;
+    }
+
+    public BitMask(long currentValue) {
+        this.bitMaskValue = currentValue;
+    }
+
+    public void setBit(int bit) {
+        long bitMask = Long.rotateLeft(1, bit);
+        bitMaskValue |= bitMask;
+    }
+
+    public void unsetBit(int bit) {
+        long bitMask = Long.rotateLeft(1, bit);
+        bitMaskValue ^= bitMask;
+    }
+
+    public boolean isBitSet(int bit) {
+        long bitMask = Long.rotateLeft(1, bit);
+        long result = this.bitMaskValue &amp; bitMask;
+        if (result != 0) {
+            return true;
+        }
+        return false;
+    }
+}</pre></div></td></tr></table></section>
         </main>
       </div>
     </div>
