@@ -5,13 +5,13 @@ Karl-Heinz Marbaise <tmpg@maven-practical-guide.io>; {docdate}
 :appendix-number:
 :revnumber: {projectVersion}
 :revdate: {localdate}
-:sectnums:
-:sectnumlevels: 2
 :sectlinks:
-:partnums:
 :xrefstyle: full
+:sectnums:
+:sectnumlevels: 3
 :toc: left
 //
+:iconfont-fontawesome:
 
 :keywords: Maven,Documentation,Apache Maven
 :link-junit: https://junit.org[JUnit]

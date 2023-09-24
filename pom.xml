@@ -108,7 +108,7 @@
               <highlightjs-theme>github</highlightjs-theme>
               <docinfo>shared</docinfo>
               <icons>font</icons>
-              <sectids>false</sectids>
+              <sectids>true</sectids>
               <imagesdir>images</imagesdir>
               <projectName>${project.name}</projectName>
               <projectVersion>${project.version}</projectVersion>
@@ -123,7 +123,6 @@
             <sourceDirectory>src/main/asciidoc</sourceDirectory>
             <headerFooter>true</headerFooter>
             <preserveDirectories>true</preserveDirectories>
-            <outputDirectory>${project.reporting.outputDirectory}</outputDirectory>
           </configuration>
         </plugin>
       </plugins>
