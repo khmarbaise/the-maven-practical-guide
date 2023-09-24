@@ -1,7 +1,29 @@
+[[release]]
 = Making Releases
 
 Here you get an overview of the different options how to do a release with Maven.
 
+== Single Module Build
+
+
+== Multi Module Build
+
+=== In One
+
+The usual way?
+
+Only releasing changed modules? What's behind this question?
+
+Pros/Cons?
+
+=== Single Childs
+
+Why needed?
+
+== Maven Release Plugin
+pros/cons
+
+[[release.traditional]]
 == The Traditional Maven Way
 
 * maven-release-plugin
