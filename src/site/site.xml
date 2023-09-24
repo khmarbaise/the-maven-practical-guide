@@ -22,6 +22,8 @@
 
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
+      <item name="Book HTML" href="book/the-maven-practical-guide.html"/>
+      <item name="Book PDF" href="book/the-maven-practical-guide.pdf"/>
     </menu>
 
     <menu ref="modules" inherit="top"/>
