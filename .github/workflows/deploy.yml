@@ -30,7 +30,6 @@ jobs:
   update-site:
     name: Linux
     runs-on: ubuntu-latest
-    container: "maven:3.9.4-eclipse-temurin-17"
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v3
@@ -51,7 +50,7 @@ jobs:
       - name: 'Deploy to gh-pages'
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          folder: "target/staging"
+          folder: target/staging
           force: true
       - name: 'Deploy to gh-pages'
         uses: JamesIves/github-pages-deploy-action@releases/v4
