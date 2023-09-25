@@ -29,3 +29,5 @@ Those simply reminders to my own.
 
 This is a more or less full documentation about Apache Maven.
 
+//FIXME: configuration settings.xml?
+//FIXME: configuration ".mvn" + ".mvn/maven.config" etc.

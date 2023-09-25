@@ -82,7 +82,6 @@ include::00-preface.adoc[]
 
 :numbered:
 
-
 include::_001_chapter.adoc[]
 
 include::10-foundation.adoc[]

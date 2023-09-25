@@ -1,3 +1,4 @@
+[[fundation.coordinates]]
 == Coordinates
 Structure in java project separated/structured by using packages
 Higher level abstraction separation via groupId coordinates
@@ -7,6 +8,7 @@ groupId/artifactId/version
 repositories? picturing to repositories? Remote repositories? How to find an artifact based on
  it coordinates? What about search https://central.sonatype.com
 
+[[fundation.versions]]
 == Versions
 
 Base idea of versions? Why even needed?
@@ -14,12 +16,14 @@ Base idea of versions? Why even needed?
 * https://semver.org/[Semantic Versioning]
 * https://calver.org/[Calendar Versioning]
 
+[[fundation.versions.snapshot]]
 === SNAPSHOT
 
 Version, SNAPSHOT vs. NON-SNAPSHOT
 //FIXME: assumption related to versions/releases
 
+[[fundation.versions.releases]]
 === Releases
 
-What is a release from Maven point of view? Immutability?
+What is a release from Maven point of view? Immutability? Why?
 
