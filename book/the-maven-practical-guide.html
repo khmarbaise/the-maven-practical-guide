@@ -436,7 +436,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="js/highlight/styles/github.min.css">
 </head>
 <body class="book toc2 toc-left">
@@ -486,13 +485,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#_testing_with_maven">3. Testing with Maven</a>
+<li><a href="#testing">3. Testing with Maven</a>
 <ul class="sectlevel2">
-<li><a href="#_project_setup">3.1. Project Setup</a>
+<li><a href="#testing.setup">3.1. Project Setup</a>
 <ul class="sectlevel3">
-<li><a href="#_unit_testing">3.1.1. Unit Testing</a></li>
-<li><a href="#_integration_testing">3.1.2. Integration Testing</a></li>
-<li><a href="#_testing_suites">3.1.3. Testing Suites</a></li>
+<li><a href="#testing.unit.testing">3.1.1. Unit Testing</a></li>
+<li><a href="#testing.integration.testing">3.1.2. Integration Testing</a></li>
+<li><a href="#testing.suites">3.1.3. Testing Suites</a></li>
 <li><a href="#_testing_frameworks">3.1.4. Testing Frameworks</a>
 <ul class="sectlevel4">
 <li><a href="#_junit_4">JUnit 4</a></li>
@@ -501,8 +500,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_combining">Combining</a></li>
 </ul>
 </li>
-<li><a href="#_unit_testing_2">3.1.5. Unit Testing</a></li>
-<li><a href="#_integration_testing_2">3.1.6. Integration Testing</a>
+<li><a href="#_unit_testing">3.1.5. Unit Testing</a></li>
+<li><a href="#_integration_testing">3.1.6. Integration Testing</a>
 <ul class="sectlevel4">
 <li><a href="#_importance_of_separation">Importance of Separation</a></li>
 </ul>
@@ -753,7 +752,7 @@ something more about me ;-)</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 Copies of this document may be made for your own use and for distribution to others, provided that you do not
@@ -884,7 +883,7 @@ OS name: "mac os x", version: "13.4.1", arch: "aarch64", family: "mac"</code></p
 into a file called <code>pom.xml</code> in a separate directory on your system:</p>
 </div>
 <div class="paragraph">
-<p><span class="icon green"><i class="fa fa-plus-circle"></i></span> denotes a public type, <span class="icon red"><i class="fa fa-minus-circle"></i></span></p>
+<p><span class="icon green">[plus circle&#93;</span> denotes a public type, <span class="icon red">[minus circle&#93;</span></p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -897,9 +896,9 @@ into a file called <code>pom.xml</code> in a separate directory on your system:<
     &lt;version&gt;0.1.0-SNAPSHOT&lt;/version&gt;
   &lt;/parent&gt;
 
-  &lt;groupId&gt;com.soebes.tmpg.examples.basics&lt;/groupId&gt;          <i class="conum" data-value="1"></i><b>(1)</b>
-  &lt;artifactId&gt;simplest-pom&lt;/artifactId&gt;                       <i class="conum" data-value="2"></i><b>(2)</b>
-  &lt;version&gt;0.1.0-SNAPSHOT&lt;/version&gt;                           <i class="conum" data-value="3"></i><b>(3)</b>
+  &lt;groupId&gt;com.soebes.tmpg.examples.basics&lt;/groupId&gt;          &lt;!--<b class="conum">(1)</b>--&gt;
+  &lt;artifactId&gt;simplest-pom&lt;/artifactId&gt;                       &lt;!--<b class="conum">(2)</b>--&gt;
+  &lt;version&gt;0.1.0-SNAPSHOT&lt;/version&gt;                           &lt;!--<b class="conum">(3)</b>--&gt;
 
   &lt;name&gt;TMPG :: Examples :: Simplest POM&lt;/name&gt;
 
@@ -907,20 +906,17 @@ into a file called <code>pom.xml</code> in a separate directory on your system:<
 </div>
 </div>
 <div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The groupId</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The artifactId</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>The version</td>
-</tr>
-</table>
+<ol>
+<li>
+<p>The groupId</p>
+</li>
+<li>
+<p>The artifactId</p>
+</li>
+<li>
+<p>The version</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
@@ -1060,14 +1056,14 @@ module build.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_testing_with_maven"><a class="link" href="#_testing_with_maven">3. Testing with Maven</a></h2>
+<h2 id="testing"><a class="link" href="#testing">3. Testing with Maven</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>create a general summary (overview). The goal which should be reached
 in this section.</p>
 </div>
 <div class="sect2">
-<h3 id="_project_setup"><a class="link" href="#_project_setup">3.1. Project Setup</a></h3>
+<h3 id="testing.setup"><a class="link" href="#testing.setup">3.1. Project Setup</a></h3>
 <div class="paragraph">
 <p>Explain the basic project setup..</p>
 </div>
@@ -1075,7 +1071,7 @@ in this section.</p>
 <p>Using fraction example.</p>
 </div>
 <div class="sect3">
-<h4 id="_unit_testing"><a class="link" href="#_unit_testing">3.1.1. Unit Testing</a></h4>
+<h4 id="testing.unit.testing"><a class="link" href="#testing.unit.testing">3.1.1. Unit Testing</a></h4>
 <div class="paragraph">
 <p>
 Basic unit testing, naming conventions, skip execution of unit tests</p>
@@ -1087,7 +1083,7 @@ Using JUnit Jupiter as example because it states of the art.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_integration_testing"><a class="link" href="#_integration_testing">3.1.2. Integration Testing</a></h4>
+<h4 id="testing.integration.testing"><a class="link" href="#testing.integration.testing">3.1.2. Integration Testing</a></h4>
 <div class="paragraph">
 <p></p>
 </div>
@@ -1097,7 +1093,7 @@ of integration tests or both.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_testing_suites"><a class="link" href="#_testing_suites">3.1.3. Testing Suites</a></h4>
+<h4 id="testing.suites"><a class="link" href="#testing.suites">3.1.3. Testing Suites</a></h4>
 <div class="paragraph">
 <p>With JUnit Jupiter</p>
 </div>
@@ -1144,7 +1140,7 @@ you tipps how to prevent several issues with testing.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_unit_testing_2"><a class="link" href="#_unit_testing_2">3.1.5. Unit Testing</a></h4>
+<h4 id="_unit_testing"><a class="link" href="#_unit_testing">3.1.5. Unit Testing</a></h4>
 <div class="paragraph">
 <p>Unit testing can be done out-of-box in Maven which means you just have
 to locate your unit tests into 'src/test/java' and follow the naming
@@ -1300,7 +1296,7 @@ would like to use? There are things like <a href="https://junit.org">JUnit</a>, 
 Spock and of course many other opportunities.</p>
 </div>
 <div class="paragraph">
-<p>In the case you would like to use <a href="https://junit.org">JUnit</a> within your unit tests
+<p>In the case you would like to use <a href="https://junit.org" class="bare">https://junit.org</a> within your unit tests
 you just simply add the appropriate dependency to your 'pom.xml' and
 that&#8217;s it.</p>
 </div>
@@ -1330,10 +1326,10 @@ that&#8217;s it.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If you prefer <a href="https://testng.org">TestNG</a> to use for your unit tests you can simply
-add the dependency for <a href="https://testng.org">TestNG</a> and your unit tests can be run as
+<p>If you prefer <a href="https://testng.org" class="bare">https://testng.org</a> to use for your unit tests you can simply
+add the dependency for <a href="https://testng.org" class="bare">https://testng.org</a> and your unit tests can be run as
 well without any supplemental change except the changes based on the
-differences between <a href="https://junit.org">JUnit</a> and <a href="https://testng.org">TestNG</a> itself.</p>
+differences between <a href="https://junit.org" class="bare">https://junit.org</a> and <a href="https://testng.org">TestNG</a> itself.</p>
 </div>
 <div class="listingblock">
 <div class="title">Unit Testing Example(2)</div>
@@ -1383,7 +1379,7 @@ JUnit, TestNG, Spock?, BDD ?</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_integration_testing_2"><a class="link" href="#_integration_testing_2">3.1.6. Integration Testing</a></h4>
+<h4 id="_integration_testing"><a class="link" href="#_integration_testing">3.1.6. Integration Testing</a></h4>
 <div class="paragraph">
 <p>What is integration tests?
 How to use? Naming convention?
@@ -2062,7 +2058,7 @@ clean' call.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 HINT: Something about the clean life cycle of the maven super pom!!
@@ -2155,7 +2151,7 @@ jar file, cause if one of your unit tests will fail your build will
 fail and no packages (jar files) are being built.</p>
 </div>
 <div class="paragraph">
-<p>For this purpose the <a href="https://maven.apache.org/plugins/maven-surefire-plugin/">Maven Surefire Plugin</a> is responsible
+<p>For this purpose the <a href="https://maven.apache.org/plugins/maven-surefire-plugin/" class="bare">https://maven.apache.org/plugins/maven-surefire-plugin/</a> is responsible
 to run those unit tests.</p>
 </div>
 </div>
@@ -2643,7 +2639,7 @@ Example project.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 Think about a good example here?
@@ -2807,9 +2803,9 @@ has several aspects of testing.</p>
     &lt;version&gt;0.1.0-SNAPSHOT&lt;/version&gt;
   &lt;/parent&gt;
 
-  &lt;groupId&gt;com.soebes.tmpg.examples.basics&lt;/groupId&gt;          <i class="conum" data-value="1"></i><b>(1)</b>
-  &lt;artifactId&gt;simplest-pom&lt;/artifactId&gt;                       <i class="conum" data-value="2"></i><b>(2)</b>
-  &lt;version&gt;0.1.0-SNAPSHOT&lt;/version&gt;                           <i class="conum" data-value="3"></i><b>(3)</b>
+  &lt;groupId&gt;com.soebes.tmpg.examples.basics&lt;/groupId&gt;          &lt;!--<b class="conum">(1)</b>--&gt;
+  &lt;artifactId&gt;simplest-pom&lt;/artifactId&gt;                       &lt;!--<b class="conum">(2)</b>--&gt;
+  &lt;version&gt;0.1.0-SNAPSHOT&lt;/version&gt;                           &lt;!--<b class="conum">(3)</b>--&gt;
 
   &lt;name&gt;TMPG :: Examples :: Simplest POM&lt;/name&gt;
 
@@ -2817,20 +2813,17 @@ has several aspects of testing.</p>
 </div>
 </div>
 <div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The groupId</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The artifactId</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>The version</td>
-</tr>
-</table>
+<ol>
+<li>
+<p>The groupId</p>
+</li>
+<li>
+<p>The artifactId</p>
+</li>
+<li>
+<p>The version</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>There are several options to configure a plugin.</p>
@@ -2981,11 +2974,11 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
     &lt;addMavenDescriptor&gt;true&lt;/addMavenDescriptor&gt;
     &lt;index&gt;true&lt;/index&gt;
     &lt;manifest&gt;
-      &lt;addDefaultImplementationEntries&gt;true&lt;/addDefaultImplementationEntries&gt; <i class="conum" data-value="1"></i><b>(1)</b>
-      &lt;addDefaultSpecificationEntries&gt;true&lt;/addDefaultSpecificationEntries&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;addDefaultImplementationEntries&gt;true&lt;/addDefaultImplementationEntries&gt; &lt;!--<b class="conum">(1)</b>--&gt;
+      &lt;addDefaultSpecificationEntries&gt;true&lt;/addDefaultSpecificationEntries&gt; &lt;!--<b class="conum">(2)</b>--&gt;
     &lt;/manifest&gt;
     &lt;manifestEntries&gt;
-      &lt;artifactId&gt;${project.artifactId}&lt;/artifactId&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;artifactId&gt;${project.artifactId}&lt;/artifactId&gt; &lt;!--<b class="conum">(3)</b>--&gt;
       &lt;groupId&gt;${project.groupId}&lt;/groupId&gt;
       &lt;version&gt;${project.version}&lt;/version&gt;
       &lt;buildNumber&gt;${buildNumber}&lt;/buildNumber&gt;
@@ -2996,20 +2989,17 @@ plugins like 'build-helper-maven-plugin' to the sources folder.</p>
 </div>
 </div>
 <div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The groupId</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The artifactId</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>The version</td>
-</tr>
-</table>
+<ol>
+<li>
+<p>The groupId</p>
+</li>
+<li>
+<p>The artifactId</p>
+</li>
+<li>
+<p>The version</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>What should be defined in such a parent?
@@ -3362,7 +3352,7 @@ ISBN 1-56592-580-7.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.1.0-SNAPSHOT<br>
-Last updated 2023-09-25 21:09:03 UTC
+Last updated 2023-09-25 21:41:11 UTC
 </div>
 </div>
 <script src="js/highlight/highlight.min.js"></script>
