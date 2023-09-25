@@ -10,13 +10,13 @@ Karl-Heinz Marbaise <tmpg@maven-practical-guide.io>; {docdate}
 :sectnums:
 :sectnumlevels: 3
 :toc: left
-//
+
 :iconfont-fontawesome:
 
 :keywords: Maven,Documentation,Apache Maven
-:link-junit: https://junit.org[JUnit]
-:link-testng: https://testng.org[TestNG]
-:link-mib: https://en.wikipedia.org/wiki/Binary_prefix#Specific_units_of_IEC_60027-2_A.2_and_ISO.2FIEC_80000[MiB]
+:junit: https://junit.org
+:link-testng: https://testng.org
+:link-mib: https://en.wikipedia.org/wiki/Binary_prefix#Specific_units_of_IEC_60027-2_A.2_and_ISO.2FIEC_80000
 :link-groovy: https://groovy-lang.org/[Groovy]
 :link-kotlin: https://kotlinlang.org/[Kotlin]
 :link-scala: https://scala.org[Scala]
@@ -39,7 +39,7 @@ Karl-Heinz Marbaise <tmpg@maven-practical-guide.io>; {docdate}
 :link-maven-install-plugin: https://maven.apache.org/plugins/maven-install-plugin/[Maven Install Plugin]
 :link-maven-deploy-plugin: https://maven.apache.org/plugins/maven-deploy-plugin/[Maven Deploy Plugin]
 :link-maven-shade-plugin: https://maven.apache.org/plugins/maven-shade-plugin/[Maven Shade Plugin]
-:link-maven-surefire-plugin: https://maven.apache.org/plugins/maven-surefire-plugin/[Maven Surefire Plugin]
+:link-maven-surefire-plugin: https://maven.apache.org/plugins/maven-surefire-plugin/
 :link-maven-failsafe-plugin: https://maven.apache.org/plugins/maven-failsafe-plugin/[Maven Surefire Plugin]
 :link-maven-enforcer-plugin: https://maven.apache.org/plugins/maven-enforcer-plugin/[Maven Enforcer Plugin]
 :link-maven-invoker-plugin: https://maven.apache.org/plugins/maven-invoker-plugin/[Maven Invoker Plugin]

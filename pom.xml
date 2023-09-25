@@ -118,10 +118,10 @@
               <source-highlighter>highlight.js</source-highlighter>
               <highlightjsdir>js/highlight</highlightjsdir>
               <highlightjs-theme>github</highlightjs-theme>
-              <docinfo>shared</docinfo>
-              <icons>font</icons>
-              <sectids>true</sectids>
-              <imagesdir>images</imagesdir>
+<!--              <docinfo>shared</docinfo>-->
+<!--              <icons>font</icons>-->
+<!--              <sectids>true</sectids>-->
+<!--              <imagesdir>images</imagesdir>-->
               <projectName>${project.name}</projectName>
               <projectVersion>${project.version}</projectVersion>
               <toclevels>4</toclevels>

@@ -1,14 +1,17 @@
+[[testing]]
 = Testing with Maven
 
 create a general summary (overview). The goal which should be reached
 in this section.
 
+[[testing.setup]]
 == Project Setup
 
 Explain the basic project setup..
 
 Using fraction example.
 
+[[testing.unit.testing]]
 === Unit Testing
 
 (((Testing, "Unit testing")))
@@ -19,6 +22,7 @@ Basic ((unit testing)), naming conventions, skip execution of unit tests
 Using JUnit Jupiter as example because it states of the art.
 
 
+[[testing.integration.testing]]
 === Integration Testing
 
 (((Testing, "Integration Testing")))
@@ -26,6 +30,7 @@ Using JUnit Jupiter as example because it states of the art.
 Basic combination of unit- and integration testing, naming conventions, skip execution
 of integration tests or both.
 
+[[testing.suites]]
 === Testing Suites
 
 //TODO: Create a testing suites example
@@ -120,15 +125,15 @@ So if you follow the conventions in Maven and put your tests into the
 appropriate location `src/test/java` those tests will automatically
 be picked up and executed as unit tests. The plugin which is
 responsible for execution of those unit tests is the
-{link-maven-surefire-plugin}.
+{link-maven-surefire-plugin}[Maven Surefire Plugin].
 
 Make an example output here....
 
 An important thing to think of is sometimes which test framework you
-would like to use? There are things like {link-junit}, {link-testng},
+would like to use? There are things like {junit}[JUnit], {link-testng}[TestNG],
 Spock and of course many other opportunities.
 
-In the case you would like to use {link-junit} within your unit tests
+In the case you would like to use {junit} within your unit tests
 you just simply add the appropriate dependency to your 'pom.xml' and
 that's it.
 
@@ -141,7 +146,7 @@ include::../../../../examples/testing/ut-example/pom.xml[tags=first]
 If you prefer {link-testng} to use for your unit tests you can simply
 add the dependency for {link-testng} and your unit tests can be run as
 well without any supplemental change except the changes based on the
-differences between {link-junit} and {link-testng} itself.
+differences between {junit} and {link-testng}[TestNG] itself.
 
 [source,xml]
 .Unit Testing Example(2)
