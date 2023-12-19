@@ -19,8 +19,6 @@
 'UTF-8'
 -doctitle
 'TMPG :: Testing :: Unit Test Example (JUnit Jupiter) 0.1.0-SNAPSHOT Test API'
--link
-'../apidocs'
 -linkoffline
 'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/runner/work/the-maven-practical-guide/the-maven-practical-guide/examples/testing/ut-example-junit-jupiter/target/javadoc-bundle-options'
 -use
