@@ -31,9 +31,8 @@ The project is in an early state.
   * Snapshot State site: https://khmarbaise.github.io/the-maven-practical-guide
 
 * The real guide:
-  * HTML https://khmarbaise.github.io/the-maven-practical-guide/the-maven-practical-guide.html
-  * PDF https://khmarbaise.github.io//the-maven-practical-guide/the-maven-practical-guide.pdf
-
+  * HTML https://the-maven-practical-guide.io/book/the-maven-practical-guide.html
+  * PDF https://the-maven-practical-guide.io/book/the-maven-practical-guide.pdf
 
 # Dependency Updates
 
